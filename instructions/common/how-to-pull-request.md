@@ -15,6 +15,7 @@
 ![Create Pull Request: Step 3](../assets/create-pull-request/step-3.jpg)
 
 ## Step 4: Select the "Base" repository dropdown and choose your forked repository
+**NOTE: Be sure that you are selecting YOUR repository as the base, NOT Code-the-Dream-School.**
 
 ![Create Pull Request: Step 4](../assets/create-pull-request/step-4.jpg)
 
