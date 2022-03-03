@@ -1,7 +1,11 @@
+/*HTML document CSS*/
 html{
   font-size: 100%;
   scroll-behavior: smooth;
 }
+
+
+/*Body CSS*/
 body{
   font-family: "Open Sans", "Roboto", "Ubuntu", sans-serif;
   margin: 0em;
@@ -9,39 +13,48 @@ body{
 .light{
   background-color: white;
 }
-.black{
-  color: black;
-}
 .dark{
   background-color: black;
+}
+.black{
+  color: black;
 }
 .white{
   color: white;
 }
-.whiteNav{
-  color: rgba(255,255,255,.7);
-  fill: rgba(255,255,255,.7);
-}
-.blackNav{
-  color: rgba(0,0,0,.7);
-  fill: rgba(0,0,0,.7);
-}
 section{
   margin: 1.5rem 3rem;
+  scroll-margin-top: 4.75rem;
 }
 h2{
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 0em;
 }
+
+
+
+/*Experience and Skills CSS*/
 #skills ul, #experiences ul{
   padding: 0em;
 }
+#experiences ul{
+  display: flex;
+  flex-direction: column;
+}
 #experiences li {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   background-color: lightgrey;
   color: black;
   padding: .75rem 1.25rem;
   margin-bottom: 1rem;
+}
+.timeFrame{
+  color: gray;
+}
+#experiences li:last-child {
+  margin-bottom: 0em;
 }
 #skills li {
   display: inline-block;
@@ -51,22 +64,39 @@ h2{
   margin: 0em .25rem;
   color: purple;
 }
+
+
+
+/*Navigation Bar CSS*/
+.whiteNav{
+  color: rgba(255,255,255,.7);
+  fill: rgba(255,255,255,.7);
+}
+.blackNav{
+  color: rgba(0,0,0,.7);
+  fill: rgba(0,0,0,.7);
+}
 nav {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 nav ul{
-  display: inline-block;
-  float: right;
-  padding-left: 0em;
-  padding-top: .6rem;
-  margin: 0em;
   font-family: "Open Sans";
   letter-spacing: .09375rem;
-  vertical-align: middle;
+}
+#directory{
+  margin: 0rem 0rem 0rem auto;
 }
 nav li{
   display: inline-block;
+}
+nav a{
+  text-decoration: none;
+  padding: .25rem .5rem;
+}
+nav svg{
+  width: 100%;
 }
 #lightDark{
   width: 1rem;
@@ -83,19 +113,38 @@ nav li{
   bottom: 0em;
   right: 0em;
 }
+
+
+
+/*Navigation One and Navigation Two*/
 .navOne{
   display: inline-block;
   background-color: rgba(0,0,0,0);
   margin: 0em;
   padding: .625rem .9375rem .625rem 3.125rem;
 }
+.navTwo{
+  display: inline-block;
+  margin: 0em;
+  padding: .625rem .9375rem .625rem 3.125rem;
+  box-shadow: 0 5px 20px -10px grey;
+}
 .navOne #home {
   display: none;
 }
+.navTwo #home {
+  display: flex;
+  align-items: center;
+  padding: 0em;
+  margin: 0em;
+}
+.navTwo #home img{
+  border-radius: 50%;
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
 .navOne nav a{
   color: rgba(255,255,255,.7);
-  text-decoration: none;
-  padding: .25rem .5rem;
 }
 .navOne svg{
   fill: rgba(255,255,255,.7);
@@ -104,44 +153,14 @@ nav li{
   border-bottom: solid;
   border-color: white;
 }
-.navTwo{
-  display: inline-block;
-  margin: 0em;
-  padding: .625rem .9375rem .625rem 3.125rem;
-  box-shadow: 0 5px 20px -10px grey;
-}
-.navTwo #home {
-  display: inline-block;
-  float: left;
-  padding: 0em;
-  margin: 0em;
-}
-.navTwo #home a{
-  display: inline-block;
-  align-items: center;
-  float: left;
-}
-.navTwo #home img{
-  border-radius: 50%;
-  margin-right: .625rem;
-  width: 2.1875rem;
-  height: 2.1875rem;
-}
-.navTwo #author{
-  float: right;
-  margin-top: .3125rem;
-}
-.navTwo #photo{
-  float: left;
-}
-.navTwo nav a{
-  text-decoration: none;
-  padding: .25rem .5rem;
-}
 .navTwo #directory a:hover{
   border-bottom: solid;
   border-color: purple;
 }
+
+
+
+/*Main image CSS*/
 #imageSection{
   position: relative;
   width: 100%;
@@ -189,48 +208,62 @@ nav li{
   font-size: .75rem;
   opacity: .7;
 }
-button{
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-family: inherit;
-}
+
+
+
+/*Message Form CSS*/
 form{
-  display: block;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 .smallField{
-  display: inline-block;
-  width: 24.5%;
-  padding-right: .25rem;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.smallBox{
+width: 47.5%;
 }
 .largeField{
-  margin: 1em 0em 0em 0em;
+  width: 50%;
+  margin: 1rem 0em 0em 0em;
 }
 label{
   font-size: 1.25rem;
   color: grey;
 }
-input{
-  width: 95%;
+input, textarea{
   font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
 }
-textarea{
-  width: 49%;
+button{
+  border: none;
+  cursor: pointer;
+  color: white;
   font-family: inherit;
+  font-size: 1rem;
 }
 .submit{
+  width: 7.5vw;
+  min-width: 90px;
   background-color: purple;
-  margin: 1em 0em 0em 0em;
+  margin: 1rem 0em 0em 0em;
   padding: .5rem 1rem;
   border-radius: 0.1875rem;
 }
 .submit:hover{
   background-color: rgba(128, 0, 128, .75);
 }
+
+
+
+/*Messages CSS*/
 .edit{
+  width: 7.5vw;
+  min-width: 90px;
   background-color: grey;
-  margin: 1rem 1rem 1rem 0rem;
   padding: .5rem 1rem;
   border-radius: 0.1875rem;
 }
@@ -238,8 +271,9 @@ textarea{
   background-color: rgba(128, 128, 128, .75);
 }
 .remove{
+  width: 7.5vw;
+  min-width: 90px;
   background-color: #dc2626;
-  margin: 1rem 0em;
   padding: .5rem 1rem;
   border-radius: 0.1875rem;
 }
@@ -249,6 +283,19 @@ textarea{
 #messages ul{
   padding: 0em;
 }
+#messages li{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+#messages div, #messages button{
+  display: inline-block;
+  margin: 0em 1rem 0em 0em;
+}
+#messages input{
+  margin: 0em;
+}
 #messages a{
   text-decoration: none;
   margin-right: 1rem;
@@ -257,66 +304,91 @@ textarea{
   border-bottom: solid;
   border-color: purple;
 }
-#messages li{
-  display: block;
-}
 #new{
   margin-top: 1rem;
 }
-svg{
-  width: 100%;
-  fill: lightgrey;
-}
+
+
+
+/*Footer CSS*/
 footer{
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0 auto;
   width: 100%;
-  padding: 1rem 0em;
   background-color: purple;
-}
+  }
 footer ul{
-  display: inline-block;
-  margin: 0em;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0em 3em 0em 0em;
   padding: 0em;
-  text-align: center;
   border: 0em;
 }
 footer li{
   display: inline-block;
-  padding: 0rem .75rem;
-  width: 5%;
-  vertical-align: middle;
+  margin-left: 1rem;
 }
-.copyright{
+footer p{
   display: inline-block;
-  padding: 0rem .75rem;
-  width: 40%;
-  vertical-align: middle;
-  text-align: left;
+  margin: 0em 3rem;
   color: lightgrey;
+}
+footer svg{
+  fill: lightgrey;
 }
 footer svg:hover{
   fill: black;
 }
 
-@media only screen and (max-width: 768px) {
-    .smallField{
-      display: inline-block;
-      width: 100%;
-      padding: 0em;
+/*Media Specific CSS*/
+/*Form elements will display as a column and have larger width and navigation to section links will not display for smaller display sizes*/
+@media screen and (max-width: 768px) {
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+  .smallField{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .smallBox{
+  width: 100%;
+  }
+  .largeField{
+    width: 100%;
+    margin: 1rem 0em 0em 0em;
+  }
+  input, textarea{
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .mobileOnly{
+    display: none;
+  }
+}
+/*Text within each experience list elemnt will display as a column for smaller display sizes*/
+@media screen and (max-width: 790px){
+  #experiences li{
+    flex-direction: column;
+  }
+}
+/*Footer elements will display as a column for smaller display sizes*/
+@media screen and (max-width: 426px){
+    footer{
+      flex-direction: column;
+      }
+    footer ul{
+      margin: 0rem;
     }
-    input{
-      width: 100%;
-      font-family: inherit;
+    footer li{
+      margin: 0em .5rem;
     }
-    textarea{
-      width: 100%;
-      padding: 0.0625rem .125rem;
-      margin: .125rem;
-    }
-    .mobileOnly{
-      display: none;
+    footer p{
+      margin: .5rem 0em;
     }
   }
