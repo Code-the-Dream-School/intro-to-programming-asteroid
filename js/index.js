@@ -160,7 +160,7 @@ const headingTwo = document.getElementsByTagName("h2");
 const navContent = document.querySelectorAll("nav li");
 const navClass = Array.from(navbar.classList);
 let navLink = (i) =>  navContent[i].firstChild;
-let navSvg = navContent[6].children[0].children[0];
+let navSvg = navContent[(navContent.length - 1)].children[0].children[0];
 let clickCount = 0;
 theme.addEventListener("click", (e) =>{
 
@@ -184,8 +184,8 @@ theme.addEventListener("click", (e) =>{
     navbar.classList.remove("dark");
     navbar.classList.add("light");
 
-    //Ignoring the first navigation list element make all navigation list elements white
-    for (i = 1; i < 6; i++){
+    //Ignoring the first and last navigation list element make all navigation list elements white
+    for (i = 1; i < (navContent.length - 1); i++){
       navLink(i).classList.remove("whiteNav");
       navLink(i).classList.add("blackNav");
     }
@@ -210,8 +210,8 @@ theme.addEventListener("click", (e) =>{
     navbar.classList.remove("light");
     navbar.classList.add("dark");
 
-    //Ignoring the first navigation list element make all navigation list elements white
-    for (i = 1; i < 6; i++){
+    //Ignoring the first and last navigation list element make all navigation list elements white
+    for (i = 1; i < (navContent.length - 1); i++){
       navLink(i).classList.remove("blackNav");
       navLink(i).classList.add("whiteNav");
     }
@@ -221,3 +221,22 @@ theme.addEventListener("click", (e) =>{
     navSvg.classList.add("whiteNav");
   }
 })
+
+
+/*
+AJAX code to access GitHub Ptojects
+*/
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
+let githubRequest = new XMLHttpRequest();
+githubRequest.onload = function () {
+    repositories = JSON.parse(githubRequest.response)
+    for (i = 0; i < repositories.length; i++){
+      let projectItem = document.createElement("li");
+      projectItem.innerHTML = `<a href = "${repositories[i].html_url}" target = "_blank"><h3>${repositories[i].name}</h3><p>${repositories[i].description}</p></a>`
+      projectList.appendChild(projectItem)
+      console.log(repositories[i])
+    }
+}
+githubRequest.open("GET", "https://api.github.com/users/MarcusCHill/repos");
+githubRequest.send();
