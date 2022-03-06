@@ -14,10 +14,10 @@ body{
   background-color: white;
 }
 .dark{
-  background-color: black;
+  background-color: rgb(10,10,10);
 }
 .black{
-  color: black;
+  color: rgb(10,10,10);
 }
 .white{
   color: white;
@@ -46,7 +46,7 @@ h2{
   display: flex;
   justify-content: space-between;
   background-color: lightgrey;
-  color: black;
+  color: rgb(10,10,10);
   padding: .75rem 1.25rem;
   margin-bottom: 1rem;
 }
@@ -64,6 +64,45 @@ h2{
   margin: 0em .25rem;
   color: purple;
 }
+
+
+
+/*Project Section CSS*/
+#projects ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: .25rem;
+  padding: 0em;
+}
+#projects li{
+  display: inline-block;
+  width: 25%;
+  min-width: 230px;
+  margin-right: 3rem;
+  background-color: purple;
+  box-shadow: -10px 5px 10px grey;
+  position: relative;
+  top: 0px;
+  transition: top ease 0.5s;
+}
+#projects a{
+  color: white;
+  text-decoration: none;
+}
+#projects li:hover{
+  top: -1.5rem;
+}
+#projects p{
+  padding: 0em 1rem;
+  text-align: center;
+}
+#projects h3{
+  padding: 0rem 1rem;
+  margin-bottom: 0rem;
+  text-align: center;
+}
+
 
 
 
@@ -340,11 +379,19 @@ footer svg{
   fill: lightgrey;
 }
 footer svg:hover{
-  fill: black;
+  fill: rgb(10,10,10);;
 }
 
 /*Media Specific CSS*/
-/*Form elements will display as a column and have larger width and navigation to section links will not display for smaller display sizes*/
+
+/*Navigation to section links will not display for smaller display sizes*/
+@media screen and (max-width: 815px) {
+  .mobileOnly{
+    display: none;
+  }
+}
+
+/*Form elements will display as a column with larger width, navigation to section links will not display, and Project list will display as column with bottom margin for smaller display sizes*/
 @media screen and (max-width: 768px) {
   form{
     display: flex;
@@ -367,8 +414,16 @@ footer svg:hover{
     width: 100%;
     box-sizing: border-box;
   }
-  .mobileOnly{
-    display: none;
+  #projects ul{
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects li{
+    margin-bottom: 3rem;
+    margin-right: 0rem;
+  }
+  #projects li:last-of-type{
+    margin-bottom: 0rem;
   }
 }
 /*Text within each experience list elemnt will display as a column for smaller display sizes*/
