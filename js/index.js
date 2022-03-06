@@ -224,19 +224,47 @@ theme.addEventListener("click", (e) =>{
 
 
 /*
-AJAX code to access GitHub Ptojects
+Fetch GitHub API to create Project list
 */
 const projectSection = document.getElementById("projects");
 const projectList = projectSection.querySelector("ul");
-let githubRequest = new XMLHttpRequest();
-githubRequest.onload = function () {
-    repositories = JSON.parse(githubRequest.response)
-    for (i = 0; i < repositories.length; i++){
-      let projectItem = document.createElement("li");
-      projectItem.innerHTML = `<a href = "${repositories[i].html_url}" target = "_blank"><h3>${repositories[i].name}</h3><p>${repositories[i].description}</p></a>`
-      projectList.appendChild(projectItem)
-      console.log(repositories[i])
-    }
+const checkStatus = (res) =>{
+  if (res.ok){
+    return res
+  } else {
+    return Promise.reject(new Error(res.statusText))
+  }
 }
-githubRequest.open("GET", "https://api.github.com/users/MarcusCHill/repos");
-githubRequest.send();
+
+const repositoryData = (data) => {
+  for (i = 0; i < data.length; i++){
+    let projectItem = document.createElement("li");
+    projectItem.innerHTML = `<a href = "${data[i].html_url}" target = "_blank"><h3>${data[i].name}</h3><p>${data[i].description}</p></a>`
+    projectList.appendChild(projectItem)
+  }
+}
+
+fetch('https://api.github.com/users/MarcusCHill/repos')
+  .then(res => checkStatus(res))
+  .then(response => response.json())
+  .then(data => repositoryData(data))
+  .catch(error => console.log("Looks like something went wrong with a request!", error))
+
+
+
+/*
+AJAX Method
+*/
+/*
+  let githubRequest = new XMLHttpRequest();
+  githubRequest.onload = function () {
+      repositories = JSON.parse(githubRequest.response)
+      for (i = 0; i < repositories.length; i++){
+        let projectItem = document.createElement("li");
+        projectItem.innerHTML = `<a href = "${repositories[i].html_url}" target = "_blank"><h3>${repositories[i].name}</h3><p>${repositories[i].description}</p></a>`
+        projectList.appendChild(projectItem)
+      }
+  }
+  githubRequest.open("GET", "https://api.github.com/users/MarcusCHill/repos");
+  githubRequest.send();
+*/
