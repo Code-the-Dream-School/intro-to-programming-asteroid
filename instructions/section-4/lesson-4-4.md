@@ -56,14 +56,14 @@ For this assignment, there are some general requirements but the design is up to
   - (Optional) Load in a font family from [Google Fonts](https://fonts.google.com/)
 - [ ] Add spacing (padding/margin) between sections
 - [ ] Change the font size, weight, and color of all headings
-- [ ] Transform the "Experience" list items into styled blocks
-- [ ] Transform the "Skills" list items into styled blocks
+- [ ] Transform the "Experience" list items into styled blocks (ex. give them a different background color, or a border to make them distinct from their parent/container)
+- [ ] Transform the "Skills" list items into styled blocks (ex. give them a different background color, or a border to make them distinct from their parent/container)
 - [ ] Style the "Leave a Message" form elements
   - Change font size and color of labels
   - Change font size, padding, border, etc. of inputs and textarea
   - Add spacing (padding/margin) between form fields
   - Change padding, background color, border, etc. of submit button
-- [ ] Transform the "Messages" list items into styled blocks and customize the button(s)
+- [ ] Transform the "Messages" list items into styled blocks (ex. give them a different background color, or a border to make them distinct from their parent/container) and customize the button(s)
 - [ ] Change the spacing and background color of the footer
 - [ ] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.)
 
