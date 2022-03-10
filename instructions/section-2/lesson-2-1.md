@@ -45,7 +45,7 @@ Navigate to the directory you just cloned in your terminal:
 
 Create a new local branch to work on separate from the `main` branch:
 
-    git checkout -b lesson-2-1
+    
 
 Now, open the project directory in your code editor and continue to the next section.
 
