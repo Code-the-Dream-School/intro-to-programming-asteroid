@@ -30,7 +30,7 @@ Checkout your main branch and pull changes:
 
 Create a new local branch to work on separate from the `main` branch:
 
-    git checkout -b lesson-4-2
+    git checkout -b 
 
 Now, open the project directory in your code editor and continue to the next section.
 
