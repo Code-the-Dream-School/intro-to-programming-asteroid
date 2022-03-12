@@ -81,7 +81,7 @@ h2{
   min-width: 230px;
   margin-right: 3rem;
   background-color: #94f;
-  box-shadow: -10px 5px 10px grey;
+  box-shadow: -10px 5px 10px rgba(153, 68, 255, .65);
   position: relative;
   top: 0px;
   transition: top ease 0.5s;
@@ -127,30 +127,42 @@ nav ul{
 #directory{
   margin: 0rem 0rem 0rem auto;
 }
+.home{
+  display: flex;
+  align-items: center;
+}
 nav li{
   display: inline-block;
+  padding: .25rem .5rem;
 }
 nav a{
   text-decoration: none;
-  padding: .25rem .5rem;
 }
 nav svg{
   width: 100%;
 }
-#lightDark{
+#lightDark, #hamburger{
   width: 1rem;
   padding: 0em;
   background-color: rgba(0,0,0,0);
   border: 0em;
 }
+#hamburger{
+  display: none;
+}
 .fixed{
   position: fixed;
-  height: 2.5rem;
   z-index: 1;
   top: 0em;
   left: 0em;
   bottom: 0em;
   right: 0em;
+}
+.smallNav{
+  height: 2.5rem;
+}
+.bigNav{
+  height: 11.25rem;
 }
 
 
@@ -168,16 +180,14 @@ nav svg{
   padding: .625rem .9375rem .625rem 3.125rem;
   box-shadow: 0 5px 20px -10px grey;
 }
-.navOne #home {
+.navOne .home {
   display: none;
 }
-.navTwo #home {
-  display: flex;
-  align-items: center;
-  padding: 0em;
+.navTwo .home {
+  padding: 0rem 0em;
   margin: 0em;
 }
-.navTwo #home img{
+.navTwo #photo img{
   border-radius: 50%;
   width: 2.1875rem;
   height: 2.1875rem;
@@ -385,10 +395,38 @@ footer svg:hover{
 
 /*Media Specific CSS*/
 
-/*Navigation to section links will not display for smaller display sizes*/
+/*Navigation to section links will be accessible within a navigation button for smaller display sizes*/
 @media screen and (max-width: 815px) {
+ nav{
+    justify-content: space-between;
+  }
+  #lightDark{
+  }
+  .navOne, .navTwo{
+    padding: .625rem 3.125rem;
+    align-items: flex-start;
+  }
   .mobileOnly{
     display: none;
+  }
+  .noAuthor{
+    display: none;
+  }
+  #directory{
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+    padding: 0em;
+  }
+  #navButton{
+    align-self: flex-start;
+    padding-top: .625rem;
+  }
+  #hamburger{
+    display: inline-block;
+  }
+  section{
+    scroll-margin-top: 13.5rem;
   }
 }
 

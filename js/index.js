@@ -27,7 +27,6 @@ for (let skill of skills) {
 
 
 
-
 //vairiables will be used in the next few functions
 const messageSection = document.getElementById("messages")
 const messageList = document.querySelector("#messages ul");
@@ -130,22 +129,22 @@ messageForm.addEventListener("submit", (e) => {
 /*
 Allows navigation bar to change css class at a certain user scroll position
 */
-const navbar = document.querySelector(".navigation");
+const navBar = document.querySelector(".navigation");
 const imageSection = document.getElementById("imageSection");
 
 //Navigation bar class is based on user scroll position in reference to image height
 window.addEventListener("scroll", (e) => {
   let imagePosition = imageSection.getBoundingClientRect().height;
-  let navbarPosition = navbar.getBoundingClientRect().height;
-  let displayNav = imagePosition - navbarPosition;
+  let navBarPosition = navBar.getBoundingClientRect().height;
+  let displayNav = imagePosition - navBarPosition;
   if(window.scrollY > displayNav){
     //Show navigation background color and display photo and author name
-    navbar.classList.remove("navOne");
-    navbar.classList.add("navTwo");
+    navBar.classList.remove("navOne");
+    navBar.classList.add("navTwo");
   } else {
     //Navigation background is transparent and display of photo and author name is set to none
-    navbar.classList.remove("navTwo");
-    navbar.classList.add("navOne");
+    navBar.classList.remove("navTwo");
+    navBar.classList.add("navOne");
   }
 })
 
@@ -158,17 +157,17 @@ const theme = document.getElementById("lightDark");
 const body = document.getElementById("content");
 const headingTwo = document.getElementsByTagName("h2");
 const navContent = document.querySelectorAll("nav li");
-const navClass = Array.from(navbar.classList);
 let navLink = (i) =>  navContent[i].firstChild;
-let navSvg = navContent[(navContent.length - 1)].children[0].children[0];
-let clickCount = 0;
+let sunSvg = document.querySelector("#lightDark svg")
+let hamSvg = document.querySelector("#hamburger svg")
+let sunClick = 0;
 theme.addEventListener("click", (e) =>{
 
   //count the number of clicks
-  clickCount ++;
+  sunClick ++;
 
   //First/odd click runs ELSE second/even click runs IF
-  if(clickCount/2 === parseInt(clickCount/2)){
+  if(sunClick/2 === parseInt(sunClick/2)){
 
     //Make body background white and text color black
     body.classList.remove("dark", "white");
@@ -181,18 +180,22 @@ theme.addEventListener("click", (e) =>{
     }
 
     //Make navigation bar background white
-    navbar.classList.remove("dark");
-    navbar.classList.add("light");
+    navBar.classList.remove("dark");
+    navBar.classList.add("light");
 
-    //Ignoring the first and last navigation list element make all navigation list elements white
+    //Ignoring the first navigation list element and SVGs make all navigation list elements white
     for (i = 1; i < (navContent.length - 1); i++){
       navLink(i).classList.remove("whiteNav");
       navLink(i).classList.add("blackNav");
     }
 
     //Make the sun SVG black
-    navSvg.classList.remove("whiteNav");
-    navSvg.classList.add("blackNav");
+    sunSvg.classList.remove("whiteNav");
+    sunSvg.classList.add("blackNav");
+
+    //Make the hamburger SVG black
+    hamSvg.classList.remove("whiteNav");
+    hamSvg.classList.add("blackNav");
 
   } else {
 
@@ -207,18 +210,73 @@ theme.addEventListener("click", (e) =>{
     }
 
     //Make navigation bar background black
-    navbar.classList.remove("light");
-    navbar.classList.add("dark");
+    navBar.classList.remove("light");
+    navBar.classList.add("dark");
 
-    //Ignoring the first and last navigation list element make all navigation list elements white
+    //Ignoring the first navigation list element and SVGs make all navigation list elements white
     for (i = 1; i < (navContent.length - 1); i++){
       navLink(i).classList.remove("blackNav");
       navLink(i).classList.add("whiteNav");
     }
 
     //Make the sun SVG white
-    navSvg.classList.remove("blackNav");
-    navSvg.classList.add("whiteNav");
+    sunSvg.classList.remove("blackNav");
+    sunSvg.classList.add("whiteNav");
+
+    //Make the hamburger SVG white
+    hamSvg.classList.remove("blackNav");
+    hamSvg.classList.add("whiteNav");
+  }
+})
+
+
+
+/*
+Hamburger Navigation button
+*/
+const mobileNav = document.getElementById("hamburger");
+const authorInfo = document.querySelector(".home");
+let hamClick = 0;
+
+mobileNav.addEventListener("click", (e) =>{
+
+  //count the number of clicks
+  hamClick ++;
+
+  //First/odd click runs ELSE second/even click runs IF
+  if(hamClick/2 === parseInt(hamClick/2)){
+
+    //Hide navigation links
+    for (i = 2; i < (navContent.length - 1); i++){
+      navLink(i).classList.add("mobileOnly")
+    }
+
+    //Hide the sun SVG
+    theme.classList.add("mobileOnly")
+
+    //Smaller navigation size
+    navBar.classList.remove("bigNav")
+    navBar.classList.add("smallNav")
+
+    //Dispaly author information in navTwo
+    authorInfo.classList.remove("noAuthor")
+
+  } else {
+
+    //Display navigation Links
+    for (i = 2; i < (navContent.length - 1); i++){
+      navLink(i).classList.remove("mobileOnly")
+    }
+
+    //Dispaly the sun SVG
+    theme.classList.remove("mobileOnly")
+
+    //Larger navigation size
+    navBar.classList.remove("smallNav")
+    navBar.classList.add("bigNav")
+
+    //Hide author information in navTwo
+    authorInfo.classList.add("noAuthor")
   }
 })
 
