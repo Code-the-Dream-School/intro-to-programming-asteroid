@@ -1,3 +1,3 @@
-##README
+##PROJECT NAME
 
-This is a readme file.  It should contain helpful information about the versions and requirements needed to run the app.
+This readme file contains helpful information.  It tells all about the versions and requirements needed to run the app.
