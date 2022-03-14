@@ -1,4 +1,4 @@
-[< Back to Overview](../../README.md)
+o[< Back to Overview](../../README.md)
 
 # Lesson 4.1: HTML Basics
 
@@ -68,6 +68,7 @@ The "head" of an HTML document contains all the page's meta information, such as
 - [ ] Below that, add additional `<meta>` elements ([learn more](https://www.w3schools.com/html/html_head.asp))
 
 #### **Body Element*
+
 The "body" of an HTML document contains all the page's visible content.
 
 - [ ] After the closing `</head>` tag, insert a `<body>` element
