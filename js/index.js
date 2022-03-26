@@ -2,7 +2,6 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-
 copyright.innerHTML = (`&copy Dmitry Boyko ${thisYear}`);
 footer.appendChild(copyright);
 
@@ -14,5 +13,4 @@ for ( i = 0; i < skills.length; i ++ ) {
     item.textContent = skills[i]
     skillList.append(item)
 };
-
-skillList.querySelector('li').textContent = "My Lucky Day"
+skillList.querySelector('li').textContent = "Cypress"
