@@ -14,5 +14,4 @@ for ( i = 0; i < skills.length; i ++ ) {
     item.textContent = skills[i]
     skillList.append(item)
 };
-
-skillList.querySelector('li').textContent = "My Lucky Day"
+skillList.querySelector('li').textContent = "Cypress"
