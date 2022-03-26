@@ -5,3 +5,5 @@ const copyright = document.createElement('p');
 
 copyright.innerHTML = (`&copy Dmitry Boyko ${thisYear}`);
 footer.appendChild(copyright);
+
+const skillsSection = document.getElementById('skills')
