@@ -5,8 +5,11 @@
         <title>Portfolio</title> 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="George" content="Portfolio" />
-
+        <meta name="description" content="George's Portfolio">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali&display=swap">
     </head>
 
     <body> 
@@ -15,18 +18,21 @@
             <header>
                 <nav>
                     <ul>
+                        <li>George K Owusu Jr</li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#experience">EXPERIENCE</a></li>
                         <li><a href="#skills">SKILLS</a></li>
-                        <li><a href="#connect">CONNECT</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>  
                 </nav>
-
-                <div>
-                    <p><strong> I am the liaison <br/>that will connect your business <br/> with the world!</strong> </p>
-                </div>
-
             </header>
+
+                <div id="head">
+                    <div><p> I am the liaison <br/>that will connect your business <br/> with the world!</p></div>
+                    
+                    <img id="profile-img" src="img/ME.jpg" alt="man in suit" height="250px" width="250px"/>
+                </div>
             
             <hr/>
 
@@ -36,9 +42,9 @@
                     <p>George Owusu is a JavaScript Expert</p>
 
                     <p>Mr. Owusu is currently employed as an  Operations Supervisor at Best Buy. He has been with the company since 2013. Mr. Owusu has had a long term goal of developing and maintaining web, phone and game applications. To begin making progress with his goal, he began coding in 2021. Mr. Owusu aspires to obtain a career as a Full-Stack Developer. </p>    
-                    <img src="/img/ME.jpg" alt="man in suit"/>
-                    <h1>Education</h1>
-
+                    
+                    <h2>Education</h2>
+                    <img src="img/education.png" alt="clipart of kids who graduated">
                     <p><strong>Virginia State University</strong>, Petersburg, VA August 2008-2012<br/>Bachelor’s of Science (degree in progress)<br/>Major: Interdisciplinary Studies, Minor: Community Based Education </p>
 
                     <p><strong>Morgan State University</strong>, Baltimore, MD August 2006-August 2008<br/>Bachelor’s of Science (transfer)<br/>Major: Mass Communication</p>
@@ -49,6 +55,7 @@
 
                 <section id="experience">
                     <h1>Experience</h1>
+                    <img id="experience"src="img/experience.jpeg" alt="experience artwork"/>
                     <ul>
                         <li><strong>Intro to Programming</strong>, Code the Dream, January 2022</li>
                         <li><strong>Operations Supervisor</strong> Best Buy, Colonial Heights, VA May 2015-present</li>
@@ -56,45 +63,42 @@
                         <li><strong>Inventory Specialist</strong> Best Buy Colonial Heights, VA July 2013-January 2015</li>
                         <li><strong>Substitute Teacher</strong> Gum Spring Children’s Center, Alexandria, VA August 2006-August 2008 </li>
                     </ul>
-                    <img src="/img/download.jpeg" alt="experience artwork"/>
                 </section>
 
                 <hr/>
 
                 <section id="skills">
                     <h2>Skills</h2>
-                    <img src="/img/img_154751_softskills.jpeg" alt="picture of man holding softskills artwork"/>
-                    <ul></ul>
+                    <ul>
+
+                    </ul>
                 </section>
 
                 <section id="connect">
                     <h1>Connect</h1>
                     <ul>
-                        <li><a href="mailto:gkojunior@gmail.com" target="_blank"> Email</a></li>
-                        <li><a href="https://github.com/gkojunior"target="_blank">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank">LinkedIn</a> </li>
+                        <li><a href="mailto:gkojunior@gmail.com" target="_blank"><img src="img/gmail.png" alt="gmail icon"></a></li>
+                        <li><a href="https://github.com/gkojunior"target="_blank"><img src="img/GitHub.png" alt="github icon"></a></li>
+                        <li><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank"><img src="img/linked.jpeg" alt="linked in icon"></a> </li>
                     </ul>     
                 <section>                
             </main>
             
-             <section>
-                <h2>Leave a Message</h2>
-                
-                <form action="index.html" name="leave_message">
+             <section id="contact">
+                <form action="index.html" name="leave_message" id="leaveMessage">
+                    <h2 id="messageHeader">Leave a Message</h2>
                     <fieldset>
-
-                        <legend><span class="number">1</span> Basic info</legend><br/>
+                        <legend><span class="number">I</span> Basic Information</legend><br/>
 
                         <label>Name:</label>
-                        <input type="text" name="name" 
-                        required="true"><br/>
+                        <input type="text" name="name" required="true"><br/>
 
                         <label>Email:</label>
                         <input type="email" name="email" required="true"><br/>
                     </fieldset>
                     
                     <fieldset>
-                        <legend><span class="number">2</span> Message:</legend><br/>
+                        <legend><span class="number">II</span> Send me a message</legend><br/>
 
                         <label>Message:</label>
                         <textarea name="message" required="true"></textarea><br/>
@@ -104,12 +108,21 @@
                 </form>
             </section>
 
-            <footer>
-                
-            </footer>
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul>
 
+                </ul>
+            </section>
+
+            
+            
+            <footer>
+                <div><a href="#top" class="link_to_top">Back to top of page</a>
+                </div>
+            </footer>
         </div> <!-- End wrapper div  -->  
-        <a href="#top">Back to top of page</a>
-        <script src="/js/index.js"></script>  
+        
+        <script src="js/index.js"></script>  
     </body>
 </html>
