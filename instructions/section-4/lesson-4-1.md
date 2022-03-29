@@ -107,7 +107,11 @@ Create a commit for the changes you made and add a message describing the change
 
 Push your commit to the remote repository (visible in GitHub):
 
-    git push
+    git push 
+
+-Then Do 
+
+    git push origin lesson-4-1
 
 Check the log to make sure your commit has been published:
 
