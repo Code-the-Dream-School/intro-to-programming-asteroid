@@ -2,98 +2,127 @@
 <html lang="en">
 
     <head>
-        <title>Portfolio</title>
+        <title>Portfolio</title> 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Your description" />
-
+        <meta name="description" content="George's Portfolio">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali&display=swap">
     </head>
 
-    <body>
+    <body> 
+        <a name="top"></a> <!-- Anchor -->
         <div> <!-- Start wrapper div -->
             <header>
                 <nav>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#connect">Connect</a></li>
+                        <li>George K Owusu Jr</li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#experience">EXPERIENCE</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>  
                 </nav>
-
-                <div>
-                    <p><strong> I am the liason <br>that will connect your business <br> with the world!</strong> </p>
-                </div>
-
             </header>
+
+                <div id="head">
+                    <div><p> I am the liaison <br/>that will connect your business <br/> with the world!</p></div>
+                    
+                    <img id="profile-img" src="img/ME.jpg" alt="man in suit" height="250px" width="250px"/>
+                </div>
+            
+            <hr/>
+
             <main>
-                <section id="skills">
-                    <h2>Skills</h2>
-                    <ul></ul>
-                </section>
-
-                <hr>
-
                 <section id="about">
                     <h1>About</h1>
                     <p>George Owusu is a JavaScript Expert</p>
 
-                    <p>Mr. Owusu is currntly employed as an  Operations Supervisor at Best Buy. He has been with the company since 2013. Mr. Owusu has had a long term goal of devloping and maintaing web, phone and game applications. To begin making progress with his goal, he began coding in 2021. Mr. Owusu aspires to obtain a career as a Full-Stack Developer. </p>    
-                    <img src="/img/ME.jpg" alt="man in suit">
+                    <p>Mr. Owusu is currently employed as an  Operations Supervisor at Best Buy. He has been with the company since 2013. Mr. Owusu has had a long term goal of developing and maintaining web, phone and game applications. To begin making progress with his goal, he began coding in 2021. Mr. Owusu aspires to obtain a career as a Full-Stack Developer. </p>    
+                    
+                    <h2>Education</h2>
+                    <img src="img/education.png" alt="clipart of kids who graduated">
+                    <p><strong>Virginia State University</strong>, Petersburg, VA August 2008-2012<br/>Bachelor’s of Science (degree in progress)<br/>Major: Interdisciplinary Studies, Minor: Community Based Education </p>
+
+                    <p><strong>Morgan State University</strong>, Baltimore, MD August 2006-August 2008<br/>Bachelor’s of Science (transfer)<br/>Major: Mass Communication</p>
+
                 </section>
 
-                <hr>
+                <hr/>
 
                 <section id="experience">
                     <h1>Experience</h1>
+                    <img id="experience"src="img/experience.jpeg" alt="experience artwork"/>
                     <ul>
-                        <li>Operations Supervisor @ Best Buy</li>
-                        <li>Substitute Teacher @ Gum Spring Children Center</li>
-                        <li>Sales Associate @ Circuit City</li>
+                        <li><strong>Intro to Programming</strong>, Code the Dream, January 2022</li>
+                        <li><strong>Operations Supervisor</strong> Best Buy, Colonial Heights, VA May 2015-present</li>
+                        <li><strong>Inventory Specialist(SWAT)</strong>  Best Buy, Colonial Heights, VA January 2015-May 2015</li>
+                        <li><strong>Inventory Specialist</strong> Best Buy Colonial Heights, VA July 2013-January 2015</li>
+                        <li><strong>Substitute Teacher</strong> Gum Spring Children’s Center, Alexandria, VA August 2006-August 2008 </li>
                     </ul>
-                    <img src="/img/shutterstock_1913068270-jpg.jpeg" alt="picture of people working">
                 </section>
 
-                <hr>
+                <hr/>
 
-                <section>
-                    <form action="index.html" method="post">
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul>
 
-                        <h1>Leave a comment</h1>
-
-                        <fieldset>
-
-                            <legends><span class="number">1</span> Basic info</legends>
-
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="user_name">
-
-                            <label for="email">Email:</label>
-                            <input type="email" id="mail" name="user_email">
-                        </fieldset>
-
-                        <fieldset>
-
-                            <legends><span class="number">2</span> Please leave a Comment</legends>
-
-                            <label for="comment">Comment:</label>
-                            <textarea id="comment" name="user_comment"></textarea>
-                        </fieldset> 
-
-                        <button type="submit"> Submit </button> 
-
-                      </form>
+                    </ul>
                 </section>
 
                 <section id="connect">
                     <h1>Connect</h1>
                     <ul>
-                        <li><a href="mailto:gkojunior@gmail.com" target="_blank"> Email</li>
-                        <li><a href="https://github.com/gkojunior"target="_blank">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank">LinkedIn</a> </li>
+                        <li><a href="mailto:gkojunior@gmail.com" target="_blank"><img src="img/gmail.png" alt="gmail icon"></a></li>
+                        <li><a href="https://github.com/gkojunior"target="_blank"><img src="img/GitHub.png" alt="github icon"></a></li>
+                        <li><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank"><img src="img/linked.jpeg" alt="linked in icon"></a> </li>
                     </ul>     
                 <section>                
             </main>
-            <footer></footer>
-        </div> <!-- End wrapper div  -->    
+            
+             <section id="contact">
+                <form action="index.html" name="leave_message" id="leaveMessage">
+                    <h2 id="messageHeader">Leave a Message</h2>
+                    <fieldset>
+                        <legend><span class="number">I</span> Basic Information</legend><br/>
+
+                        <label>Name:</label>
+                        <input type="text" name="name" required="true"><br/>
+
+                        <label>Email:</label>
+                        <input type="email" name="email" required="true"><br/>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend><span class="number">II</span> Send me a message</legend><br/>
+
+                        <label>Message:</label>
+                        <textarea name="message" required="true"></textarea><br/>
+                    </fieldset>
+
+                        <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="messages">
+                <h2>Messages</h2>
+                <ul>
+
+                </ul>
+            </section>
+
+            
+            
+            <footer>
+                <div><a href="#top" class="link_to_top">Back to top of page</a>
+                </div>
+            </footer>
+        </div> <!-- End wrapper div  -->  
+        
+        <script src="js/index.js"></script>  
     </body>
 </html>
