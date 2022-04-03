@@ -8,8 +8,8 @@ footer.appendChild(copyright);
 const skills = ['HTML','CSS','JavaScript','Git','GitHub'];
 const skillsSection = document.getElementById('skills');
 const skillList = skillsSection.querySelector('ul');
-for(i=0; i<skills.length; i++){
-    item =document.createElement('li')
+for(let i=0; i<skills.length; i++){
+    let item = document.createElement('li')
     item.textContent = skills[i]
     skillList.append(item);
 }
