@@ -29,5 +29,5 @@ messageForm.addEventListener('submit', function(event){
     newMessage.append(userMessage.value)
 
     messageContainer.append(newMessage)
-    console.log(newMessage)
+    console.log(userName.value, userEmail.value, userMessage.value)
 })
