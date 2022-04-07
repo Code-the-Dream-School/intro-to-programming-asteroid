@@ -52,7 +52,7 @@ form.addEventListener('submit', (e) => {
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto: ${email}">${name}></a>`;
+    newMessage.innerHTML = `<a href="mailto: ${email}">${name}</a>`;
     messageList.appendChild(newMessage);
 
     const removeButton = document.createElement('button');
@@ -88,3 +88,11 @@ form.addEventListener('submit', (e) => {
       }
     }
   });
+
+removeButton.addEventListener('click' , (e) => {
+    const entry = button.parentNode;
+    entry.remove();
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+});
+
