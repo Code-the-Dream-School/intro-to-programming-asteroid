@@ -26,8 +26,24 @@ messageForm.addEventListener('submit', function(event){
 
     const newMessage = document.createElement('li')
     newMessage.append(`${userName.value} with email: ${userEmail.value} sent: `)
-    newMessage.append(userMessage.value)
+    newMessage.append(userMessage.value, ' ')
+    messageForm.reset()
+
+    
+    const removeButton = document.createElement('button')
+    removeButton.innerText = 'Remove'
+    removeButton.type = 'button'
+    
+    removeButton.addEventListener('click', (event) => {
+    const entry = event.target.parentNode
+    entry.remove()
+    })
 
     messageContainer.append(newMessage)
+    newMessage.appendChild(removeButton)
+    
+    
     console.log(userName.value, userEmail.value, userMessage.value)
 })
+
+
