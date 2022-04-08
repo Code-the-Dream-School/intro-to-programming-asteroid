@@ -46,21 +46,38 @@ form.addEventListener('submit', (e) => {
     console.log(email);
     console.log(messages);
 
-    const li = createLI(name, email, messages);
-    ul.appendChild(li);
+    // const li = createLI(name, email, messages);
+    // ul.appendChild(li);
 
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto: ${email}">${name}</a>`;
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>`;
+
+    const span = document.createElement('span');
+    span.textContent = messages;
+    newMessage.appendChild(span)
+
+    const editButton = document.createElement('button');
+    editButton.textContent = 'edit';
+    newMessage.appendChild(editButton);
     messageList.appendChild(newMessage);
 
     const removeButton = document.createElement('button');
     removeButton.textContent = 'remove';
     removeButton.type = "button"
-    li.appendChild(removeButton);
 
-    form.reset();
+    removeButton.addEventListener('click' , (e) => {
+      const entry = button.parentNode;
+      entry.remove();
+      // newMessage.appendChild(removeButton);
+      
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    
+    form.reset(); // resets form
   });                                 
   
   ul.addEventListener('click', (e) => { // edit handler
@@ -86,13 +103,3 @@ form.addEventListener('submit', (e) => {
         li.removeChild(input);
         button.textContent = 'edit'; 
       }
-    }
-  });
-
-removeButton.addEventListener('click' , (e) => {
-    const entry = button.parentNode;
-    entry.remove();
-    newMessage.appendChild(removeButton);
-    messageList.appendChild(newMessage);
-});
-
