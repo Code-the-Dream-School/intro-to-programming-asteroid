@@ -3,6 +3,7 @@ body {
     color: #2b3d68;
     font-family: 'Raleway', sans-serif;
     margin-left: 80px;
+    margin-right: 80px;
 }
 
 h1 {
@@ -17,6 +18,29 @@ hr {
     border: 1px solid #3e475e; size: 90px; width: 90%;
 }
 
-p {
-    border: 6px solid powderblue;
+article.experience {
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+section.skills {
+    border: 1px solid rgb(173, 230, 230);
+    background-color: rgb(173, 230, 230);
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+section.messages {
+    border: 1px solid rgb(173, 230, 199);
+    background-color: rgb(173, 230, 199);
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
