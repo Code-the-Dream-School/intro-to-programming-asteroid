@@ -1,25 +1,17 @@
 //Insert Copyright Text in Footer
-//create a new date object
 const today = new Date()
-//retrieve the current year from date object
 const thisYear = today.getFullYear()
-//using "DOM Selection", select the footer element
 const footer = document.querySelector("footer")
-//create a new paragraph element
 const copyright = document.createElement("p")
-//set the inner HTML of copyright element to display name and current year
 copyright.innerHTML = `&copy Amy Sandoval ${thisYear}`
-//using "DOM Manipulation", append the copyright element to the footer
 footer.appendChild(copyright)
 
 //Create List of Skills
-//list your technical skills by creating an Array of String values
 const skills = ["JavaScript", "HTML", "CSS"]
-//using "DOM Selection", select the "skills" section by id
 const skillsSection = document.getElementById("skills")
-//using "DOM Selection", query the skillsSection to find the <ul> element
 const skillsList = skillsSection.querySelector("ul")
-//create a for loop to iterate over your skills Array, starting at index 0
+
+//Create a for loop to iterate over your skills Array, starting at index 0
 for (let i = 0; i < skills.length; i++) {
   //inside the loop, create a new list item element
   let skill = document.createElement("li")
@@ -32,6 +24,11 @@ for (let i = 0; i < skills.length; i++) {
 //Handle Message Form Submit
 //using "DOM Selection", select the "leave_message" form by name attribute
 const messageForm = document.getElementsByName("leave_message")[0]
+const messageSection = document.getElementById("messages")
+
+//Hide the #messages section when the list is empty
+messageSection.style.display = "none"
+
 //add an event listener to the messageForm element that handles the "submit" event
 messageForm.addEventListener("submit", (event) => {
   //inside the callback function, create a new variable for each of the three form fields
@@ -41,8 +38,6 @@ messageForm.addEventListener("submit", (event) => {
   const textarea = event.target.message
   console.log(name.value, email.value, textarea.value)
   //Display Messages in List
-  //using "DOM Selection", select the #messages section by id
-  const messageSection = document.getElementById("messages")
   //using "DOM Selection", query the messageSection to find the <ul> element
   const messageList = messageSection.querySelector("ul")
   //create a new list item (li) element
@@ -70,4 +65,12 @@ messageForm.addEventListener("submit", (event) => {
   messageList.appendChild(newMessage)
   //add a new line of code to clear the form
   messageForm.reset()
+  //Show the #messages section
+  if (messageList) {
+    messageSection.style.display = "block"
+  }
+  //  *** next question is: how to hide messages section again after all messages are "removed" ***
+  // if messageList is empty, hide messages section, else, show messageList
 })
+
+//Create an "edit" button for each message entry that allows user to input a new/modified message
