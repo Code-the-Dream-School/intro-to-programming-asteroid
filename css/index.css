@@ -1,0 +1,113 @@
+/* font size 100% = 16px = 1em*/
+
+body {
+  background-color: #fefaf6;
+  color: #483434;
+  margin: 0;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 30px auto 0 auto;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 2;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+#header-container {
+  background-color: #fff3e4;
+  position: relative;
+  padding: 100px 0;
+}
+
+.li {
+  display: inline;
+  list-style-type: none;
+  line-height: 2;
+}
+
+#about-container {
+  margin: 100px auto;
+  line-height: 2;
+  width: 50%;
+  text-align: left;
+}
+
+#experience-container {
+  background: #fff3e4;
+  margin: 100px auto;
+  padding: 10px 0 10px 0;
+}
+.experience-text {
+  margin: 100px auto;
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+}
+
+#skills-container {
+  width: 50%;
+  text-align: left;
+  margin: 100px auto;
+  line-height: 2;
+}
+
+.skills-li {
+  background: #fff3e4;
+  line-height: 2;
+  list-style-type: none;
+  display: inline;
+  margin: 15px;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+
+#leave-a-message-container {
+  margin: 100px auto;
+  line-height: 2;
+  width: 50%;
+  text-align: left;
+}
+
+#submit-button {
+  position: relative;
+  width: 90px;
+  height: 30px;
+  background-color: #fff3e4;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#messages-container {
+  margin: 100px auto;
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+}
+
+.messages-li {
+  background: #fff3e4;
+  line-height: 2;
+}
+
+#footer-container {
+  background-color: #fff3e4;
+  padding: 50px 0 20px;
+}

@@ -5,16 +5,17 @@ var thisYear = today.getFullYear();
 var footer = document.querySelector("footer");
 var copyright = document.createElement("p");
 
-copyright.innerHTML = `&copy;XeniyaD  ${thisYear}`;
+copyright.innerHTML = `&copy;Xeniya Dobrogorskaya  ${thisYear}`;
 
 footer.appendChild(copyright);
 
 const skills = ["HTML", "CSS", "JavaScript"];
-const skillsSection = document.querySelector("#skills");
+const skillsSection = document.querySelector("#skills-container");
 const skillsList = skillsSection.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
   const skill = document.createElement("li");
+  skill.setAttribute("class", "skills-li");
   skill.textContent = skills[i];
   skillsList.appendChild(skill);
 }
@@ -27,16 +28,15 @@ messageForm.addEventListener("submit", (event) => {
   const emailInput = event.target.email;
   const textArea = event.target.message;
 
-  const messageSection = document.querySelector("#messages");
+  const messageSection = document.querySelector("#messages-container");
   const messageList = messageSection.querySelector("ul");
   //console.log(messageList);
+  // Create messages in a Message Section hide it if no messages
   const newMessage = document.createElement("li");
+  newMessage.setAttribute("class", "messages-li");
   messageList.appendChild(newMessage);
-  newMessage.insertAdjacentHTML(
-    "afterbegin",
-    `<a href="mailto:${emailInput.value}" target="_blank"
-  >${nameInput.value}</a> wrote: <span> ${textArea.value} </span>`
-  );
+  newMessage.innerHTML = `<a href="mailto:${emailInput.value}" target="_blank"
+  >${nameInput.value}</a><span> wrote:  ${textArea.value} </span>`;
   //create EDIT Button
   const editButton = document.createElement("button");
   editButton.textContent = "edit";
@@ -54,9 +54,13 @@ messageForm.addEventListener("submit", (event) => {
       if (button.textContent === "remove") {
         ul.removeChild(entry);
       } else if (button.textContent === "edit") {
-        // still working on EDIT button functionality
-        //and
-        //Hide the #messages section feature
+        const span = entry.querySelector("span");
+        const editMessage = document.createElement("input");
+        editMessage.type = "text";
+        editMessage.value = textArea.value;
+        entry.insertBefore(editMessage, span);
+        entry.removeChild(span);
+        //Next going to turn edit button into save button
       }
     }
   });
