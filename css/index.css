@@ -1,14 +1,15 @@
-
-
-@media screen and (min-width: 992px) {
+/*
+Setting for modile view
+*/
+@media screen and (max-width: 990px) {
     body {
         background-color: AliceBlue;
         color: #2b3d68;
         font-family: 'Raleway', sans-serif;
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
-
+ 
     h1 {
         font-size: 40px; font-weight: 10; color: #6880b8;
     }
@@ -17,17 +18,10 @@
         font-size: 30px; font-weight: 10; color: #6880b8;
     }
     
-    /* hr {
-        border: 1px solid #3e475e; size: 90px; width: 90%;
-    } */
-    
     article.experience {
         border: 1px solid lightblue;
         background-color: lightblue;
-        padding-top: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
+        padding: 10px;
         border-radius: 10px;
     }
     
@@ -92,10 +86,15 @@
         color: #323f5c;
         padding-top: 5px;
         padding-bottom: 10px;
-        padding-left: 50px;
+        padding-right: 10px;
     }
 }
   
+
+/*
+Below setting for browser
+*/
+
 @media screen and (min-width: 1312px) {
     body {
         background-color: AliceBlue;
@@ -113,17 +112,10 @@
         font-size: 30px; font-weight: 10; color: #6880b8;
     }
     
-    /* hr {
-        border: 1px solid #3e475e; size: 90px; width: 90%;
-    } */
-    
     article.experience {
         border: 1px solid lightblue;
         background-color: lightblue;
-        padding-top: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
+        padding: 10px;
         border-radius: 10px;
     }
     
