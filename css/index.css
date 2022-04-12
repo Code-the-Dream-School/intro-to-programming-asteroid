@@ -1,0 +1,71 @@
+body {
+  background-color: #89CE94;
+  color: #311E10;
+  font-family: "Avenir Next", Calibri, Verdana, sans-serif;  
+}
+
+h1 {
+    text-align:center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 26px;  
+    font-weight: bold; 
+}
+
+section {
+    margin-top : 20px;
+    margin-left : 40px;
+    padding-bottom: 30px;
+    padding-right:10px;
+}
+
+.experience-list li,
+.skills-list li ,
+.messages-list li{
+    border: 2px solid #820263;
+}
+  
+form {
+    background-color: papayawhip;
+    border: 2px solid steelblue;
+    padding: 32px;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+textarea {
+    width: 50%;
+}
+
+.navigation-list{
+    margin-left:40px;
+}
+
+button {
+    font-size: 18px;
+    padding: 8px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #F194B4;
+    text-align:center;
+    padding:1px;
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 100%;
+    }
+    
+    textarea {
+        width: 100%;
+    }
+}
