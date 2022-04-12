@@ -2,7 +2,9 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
-copyright.innerHTML = (`&copy Dmitry Boyko ${thisYear}`);
+copyright.innerHTML = (` &copy Dmitry Boyko ${thisYear}`);
+copyright.style.color = "lightblue";
+copyright.style.letterSpacing = '.12rem';
 footer.appendChild(copyright);
 
 const skillsSection = document.getElementById('skills');
