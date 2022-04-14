@@ -1,0 +1,389 @@
+body {
+    background-image: linear-gradient(to top, #000033, #222255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    margin: 10px;
+    padding: 100px;
+    height: 100%;
+}
+
+
+/* moon image and details */
+
+#moon{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    animation: shine 2s ease-in-out infinite;
+    background-color: #e7e6e1;
+    box-shadow: 0px 0px 5px 2px #5f5f72;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+
+}
+
+.details {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    background-color: rgba(165, 165, 165, 0.089);
+}
+.details.one {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.two {
+    position: absolute;
+    top: 60px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset -2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.three {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.685);
+}
+.details.four.small {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 2px 0 4px rgba(167, 167, 167, 0.585);
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#container{
+    margin: 5px;
+    padding-right: 300px;
+}
+
+  .typing-effect h1 {
+    color: #fff;
+    font-family: dotgothic16, sans-serif;
+    font-size: 70px;
+    line-height: 80px;
+    overflow: hidden; 
+    border-right: 5px solid whitesmoke; 
+    white-space: nowrap; 
+    margin: 5px; 
+    letter-spacing: 5px; 
+    animation: 
+      typing 4s steps(30),
+      blink-caret .7s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0%}
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: whitesmoke }
+  }
+
+
+#message-link{
+    font-family: dotgothic16, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    background-color: #b1d4f1;
+    transition-duration: 2s;
+}
+#message-link:hover{
+    animation: shine 2s ease-in-out infinite;
+    background-color: #a87ab3;
+}
+
+/* navigation bar */
+
+#navbar{
+    list-style-type: none;
+    display: block;
+    width: 120px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    float: right;
+}
+
+#navbar a{
+    color: #b1d4f1;
+    font-family: dotgothic16, sans-serif;
+    font-size: 16px;
+
+}
+
+
+
+
+#about{
+    padding: 10px;
+    margin: 5px;
+    font-family: dotgothic16, sans-serif;
+    font-size: 50px;
+    padding-top: 340px;
+}
+
+#about-descript{
+    font-size: 15px;
+    padding: 5px;
+    width: 600px;
+    display:inline-block
+}
+
+#myself{
+    width: 375;
+    height: 375;
+    float:right;
+    display: inline;
+    padding-right: 20px;
+    border-radius: 50px;
+
+}
+
+#intro{
+    font-size: 15px;
+    font-family: roboto mono;
+    padding: 10px;
+    margin: 5px;
+    width: 600px;
+    height: 150px;
+    line-height: 20px;
+}
+
+#experience{
+    font-size: 50px;
+    font-family: dotgothic16, sans-serif;
+    padding: 10px;
+    margin: 5px;
+    padding-top: 80px;
+    
+} 
+
+#exp-sect{
+    font-size: 15px;
+    width: 600px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.exp{
+    font-size: 20px;
+    width: 600px;
+    padding: 10px;
+
+}
+
+#title{
+    padding: 10px;
+    font-size: 15px;
+}
+
+#sk-title{
+    font-family: dotgothic16, sans serif;
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;  
+    padding-top: 80px; 
+}
+
+.lists{
+    font-family: roboto mono;
+    color: #b1d4f1;
+    padding: 10px;
+    margin: 5px;
+    display:inline-block;
+    border: 1px solid #a87ab3;
+    list-style-type: none;
+
+
+}
+
+#connect{
+    font-family: dotgothic16, sans-serif;
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;
+    padding-top: 80px;
+}
+
+#proj-title{
+    font-family: dotgothic16, sans-serif;
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;
+    padding-top: 80px;
+
+}
+
+#mess-sect{
+    font-family: dotgothic16, sans-serif;
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;
+    padding-top: 80px;
+}
+
+#git{
+    font-family: roboto mono;
+    font-size: 15px; 
+    color: #b1d4f1;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+#git:hover{
+    animation: 0.5s ease-in-out infinite;
+    color: #a87ab3;
+}
+
+#linked{
+    font-family: roboto mono;
+    font-size: 15px;
+    color: #b1d4f1;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+#linked:hover{
+    animation: 0.5s ease-in-out infinite;
+    color: #a87ab3;
+}
+
+#mess-sect-2{
+    font-family: dotgothic16, sans-serif;
+    font-size: 50px;
+}
+
+#sub-button{
+    font-family:  dotgothic16, sans-serif;
+    font-size: 16px;
+    color: #141414;
+    background-color: #b1d4f1;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#sub-button:hover{
+    animation: 0.5s ease-in-out infinite;
+    color: #a87ab3;
+}
+
+.LAM{
+    font-family: dotgothic16, sans-serif;
+    font-size: 15px;
+    color: #b1d4f1;
+    padding: 10px;
+    margin: 5px;
+    padding-top: 80px;
+
+}
+
+input{
+    background-color: #b1d4f1;
+    border-radius: 10px;
+  
+}
+
+textarea{
+    background-color: #b1d4f1;
+    border-radius: 10px;
+}
+
+
+
+h2, p, form, img {
+    opacity: 0; 
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    bottom: 0;
+}
+
+.exp(2) p.show {
+    transition-delay: 0.5s;
+}
+
+.exp(3) p.show {
+    transition-delay: 2s;
+}
+
+.title(1) h2.show{
+    transition-delay: 0.5s;
+}
+
+#foot{
+    font-family: dotgothic16, sans-serif;
+    text-align: center;
+    color: #b1d4f1;
+    position: relative;
+    width: 100%;
+}
+
+p.copyright {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    bottom:0;
+}
+
+
+
+@media screen and (min-width: 688px) {
+
+}
+
+
+@media  and (min-width: 992px) {
+    
+}
