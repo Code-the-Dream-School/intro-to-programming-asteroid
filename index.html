@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
         <title>Portfolio</title>  
+
     </head>
 
     <body> 
@@ -77,12 +77,78 @@
             <ul></ul>
         </section>
 
+</head>
+
+    <body> 
+        <a name="top"></a> <!-- Anchor -->
+        <div> <!-- Start wrapper div -->
+            <header>
+                <nav>
+                    <ul>
+                        <li>George K Owusu Jr</li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#experience">EXPERIENCE</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>  
+                </nav>
+            </header>
+
+                <div id="head">
+                    <div><p> I am the liaison <br/>that will connect your business <br/> with the world!</p></div>
+                    
+                    <img id="profile-img" src="img/ME.jpg" alt="man in suit" height="250px" width="250px"/>
+                </div>
+            <main>
+                <section class="container" id="about">
+                    <div>
+                        <h1>About</h1>
+                        <img src="img/about_section_img.jpeg" alt="clipart with the word about">
+                        <p>Mr. Owusu is currently employed as an  Operations Supervisor at Best Buy. He has been with the company since 2013. Mr. Owusu has had a long term goal of developing and maintaining web, phone and game applications. To begin making progress with his goal, he began coding in 2021. Mr. Owusu aspires to obtain a career as a Full-Stack Developer. </p>    
+                    </div>
+                    
+                    <div>      
+                        <h2>Education</h2>
+                        <img id="education-img" src="img/education.png" alt="clipart of kids who graduated">
+                        <p><strong>Virginia State University</strong>, Petersburg, VA August 2008-2012<br/>Bachelor’s of Science (degree in progress)<br/>Major: Interdisciplinary Studies, Minor: Community Based Education </p> <br/>
+                        <p><strong>Morgan State University</strong>, Baltimore, MD August 2006-August 2008<br/>Bachelor’s of Science (transfer)<br/>Major: Mass Communication</p>
+                    </div>
+              
+                </section>
+
+                <hr/>
+
+                <section id="experience">
+                    <h1>Experience</h1><br/>
+                    <ul class="experienceContainer">
+                        <li>Intro to Programming, Code the Dream, January 2022</li> <br/>
+                        <li>Operations Supervisor Best Buy, Colonial Heights, VA May 2015-present</li> <br/>
+                        <li>Inventory Specialist(SWAT)  Best Buy, Colonial Heights, VA January 2015-May 2015</li> <br/>
+                        <li>Inventory Specialist Best Buy Colonial Heights, VA July 2013-January 2015</li> <br/>
+                        <li>Substitute Teacher Gum Spring Children’s Center, Alexandria, VA August 2006-August 2008 </li> <br/>
+                    </ul>
+                </section>
+
+                <hr/>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <ul>
+
+                    </ul>
+              </section>
+            </main>
+
+            <hr/>
+            
              <section id="contact">
-                 <h2 id="messageHeader">Leave a Message</h2>
+                <h2 id="messageHeader">Leave a Message</h2>
                 <form action="index.html" method="post" name="leave_message" id="leaveMessage">
                     
                     <fieldset>
                         <!-- <legend><span class="number">I</span> Basic Information</legend><br/> -->
+                        <legend><span class="number">I</span> Basic Information</legend><br/>
 
                         <label for="submitterName">Name:</label>
                         <input type="text" name="submitterName" required="true"><br/>
@@ -94,6 +160,8 @@
                     
                     <fieldset>
                         <!-- <legend><span class="number">II</span> Leave me a message!:</legend><br/> -->
+
+                        <legend><span class="number">II</span> Leave me a message!:</legend><br/>
 
                         <label for="submitterMessage">Message:</label>
                         <textarea name="submitterMessage" required="true"></textarea><br/>
@@ -108,6 +176,7 @@
                 <ul id="messageList"></ul>
             </section>
             
+
             <footer>
                 <div class="container">
                     <div class="item-1 item"><a href="mailto:gkojunior@gmail.com" target="_blank"><img src="img/Gmail_Logo.png" alt="gmail icon"></a></div>
@@ -115,6 +184,19 @@
                     <div class="item-3 item"><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank"><img src="img/linkedin-icon.png" alt="linked in icon"></a></div>
                     <div class="item-4 item"><a href="#top" class="link_to_top">BACK TO TOP</a></div>
                 </div>        
+
+            <footer class="container">
+                <div >
+                    <a href="#top" class="link_to_top">Back to top of page</a>
+                </div>
+                    
+                <div id="connect">
+                        <ul>
+                            <li><a href="mailto:gkojunior@gmail.com" target="_blank"><img src="img/Gmail_Logo.png" alt="gmail icon"></a></li> <br/>
+                            <li><a href="https://github.com/gkojunior"target="_blank"><img src="img/github-logo.png" height="40px"alt="github icon"></a></li> <br/>
+                            <li><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank"><img src="img/linkedin-icon.png" alt="linked in icon"></a> </li>
+                        </ul>
+                </div>
             </footer>
         </div> <!-- End wrapper div  -->  
         <script src="js/index.js"></script>  
