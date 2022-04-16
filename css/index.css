@@ -8,7 +8,7 @@ body {
   background-color: rgb(255, 255, 255);
   color: rgb(36, 70, 142);
   font-family: "Roboto", sans-serif;
-  font-size: 100%; /* 100% = 16px on most screens */
+  font-size: 125%; /* 100% = 16px on most screens */
 }
 
 /* type selectors */
@@ -21,9 +21,16 @@ section {
   border-bottom: none;
   padding: 3% 5%;
 }
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Monoton", cursive;
   font-size: 3em;
+  font-weight: lighter;
+  color: rgb(36, 70, 142);
 }
 ul {
   padding: 0% 0.5% 0% 0%;
@@ -48,7 +55,14 @@ a:active {
   color: rgb(219, 9, 126);
 }
 button {
-  border-style: inset;
+  margin: 1% 1% 1% 0%;
+  border-style: double;
+  border-radius: 5%;
+  padding: 1.5%;
+  background-color: rgba(219, 9, 126, 0.05);
+  color: rgb(36, 70, 142);
+  font-size: 1em;
+  font-weight: bold;
 }
 footer {
   margin: 5%;
@@ -97,9 +111,32 @@ footer {
 #connect ul li {
   color: rgb(1, 43, 134);
 }
-#messageForm {
+#messageForm form label {
+  margin: auto;
   font-family: "Nothing You Could Do", cursive;
   color: rgb(140, 87, 156);
+  font-size: 1.25em;
+}
+#messageForm form input {
+  margin: 0% 0% 2% 0%;
+  border-style: dotted;
+  padding: 1%;
+  font-size: 0.9rem;
+}
+#messageForm form textarea {
+  border-style: dashed;
+  padding: 1%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+#messageForm form button[type="reset"] {
+  padding: 0% 1.75%;
+}
+#messageForm form button[type="submit"] {
+  padding: 1% 2%;
+  font-family: "Monoton", cursive;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 #messages {
   font-family: "Nothing You Could Do", cursive;
@@ -107,4 +144,12 @@ footer {
 }
 #messages ul li {
   text-align: left;
+  font-size: 1.25em;
+}
+#messages button[type="button"] {
+  padding: 0% 0.5%;
+  border-style: dotted;
+  border-color: rgb(219, 9, 126);
+  font-size: 1rem;
+  color: rgb(219, 9, 126);
 }

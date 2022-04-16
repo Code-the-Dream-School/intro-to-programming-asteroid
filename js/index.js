@@ -49,7 +49,7 @@ messageForm.addEventListener("submit", (event) => {
   //create a new <button> element
   const removeButton = document.createElement("button");
   //set the inner text to "remove"
-  removeButton.innerText = "remove";
+  removeButton.innerText = "Remove";
   //set the type attribute to "button"
   removeButton.type = "button";
   //add an event listener that handles the "click" event
