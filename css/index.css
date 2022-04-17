@@ -5,10 +5,11 @@
 
 /* applies to the entire body of the HTML document (except where overriden by more specific selectors) */
 body {
+  margin: auto;
   background-color: rgb(255, 255, 255);
   color: rgb(36, 70, 142);
   font-family: "Roboto", sans-serif;
-  font-size: 125%; /* 100% = 16px on most screens */
+  font-size: 100%; /* 100% = 16px on most screens */
 }
 
 /* type selectors */
@@ -28,7 +29,7 @@ h4,
 h5,
 h6 {
   font-family: "Monoton", cursive;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: lighter;
   color: rgb(36, 70, 142);
 }
@@ -67,7 +68,11 @@ button {
 footer {
   margin: 5%;
   border-top: solid rgb(140, 87, 156);
+  border-right: dotted rgb(36, 70, 142);
+  border-bottom: dotted rgb(140, 87, 156);
+  border-left: dotted rgb(219, 9, 126);
   padding: 5%;
+  background-color: rgba(219, 9, 126, 0.05);
   text-align: center;
   font-size: 0.75em;
 }
@@ -83,7 +88,7 @@ footer {
   padding: 5%;
   text-align: center;
   font-family: "Monoton", cursive;
-  font-size: 4em;
+  font-size: 2.5em;
   color: rgb(219, 9, 126);
 }
 
@@ -143,6 +148,7 @@ footer {
   color: rgb(140, 87, 156);
 }
 #messages ul li {
+  background-color: rgb(199, 145, 175);
   text-align: left;
   font-size: 1.25em;
 }
@@ -152,4 +158,10 @@ footer {
   border-color: rgb(219, 9, 126);
   font-size: 1rem;
   color: rgb(219, 9, 126);
+}
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  ul li {
+    display: inline-block;
+  }
 }
