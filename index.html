@@ -5,10 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Nothing+You+Could+Do&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
   </head>
-  <body style="background-color: whitesmoke">
-    <h1 style="color: palevioletred">Amy Sandoval</h1>
-    <section style="color: darkmagenta">
+  <body>
+    <h1 class="header">Amy Sandoval</h1>
+    <section id="about">
       <h2>About</h2>
       <p>
         Hi, I’m Amy! I am a queer Mexican-American woman, born and raised in the
@@ -16,9 +22,10 @@
         January 2022. When I’m not coding or working my full-time job, I enjoy
         hiking and supporting local vegan restaurants. I’ve been vegan since
         April 2016 and I only wish I had gone vegan sooner!
+        <br><br>Pronouns: she/her
       </p>
     </section>
-    <section style="color: mediumpurple">
+    <section id="experience">
       <h2>Experience</h2>
       <ul>
         <li>Property Administrator</li>
@@ -30,7 +37,7 @@
       <h2>Skills</h2>
     <ul></ul>
     </section>
-    <section style="color: mediumblue">
+    <section id="connect">
       <h2>Connect</h2>
       <ul>
         <li>
@@ -44,7 +51,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section id="messageForm">
       <h2>Leave a Message</h2>
       <form name="leave_message">
         <label for="name">Name</label>
@@ -60,6 +67,7 @@
         <textarea name="message" required="true"></textarea>
         <br>
         <button type="reset">Clear Form</button>
+        <br>
         <button type="submit">Submit</button>
       </form>
     </section>

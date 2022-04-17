@@ -1,0 +1,167 @@
+/* universal selector - applies everywhere  */
+* {
+  box-sizing: border-box;
+}
+
+/* applies to the entire body of the HTML document (except where overriden by more specific selectors) */
+body {
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  color: rgb(36, 70, 142);
+  font-family: "Roboto", sans-serif;
+  font-size: 100%; /* 100% = 16px on most screens */
+}
+
+/* type selectors */
+section {
+  margin: -5% 5%;
+  border-style: solid;
+  border-left-color: rgb(219, 9, 126);
+  border-right-color: rgb(36, 70, 142);
+  border-top: none;
+  border-bottom: none;
+  padding: 3% 5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Monoton", cursive;
+  font-size: 2em;
+  font-weight: lighter;
+  color: rgb(36, 70, 142);
+}
+ul {
+  padding: 0% 0.5% 0% 0%;
+  list-style-type: none;
+}
+li {
+  margin-bottom: 5%;
+  text-align: center;
+}
+a:link {
+  color: rgb(0, 81, 255);
+}
+a:visited {
+  color: rgb(102, 0, 255);
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: rgb(219, 9, 126);
+}
+button {
+  margin: 1% 1% 1% 0%;
+  border-style: double;
+  border-radius: 5%;
+  padding: 1.5%;
+  background-color: rgba(219, 9, 126, 0.05);
+  color: rgb(36, 70, 142);
+  font-size: 1em;
+  font-weight: bold;
+}
+footer {
+  margin: 5%;
+  border-top: solid rgb(140, 87, 156);
+  border-right: dotted rgb(36, 70, 142);
+  border-bottom: dotted rgb(140, 87, 156);
+  border-left: dotted rgb(219, 9, 126);
+  padding: 5%;
+  background-color: rgba(219, 9, 126, 0.05);
+  text-align: center;
+  font-size: 0.75em;
+}
+
+/* class selectors */
+.header {
+  margin: 10% 5% 5%;
+  border-style: solid;
+  border-left-color: rgb(219, 9, 126);
+  border-top-color: rgb(140, 87, 156);
+  border-right-color: rgb(36, 70, 142);
+  border-bottom: none;
+  padding: 5%;
+  text-align: center;
+  font-family: "Monoton", cursive;
+  font-size: 2.5em;
+  color: rgb(219, 9, 126);
+}
+
+/* ID selectors */
+#about {
+  color: rgb(219, 9, 126);
+}
+#experience {
+  color: rgb(36, 70, 142);
+}
+#experience ul li {
+  background: rgb(191, 208, 247);
+}
+#skills {
+  color: rgb(36, 70, 142);
+}
+#skills ul li {
+  border: dotted;
+  border-color: rgb(199, 145, 175);
+  padding: 2%;
+}
+#connect {
+  color: rgb(36, 70, 142);
+}
+#connect ul li {
+  color: rgb(1, 43, 134);
+}
+#messageForm form label {
+  margin: auto;
+  font-family: "Nothing You Could Do", cursive;
+  color: rgb(140, 87, 156);
+  font-size: 1.25em;
+}
+#messageForm form input {
+  margin: 0% 0% 2% 0%;
+  border-style: dotted;
+  padding: 1%;
+  font-size: 0.9rem;
+}
+#messageForm form textarea {
+  border-style: dashed;
+  padding: 1%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+#messageForm form button[type="reset"] {
+  padding: 0% 1.75%;
+}
+#messageForm form button[type="submit"] {
+  padding: 1% 2%;
+  font-family: "Monoton", cursive;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+#messages {
+  font-family: "Nothing You Could Do", cursive;
+  color: rgb(140, 87, 156);
+}
+#messages ul li {
+  background-color: rgb(199, 145, 175);
+  text-align: left;
+  font-size: 1.25em;
+}
+#messages button[type="button"] {
+  padding: 0% 0.5%;
+  border-style: dotted;
+  border-color: rgb(219, 9, 126);
+  font-size: 1rem;
+  color: rgb(219, 9, 126);
+}
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  ul li {
+    display: inline-block;
+  }
+}
