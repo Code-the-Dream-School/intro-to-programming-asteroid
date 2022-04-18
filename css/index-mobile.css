@@ -1,18 +1,15 @@
-
-
 /*
-Below setting for browser
+Setting for modile view
 */
-
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 990px) {
     body {
         background-color: AliceBlue;
         color: #2b3d68;
         font-family: 'Raleway', sans-serif;
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
-
+ 
     h1 {
         font-size: 40px; font-weight: 10; color: #6880b8;
     }
@@ -20,8 +17,8 @@ Below setting for browser
     h2 {
         font-size: 30px; font-weight: 10; color: #6880b8;
     }
-    
-     .topnav {
+
+    .topnav {
         background-color: #333;
         overflow: hidden;
         border-radius: 10px;
@@ -37,12 +34,12 @@ Below setting for browser
     }
     
     .topnav a:hover {
-        background-color: rgb(195, 235, 238);
+        background-color: #ddd;
         color: black;
     }
     
     .topnav a.active {
-        background-color: #049faa;
+        background-color: #04AA6D;
         color: white;
     }
 
@@ -56,7 +53,7 @@ Below setting for browser
         border-radius: 10px;
         margin-bottom: 20px;
     }
-    
+        
     article.experience {
         border: 1px solid lightblue;
         background-color: lightblue;
@@ -66,14 +63,9 @@ Below setting for browser
 
     .flex-experience {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin-bottom: 10px;
       }
-    
-    .flex-leave-message {
-        display: flex;
-        flex-direction: column;
-    }
     
     section.skills {
         border: 1px solid rgb(173, 230, 230);
@@ -95,17 +87,6 @@ Below setting for browser
         border-radius: 10px;
     }
     
-    form.leave_message {
-        font-family: Arial, Helvetica, sans-serif; 
-        font-size: 15px; 
-        font-weight: 10; 
-        font-style: italic; 
-        color: #323f5c;
-        padding-top: 5px;
-        padding-bottom: 10px;
-        padding-left: 250px;
-    }
-    
     input.userNameandEmail {
         border:2px solid #2a539e;
         width: 250px;
@@ -118,6 +99,12 @@ Below setting for browser
         height: 100px;
     }
     
+    .flex-leave-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     button.submitButton {
         background-color: #4caf86;
         border: none;
@@ -125,10 +112,9 @@ Below setting for browser
         padding: 15px 105px;
         text-align: center;
         text-decoration: none;
-        /* display: inline-block; */
+        display: inline-block;
         font-size: 16px;
-        border-radius: 8px;
-        width: 255px;
+        border-radius: 10px;
     }
     
     footer.footer {
@@ -138,6 +124,17 @@ Below setting for browser
         padding-bottom: 100px;
         padding-left: 10px;
         border-radius: 10px;
+    }
+
+    form.leave_message {
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 15px; 
+        font-weight: 10; 
+        font-style: italic; 
+        color: #323f5c;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        padding-right: 10px;
     }
 
     html {
