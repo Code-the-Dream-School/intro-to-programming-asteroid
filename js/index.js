@@ -20,23 +20,27 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
+// Create messages in a Message Section, Hide the #messages-container section when the list is empty
+const messageSection = document.querySelector("#messages-container");
+const messageList = messageSection.querySelector("ul");
+//Hide Messages-container
+messageSection.hidden = true;
+
 const messageForm = document.getElementsByName("leave_message")[0];
 
 messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const nameInput = event.target.name;
-  const emailInput = event.target.email;
-  const textArea = event.target.message;
+  const nameInput = event.target.name.value;
+  const emailInput = event.target.email.value;
+  const textArea = event.target.message.value;
 
-  const messageSection = document.querySelector("#messages-container");
-  const messageList = messageSection.querySelector("ul");
-  //console.log(messageList);
-  // Create messages in a Message Section hide it if no messages
+  messageSection.hidden = false; //display Messages-container
+
   const newMessage = document.createElement("li");
   newMessage.setAttribute("class", "messages-li");
   messageList.appendChild(newMessage);
-  newMessage.innerHTML = `<a href="mailto:${emailInput.value}" target="_blank"
-  >${nameInput.value}</a><span> wrote:  ${textArea.value} </span>`;
+  newMessage.innerHTML = `<a href="mailto:${emailInput}" target="_blank"
+  >${nameInput}</a>   wrote: <span> ${textArea} </span>`;
   //create EDIT Button
   const editButton = document.createElement("button");
   editButton.textContent = "edit";
@@ -45,6 +49,7 @@ messageForm.addEventListener("submit", (event) => {
   const removeButton = document.createElement("button");
   removeButton.textContent = "remove";
   removeButton.type = "button";
+
   //event listener for EDIT and REMOVE Buttons
   newMessage.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
@@ -53,15 +58,25 @@ messageForm.addEventListener("submit", (event) => {
       const ul = entry.parentNode;
       if (button.textContent === "remove") {
         ul.removeChild(entry);
+        messageSection.hidden = true; //Hide Messages-container
       } else if (button.textContent === "edit") {
         const span = entry.querySelector("span");
         const editMessage = document.createElement("input");
         editMessage.type = "text";
-        editMessage.value = textArea.value;
+        editMessage.value = textArea;
+        editMessage.value = span.textContent;
         entry.insertBefore(editMessage, span);
         entry.removeChild(span);
-        //Next going to turn edit button into save button
-      }
+        //edit button into save button
+        button.textContent = "save";
+      } else if (button.textContent === "save") {
+        const newMessage = entry.querySelector("input");
+        const span = document.createElement("span");
+        span.textContent = newMessage.value;
+        entry.insertBefore(span, newMessage);
+        entry.removeChild(newMessage);
+        button.textContent = "edit";
+      } //Done :)
     }
   });
   newMessage.appendChild(editButton);
