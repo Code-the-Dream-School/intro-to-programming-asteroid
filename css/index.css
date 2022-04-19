@@ -1,18 +1,20 @@
 body {
-  background-color: #89CE94;
-  color: #311E10;
-  font-family: "Avenir Next", Calibri, Verdana, sans-serif;  
+    background-color: #89CE94;
+    color: #311E10;
+    font-family: "Avenir Next", Calibri, Verdana, sans-serif;  
 }
 
 h1 {
     text-align:center;
     font-size: 26px;
     font-weight: bold;
+    color: #12664F;
 }
 
 h2 {
     font-size: 26px;  
-    font-weight: bold; 
+    font-weight: bold;
+    color: #307473; 
 }
 
 section {
@@ -22,28 +24,84 @@ section {
     padding-right:10px;
 }
 
-.experience-list li,
-.skills-list li ,
+#experience li { 
+    background-color: #89CE94;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#education li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#skills-list li {
+    background-color: #89CE94;
+    list-style-type: none;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #820263;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
 .messages-list li{
     border: 2px solid #820263;
 }
-  
+
+#connect p{
+    margin: 1px;
+    font-size: 20px;
+}
+
+#leave_message label{
+    font-size: 20px;
+    color: #89CE94;
+}
+
+#leave_message input, 
+textarea {
+    margin-top: 4px;
+    margin-bottom: 15px;
+    border: 2px solid #F194B4;
+    padding: 10px;
+}
+#leave_message input:focus,
+textarea:focus {
+    outline: 1.5px solid #F194B4;
+    border-radius: 1.5px;
+}
+
 form {
     background-color: papayawhip;
     border: 2px solid steelblue;
     padding: 32px;
 }
 
+label {
+    font-size: 16px;
+    color: #7A82AB;
+}
+
 input {
     margin-bottom: 10px;
     width: 50%;
+    font-size: 18px;
+    padding: 8px;
+    border: 0px  sienna solid;
 }
 
 textarea {
     width: 50%;
+    font-size: 18px;
+    padding: 8px;
+    border: 4px seashell solid;
+    font-family: "Avenir Next", Calibri, Verdana, sans-serif;  
 }
 
-.navigation-list{
+.navigation-list {
     margin-left:40px;
 }
 
@@ -52,6 +110,7 @@ button {
     padding: 8px;
     width: 80px;
     border-radius: 10px;
+    background-color: bisque;
 }
 
 footer {
