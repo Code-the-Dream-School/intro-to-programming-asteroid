@@ -1,0 +1,160 @@
+body{
+    background-color:rgb(160, 230, 126);
+}
+
+*{
+    color:rgb(19, 20, 19);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16pt;
+    font-weight:bold ;
+    text-align: center;
+}
+
+section{
+    margin-bottom: 8px;
+    margin-right: 50px;
+    margin-left:50px;
+    padding-left: 25px;
+    padding-right: 100px;
+    background-color:rgba(134, 27, 27, 0.856);
+    border-bottom: 5px dashed rgb(97, 10,10);
+    border-top: 9px solid rgb(73, 113, 54);
+}
+
+#theWorks{
+   font-style:bold;
+   font-size: 20pt;
+   background-color: rgba(132, 77, 77, 0.856);
+   text-align: center;
+   /* figure out why isn't this centered? did i mess up padding/margins? next lesson on grids?*/
+   text-decoration: none;
+   border-top-left-radius: 30pt;
+   border-top-right-radius: 30pt;
+   border-top-color:rgba(132, 77, 77, 0.856) ;
+   border-style: double;
+   border-left-width: 20px;
+   border-right-width: 20px;
+   margin: 25px 50px 20px;
+   width:150px;
+}
+
+#worksList{
+    text-align: center;
+    list-style-type: none;
+}
+
+.portfolioItems{
+    /* background-color: i like it plain rn and want to combine with skills section in 2 columns; */
+    color:rgba(38, 139, 202, 0.762);
+    border-top-left-radius: 10pt;
+    border-top-right-radius: 10pt;
+}
+
+#skillsTitle{
+   font-style:bold;
+   font-size: 20pt;
+   text-align: center;
+   /* why not centered--same issue as above? */
+   text-decoration: none;
+   border-top-left-radius: 30pt;
+   border-top-right-radius: 30pt;
+   border-top-color:rgba(132, 77, 77, 0.856) ;
+   border-style: double;
+   border-left-width: 20px;
+   border-right-width: 20px;
+   margin: 25px 50px 20px;
+   width:100px;
+   background-color: rgba(132, 77, 77, 0.856);
+}
+
+.skillsList{
+    color:rgba(2, 2, 21, 0.085);
+    border-top-left-radius: 10pt;
+    border-top-right-radius: 10pt;
+    list-style-type: none;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    /* why doesn't font work? html? */
+    /* Combine with experience section for final */
+
+}
+
+.headerLink {
+    display:inline;  
+    text-decoration: none;
+    font-weight: bolder;
+    text-align:right ;
+    /* why doesnt align work? */
+}
+
+h2{
+    font-size:24pt;
+    font-weight: bold;
+    color:black;
+}
+
+#messageForm h2{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    color:black;
+    font-style: bold;
+}
+
+form{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    ;
+    padding-bottom: 25pt;
+    margin-bottom: 25pt;
+    margin margin-top: 25pt;
+}
+
+input, textarea{
+    border: none;
+    background-color: black;
+    color:white;
+    size: 100pt;
+    border-color: olivedrab;
+    border-style: dotted;
+    margin-bottom: 10pt;
+}
+
+button{
+    padding: 5px 15px;
+    background: #fefe03;
+    border: 0 none;
+    border-radius: 5px;
+    /* position: relative; */
+    height:30pt;
+    width: 70pt;
+    /* how to add spacing that looks good with remove button without effecting submit button? eventually add click effect like color/text change */
+}
+
+#messages, h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    /* how to say remove button needs to be 4ish spaces away? */
+}
+
+.messageList{
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* what if this looked like a Jam board or clipboard and the messages stayed until someone removed them, not on refresh like on myspace? would look good if parallel to form and above footer*/
+}
+
+.contactsList{
+    list-style: none;
+    /* make these 8bit style icons for final if possible and combine with message form and footer*/
+}
+
+footer{
+    background-color: antiquewhite;
+    margin-right: 75%;
+    text-align: right;
+    /* will combine with contacts and message form, add cool icons or hover effect */
+}

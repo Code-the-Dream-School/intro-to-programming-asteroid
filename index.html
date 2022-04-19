@@ -9,6 +9,13 @@
 			content="HTML, CSS, JavaScript, Developer,Games, Education, Teacher, Coder"
 		/>
 		<meta name="author" content="Sherose Badruddin" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href=" css/index.css"
+			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro|family=VT323"
+		/>
 	</head>
 	<body>
 		<h1>Sherose Badruddin</h1>
@@ -16,11 +23,17 @@
 		<section id="header">
 			<nav>
 				<ul>
-					<li><a href="#about" target="_self">About</a></li>
-					<li><a href="#goals" target="_self">Goals</a></li>
-					<li><a href="#experience" target="_self">Experience</a></li>
-					<li><a href="#skills" target="_self">Skills</a></li>
-					<li><a href="#contacts" target="_self">Contacts </a></li>
+					<li class="headerLink"><a href="#about" target="_self">About</a></li>
+					<li class="headerLink"><a href="#goals" target="_self">Goals</a></li>
+					<li class="headerLink">
+						<a href="#experience" target="_self">Experience</a>
+					</li>
+					<li class="headerLink">
+						<a href="#skills" target="_self">Skills</a>
+					</li>
+					<li class="headerLink">
+						<a href="#contacts" target="_self">Contacts </a>
+					</li>
 				</ul>
 			</nav>
 		</section>
@@ -28,10 +41,8 @@
 			<h2>About</h2>
 			<p>current coder, former teacher, future coding teacher</p>
 			<img
-				src="https://static.wikia.nocookie.net/simpsons/images/e/e0/Mapple_Lisa.png/revision/latest?cb=20160518003943"
+				src="https://static.wikia.nocookie.net/simpsons/images/e/e0/Mapple_Lisa.png/revision/latest/scale-to-width-down/180?cb=20160518003943"
 				alt="photo of Lisa Simpson typing on an old computer"
-				width="100"
-				length="100/"
 			/>
 		</section>
 		<!-- Add quote -->
@@ -53,28 +64,29 @@
 		<section id="experience">
 			<h2>Experience</h2>
 			<p>
-				Using Javascript, HTML, and CSS, I created a personal portfolio webpage
+				Using Javascript, HTML, and CSS, I created a personal portfolio website
 				for future Code the Dream<em> Director of Youth Programming</em>,
-				Sherose Badruddin
+				Sherose Badruddin. I've also produced, directed, and coordinatated
+				educational and recreational programming for K-12 students.
 			</p>
-			<h3>List of Portfolio items</h3>
-			<ul>
-				<li><a href="#">Web Design page</a></li>
-				<li><a href="#">Games page</a></li>
-				<li><a href="#"> Stuff I did on/through Github page</a></li>
-				<li><a href="#"> Kiddo & I funsies page</a></li>
+			<h3 id="theWorks">The Works</h3>
+			<ul id="worksList">
+				<li><a href="#" class="portfolioItems">Web Design samples</a></li>
+				<li><a href="#" class="portfolioItems">Games</a></li>
+				<li><a href="#" class="portfolioItems">Design Challenges</a></li>
+				<li><a href="#" class="portfolioItems">Funsies with Kiddo</a></li>
 			</ul>
 		</section>
 		<section id="skills">
-			<h2>Skills</h2>
-			<ul></ul>
+			<h2 id="skillsTitle">Skills</h2>
+			<ul class="skillsList"></ul>
 		</section>
 		<!-- Maybe include small graphics or icons here -->
 		<section id="contacts">
 			<nav>
 				<h2>Contacts</h2>
-				<ul>
-					<li><a href="mailto: sheroseb@gmail.com?subject=Hello">Email</a></li>
+				<ul class="contactsList">
+					<li><a href="mailto:sheroseb@gmail.com?subject=Hello">Email</a></li>
 					<li>
 						<a
 							href="https://www.linkedin.com/in/sherose-badruddin-60924aa3/"
@@ -88,7 +100,7 @@
 				</ul>
 			</nav>
 		</section>
-		<section>
+		<section id="messageForm">
 			<h2>Leave a Message</h2>
 			<form name="leave_message">
 				<label for="name">Name</label><br />
@@ -102,7 +114,7 @@
 		</section>
 		<section id="messages">
 			<h2>Messages</h2>
-			<ul></ul>
+			<ul class="messageList"></ul>
 		</section>
 		<footer></footer>
 		<script src="js/index.js"></script>
