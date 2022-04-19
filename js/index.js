@@ -10,7 +10,7 @@ copyright.innerHTML="Sherose Badruddin "+ thisYear
 console.log(footer)
 footer.appendChild(copyright)
 
-const skills = ["skill1","skill2","skill3","skill4"]
+const skills = ["Javascript","HTML","CSS"]
 
 const skillsSection = document.querySelector("#skills")
 
@@ -39,7 +39,7 @@ messageForm.addEventListener("submit", (event) => {
   messageList.appendChild(newMessage)
 
   const removeButton = document.createElement("button")
-  removeButton.textContent="remove"
+  removeButton.textContent="Remove"
   removeButton.type = "button"
   removeButton.addEventListener("click", (e) => {
     const entry = removeButton.parentNode
