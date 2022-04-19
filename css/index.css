@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300&display=swap');
+
+/* I have duplicate properties and values so assigning a var and just calling that var is 
+much more efficient. */
+:root {
+    --text-align: center;
+    --list-style: none;
+    --text-color: blueviolet;
+    --light-pink: rgb(236, 113, 171);
+    --medium-pink: rgb(233, 94, 159);
+    --darker-pink: rgb(219, 79, 144);
+    --font-weight: bold;
+}
+
+body {
+    background-color: lightblue; 
+}
+
+#logo {
+    float: left;
+}
+
+nav {
+    text-align: var(--text-align);
+}
+
+nav ul {
+    margin: 0;
+    padding-left: 700px;
+    list-style: var(--list-style);
+}
+
+nav li {
+    display: inline-block;
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--darker-pink);
+}
+
+nav ul li a:hover {
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+}
+
+h1 {
+    text-align: var(--text-align);
+    background-color: var(--medium-pink);
+    box-shadow: inset 0px 24px 0px rgba(255, 255, 255, 0.14);
+    /* background-image: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.5) 10%); */
+    color: var(--text-color);
+    font-size: 30px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: var(--font-weight);
+}
+
+h2 {
+    color: var(--medium-pink);
+}
+
+section {
+    padding: 5px;
+    margin: 10px;
+}
+
+ul, p, #leave_message {
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--darker-pink);
+}
+
+
+#about-me, #experience, #skills {
+    border-style: groove;
+}
+
+
+#about-me h2, #experience h2 {
+    text-align: var(--text-align);
+}
+
+/* Makes the bullets line up properly in the center of the page with the text. */
+#experience ul li{
+    list-style-position: inside;
+}
+
+#experience li {
+    margin-left: 450px;
+}
+
+#connect a {
+    padding: 3px;
+}
+
+#skills {
+    background-image: url("/images/Skills.png");
+    background-size: 350px;
+}
+
+#skills ul {
+    color: rgb(79, 76, 241);
+    list-style: none;
+    text-align: var(--text-align);
+    font-weight: var(--font-weight);
+}
+
+#skills h2 {
+    color: var(--medium-pink);
+    text-align: var(--text-align);
+    padding-left: 40px;
+    margin-top: 10px;
+}
+
+/* This centers everything from the message area down to the footer. */
+#message_area, #messages, #connect, footer {
+    text-align: var(--text-align);
+}
+
+/* Settings for the form fields in the "leave a message" area. */
+#name, #email, #message {
+    /* background-color: var(--light-pink); */
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+    margin-bottom: 10px;
+    border-style: double;
+    border-top-color: var(--light-pink);
+    border-bottom-color: var(--light-pink);
+    border-left-color: var(--text-color);
+    border-right-color: var(--text-color);
+    border-radius: 40px;
+    border-width: 10px;
+}
+
+/* This is to make the message text area a little wider. */
+#message {
+    width: 230px;
+}
+
+#submit-btn {
+    background-color: var(--light-pink);
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 35px;
+    border-color: var(--text-color);
+}
+
+/* Reverses the colors of the submit button when the user hovers over it. */
+#submit-btn:hover {
+    background-color: var(--text-color);
+    color: var(--light-pink);
+}
+
+#messages ul {
+    background-color: rgb(79, 76, 241);
+    /* color: var(--light-pink); */
+    color: whitesmoke;
+    list-style: none;
+}
+
+#messages a {
+    color: whitesmoke;
+}
+
+footer {
+    background-color: var(--medium-pink);
+    box-shadow: inset 0px 24px 0px rgba(255, 255, 255, 0.14);
+    font-weight: var(--font-weight);
+    padding-bottom: 5px;
+}
+
+
+/* Setting the media queries for responsive web design: mobile, tablet, and laptop. */
+
+@media screen and (min-width: 275px) and (max-width: 1200px) {
+    #experience li {
+        margin-left: 0;
+    }
+
+    nav ul {
+        padding-left: 60px;
+        list-style: var(--list-style);
+    }
+}
+
+@media screen and (max-width: 1600) {
+    #experience li {
+        margin-left: 0;
+    }
+
+    nav ul {
+        padding-left: 700px;
+        list-style: var(--list-style);
+    }
+}
+
+/* I still need to work on the remove button to remove messages and I need to create and work on the hide 
+button to hide messages. */
