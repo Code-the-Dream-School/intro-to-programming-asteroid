@@ -48,4 +48,7 @@ messageForm.addEventListener('submit', function(event){
     console.log(userName.value, userEmail.value, userMessage.value)
 })
 
+function scrollTo(hash) {
+    location.hash = "#" + hash;
+}
 

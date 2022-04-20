@@ -1,45 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <title>Lesson 4.4</title>
+    <link rel="stylesheet" href="css/index-mobile.css">
+    <link rel="stylesheet" href="css/index-tablet.css">
+    <title>Lesson 4.5</title>
   </head>
   <body>
-    <h1>Lesson 4.4</h1>
     <nav>
-      <ul>
-        <li><a href = "#">About</a></li>
-        <li><a href = "#">Experience</a></li>
-        <li><a href = "#">Connect</a></li>
-      </ul>
-    </nav>
+    <div class="topnav">
+      <a class="active" href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#connect">Connect</a>
+      <a href="#leave_message">Leave a Message</a>
+    </div>
+  </nav>
+    <h1>Lesson 4.5</h1>
     <section>
-      <article>
+      <article class = "about" id="about">
         <h2>About</h2>
         <p>Name: Dmitry Boyko</p>
+        <p>It's hard to believe, but I've been drawing all my life. Drawing is the positive, red part of my DNA. The other part, with blue color, is sports, martial arts.</p>
         <p>Ocupation: N/A</p>
       </article>
     </section>
     <section>
-      <article class = "experience">
+      <article class = "experience" id = "experience">
         <h2>Experience</h2>
-        <p>It's hard to believe, but I've been drawing all my life. Drawing is the positive, red part of my DNA. The other part, with blue color, is sports, martial arts.</p>
+        <div class = "flex-experience">
+          <div><p>&nbsp;&nbsp;&#10004;Traditional art &nbsp;&nbsp;</p></div>
+          <div><p>&nbsp;&nbsp;&#10004;Technical drawinf&nbsp;&nbsp;</p></div>
+          <div><p>&nbsp;&nbsp;&#10004;Programming&nbsp;&nbsp;</p></div>
+          <div><p>&nbsp;&nbsp;&#10004;Bug hunting&nbsp;&nbsp;</p></div>
+      </div>
     </article>
     </section>
     <article>
-      <section>
+      <section id = "connect">
         <h2>Connect</h2>
         <section>
         <ul>
           <li>&#9993; Email: <a href = "mailto: nononon@gmail.com"> Send </a></li>
           <li>&#9742; Phone: 555.555.1234</li>
         </ul>
-        </section>
-        <section id="skills" class = "skills">
+      </section>
+      <section id="skills" class = "skills">
         <h2>Skills</h2>
         <ul>
           <li>My source of knowledge: <a href = "http://google.com" target = "_blank"> URL </a></li>
@@ -49,32 +58,23 @@
     </article>
       <section>
         <h2>Leave a Message</h2>
-        <form  name="leave_message"  class = "leave_message">
-          <table>
-            <tr>
-              <td><label>Name: </label></td>
-              <td><input class = "userNameandEmail" type="text" name="userName" placeholder="Add your name" required></td>
-            </tr>
-            <tr>
-              <td><label>Email: </label></td>
-              <td><input class = "userNameandEmail" type="email" name="userEmail" placeholder="Add your email" required></td>
-            </tr>
-            <tr>
-              <td><label>Message: </label></td>
-              <td><textarea class = "userMessage" name="userMessage" placeholder="Add yuor message" required></textarea></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><button class = "submitButton" type="submit">Submit</button></td>
-            </tr>
-          </table>
+        <form  name="leave_message"  class = "leave_message" id="leave_message">
+          <div class = "flex-leave-message">
+            <label>Name: </label>
+            <input class = "userNameandEmail" type="text" name="userName" placeholder="Add your name" required>
+            <label>Email: </label>
+            <input class = "userNameandEmail" type="email" name="userEmail" placeholder="Add your email" required>
+           <label>Message: </label>
+            <textarea class = "userMessage" name="userMessage" placeholder="Add your message" required></textarea>
+            <br>
+            <button class = "submitButton" type="submit">Submit</button>
+          </div>
         </form>
       </section>
       <br>
       <section class = "messages">
       <h2>Messages</h2>
       <ul  id="messages">
-
       </ul>
       </section>
       <br>
