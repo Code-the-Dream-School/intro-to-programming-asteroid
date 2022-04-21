@@ -39,7 +39,7 @@ form.addEventListener('submit', (e) => {
     newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>`
 
     const span = document.createElement('span');
-    span.textContent = ` says: ${messages} `;
+    span.textContent = ` left a message saying, "${messages}" `;
     newMessage.appendChild(span)
 
     const editButton = document.createElement('button');
