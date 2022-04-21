@@ -1,0 +1,350 @@
+/* ================================= 
+       Basic Elements
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+:root { /* Colors */
+    --color-white: rgb(255, 255, 255);
+    --color-mediumLight: rgb(187, 187, 187);
+    --color-medium: rgb(183, 114, 24);
+    --color-mediumDark: rgba(66, 66, 66, 0.543);
+    --color-dark: rgb(0, 0, 0);
+}
+body {
+    background-image: url('https://images.unsplash.com/photo-1609824462357-e17f84f543dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80');
+    background-color: var(--color-mediumDark);
+    background-repeat: no-repeat;
+    background-size: 100% 19%;
+    font-family: 'Mali', cursive;
+}
+section {
+    margin: 2.5%;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p {
+    font-size: .9em;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, a {
+    font-size: 1em;
+    color: var(--color-medium);
+}
+h1, h2 {
+    font-weight: bold;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* ================================= 
+            Navigation
+==================================== */
+
+.name {
+    font-size: .9em;
+    margin: 0;
+}
+.main-nav {
+    margin-top: 5px;
+    background-color: var(--color-light);
+    margin: 20px;
+}
+.name a{
+    color: var(--color-medium);
+}
+.name a,
+.main-nav a {
+    text-align: center;
+    display: block;
+    padding: 5px 15px
+}
+.main-nav a {
+    font-size: 1em;
+    color: var(--color-dark);
+    text-transform: uppercase;
+}
+.main-nav a:hover {
+    color: #093a58;
+}
+
+/* ================================= 
+            Layout Containters
+==================================== */
+
+.banner,
+.main-footer {
+    text-align: center;
+}
+.banner {
+    color: var(--color-white);
+    min-height: 350px;
+    font-size: 2em;
+}
+.grid {
+    display: block;
+}
+.container {
+    display: flex;
+}
+.col {
+    padding-right: 1em;
+    padding-left: 1em;
+    }
+.item {
+    text-shadow: 0 2px 0 rgba(110,133,156,0.18);
+    padding: 0.85em;
+    border-radius: 0.3em;
+}
+
+#profile-img {
+    border-radius: 175px;
+    border: 1px solid var(--color-medium);
+    height: 150px;
+    width: 150px;
+}
+#aboutSection {
+    padding-bottom: 20px;
+    color: var(--color-dark);
+}
+#experience {
+    min-height: auto;
+    text-align: center;
+}
+
+.list:nth-child(even) {
+    background: var(--color-white);
+  }
+#skills {
+    text-align: center;
+    min-height: 200px; 
+    border: 2px solid var(--color-medium);
+}
+.row {
+    text-align: center;
+}
+#skills ul li{
+    padding: 10px 0;
+    text-align: center;
+   
+}
+#connect ul li {
+    display: inline;
+}
+.list { 
+    display: grid;
+    border: 1px solid var(--color-dark); 
+    border-radius: 5px;
+}
+
+.container p {
+    text-align: center;
+}
+
+ 
+/* Form Section */
+
+#messageHeader {
+    text-align: center;
+    color: var(--color-mediumLight);
+}
+
+form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: var(--color-mediumLight);
+    border-radius: 8px;
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="number"],
+input[name="submitterMessage"],
+textarea {
+  border: none;
+  font-size: 1em;
+  padding: 5%;
+  background-color: var(--color-medium);
+  color: var(--color-dark);
+  border-radius: 10px;
+}
+
+button {
+    padding: 10px 30px 10px 30px;
+    background-color: var(--color-light);
+    color: var(--color-medium);
+    border: 3px solid var(--color-medium);
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+fieldset {
+    border: none; 
+    text-align: center;
+}
+
+label {
+    font-size: 1.25rem;
+    color:var(--color-dark);
+    display: block;
+    text-align: center;
+}
+#messages h2 {
+    text-align: center;
+}
+  
+#messages ul li {
+    background: var(--color-mediumLight);
+    border-radius: .2em;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  /* Footer*/
+  
+  footer {
+    background: var(--color-mediumLight);
+    padding: 2px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media print {
+    section {
+        min-height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        background-size: 100% 18%;
+    }
+    .main-header,
+    .main-nav,
+    .row {
+        display: flex;
+    }
+    .main-nav a {
+        font-size: 1em;
+    }
+    .banner {
+        min-height: 475px;
+        font-size: 2em
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid {
+        text-align: center;
+        border-radius: 0.285em;
+        box-shadow: 0 0.1em 0 0 rgba(0,0,0,0.1);
+        grid-gap: 150px;
+    }
+    .aboutSectionImg {
+        width: 30%;
+        border-radius: 10px;
+    }
+    
+    #experience,
+    #skills,
+    #aboutSection {
+        text-align: center;
+    }
+    .row {
+        display: inline-block;
+    }
+    #profile-img {
+        border-radius: 175px;
+        border: 1px solid var(--color-medium);
+        height: 175px;
+        width: 175px;
+    }
+    p{
+        font-size: .9em;
+    }
+    .grid {
+        display: block;
+    }
+    .footerGrid{
+        display: flex;
+    }
+   
+}
+
+@media (min-width: 1025px) {
+    body {
+        background-size: 100% 22.75%;
+    }
+
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main-nav a {
+        font-size: 1.25em;
+    }
+    .banner {
+        min-height: 700px;
+        padding-top: 145px;
+    }
+
+    .col {
+        display: grid;
+    }
+    #aboutSection{
+        font-size: 1.5em;
+        padding-top: 60px;
+    }
+
+    .aboutSectionImg {
+        width: 25%;
+        border-radius: 10px;
+    }
+    .list{
+        padding: 30px;
+    }
+    h1, h2 {
+        font-size: 2em;
+        margin-top: 0;
+    }
+    #experience,
+    #skills,
+    #aboutSection {
+        text-align: center;
+    }
+    .row {
+        display: inline-block;
+    }
+    p{
+        font-size: 1em;
+    }
+    .main-footer {
+        display: flex;
+        padding-left: 10px;
+    }
+    .grid {
+        display: block;
+    }
+    .footerGrid{
+        display: flex;
+        grid-gap: 200px;
+        padding: 10px;
+    }
+
+}

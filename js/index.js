@@ -21,19 +21,6 @@ const form = document.getElementById('leaveMessage');
 const input = form.querySelector('input');
 const ul = document.getElementById('messageList');
 
-function createLI(text, email, message) {
-    const li = document.createElement('li');
-    const span = document.createElement('span');
-    span.textContent = text + " (" + email + ") says: " + message;
-    li.appendChild(span);
-
-    const editButton = document.createElement('button');
-    editButton.textContent = 'edit';
-    li.appendChild(editButton);
-
-    return li;
-  }
-
 // Handle Message Form Submit
 
 form.addEventListener('submit', (e) => {
@@ -46,16 +33,13 @@ form.addEventListener('submit', (e) => {
     console.log(email);
     console.log(messages);
 
-    // const li = createLI(name, email, messages);
-    // ul.appendChild(li);
-
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>`;
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a>`
 
     const span = document.createElement('span');
-    span.textContent = messages;
+    span.textContent = ` left a message saying, "${messages}" `;
     newMessage.appendChild(span)
 
     const editButton = document.createElement('button');
@@ -70,8 +54,6 @@ form.addEventListener('submit', (e) => {
     removeButton.addEventListener('click' , (e) => {
       const entry = button.parentNode;
       entry.remove();
-      // newMessage.appendChild(removeButton);
-      
     });
 
     newMessage.appendChild(removeButton);
@@ -103,3 +85,5 @@ form.addEventListener('submit', (e) => {
         li.removeChild(input);
         button.textContent = 'edit'; 
       }
+    }
+  });
