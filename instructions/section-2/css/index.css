@@ -110,9 +110,6 @@ body {
 *, :after, :before {
     box-sizing: border-box;
 }
-
-
-
 .typing-effect {
     display:inline-block;
     width: 16ch;
@@ -126,7 +123,6 @@ body {
     margin-top: 30px;
     align-items: center;
   }
-  
   @keyframes typing {
     from {
       width: 0
@@ -138,36 +134,6 @@ body {
       border-color: transparent
     }
   }
-
-  /* .typing-effect h1 {
-    color: #fff;
-    font-family: dotgothic16, sans-serif;
-    font-size: 70px;
-    margin-top: -30px;
-    text-align: center;
-    overflow: hidden; 
-    border-right: 5px solid whitesmoke; 
-    white-space: nowrap; 
-    width: 600px;
-    letter-spacing: 5px; 
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .75s step-end infinite;
-    flex-wrap: wrap;
-
-  } 
-  
-  The typing effect
-  @keyframes typing {
-    from { width: 0%}
-    to { width: 100% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: whitesmoke }
-  } 
-
 /*  
 message box that links to email */
 
@@ -186,7 +152,6 @@ message box that links to email */
     align-self: center;
     margin: 10px;
 }
-
 #an{
     color:#222255;
     background-color: transparent;
@@ -197,18 +162,12 @@ message box that links to email */
     background-color: #a87ab3;
 }
 
-#envelope{
-       
-}
-
 /* navigation bar */
 
 .container{
     display: flex;
     flex-direction: column;
-
 }
-
 #navbar{
     list-style-type: none;
     margin: 25px;
@@ -218,20 +177,16 @@ message box that links to email */
     right: 0;
     bottom: 0;
 }
-
 #navbar a{
     color: #b1d4f1;
     font-family: 'NTR', sans-serif;
     font-size: 18px;
-
 }
-
 #navbar :hover{
     color: #a87ab3;
 }
 /* 
 intro section */
-
 #about{
     padding: 10px;
     padding-top: 250px;
@@ -241,15 +196,11 @@ intro section */
     font-size: 50px;
     flex-wrap: wrap;
 }
-
 .container-2{
     display: flex;
     flex-direction: row;
     margin: auto;
-
 }
-
-
 #about-descript{
     font-family: NTR;
     font-size: 22px;
@@ -259,11 +210,9 @@ intro section */
     flex-wrap: wrap;
     text-align: justify;
 }
-
 *, :after, :before {
     box-sizing: border-box;
 }
-
 #myself{
     max-width: 300px;
     height: auto;
@@ -273,27 +222,18 @@ intro section */
     border: none;
     flex-wrap: wrap;
 }
-
 /* experience section */
-
 .exp-div{
     display: flex;
     margin: auto;
     padding-bottom: 40px;
     width: 100vw;
 }
-
 .container-3{
     display: flex;
     flex-grow: 1;
     margin: auto;
 }
-
-#job-list{
-
-
-}
-
 #experience{
     font-size: 50px;
     font-family: 'NTR', sans-serif;
@@ -312,7 +252,6 @@ intro section */
     text-align: left;
     align-items: flex-start!important;
 }
-
 #title{
     font-family: NTR;
     font-size: 25px;
@@ -343,7 +282,6 @@ intro section */
     position: relative;
     list-style: none;
     padding-right: 60px;
-
 }
 /* 
 li */
@@ -352,23 +290,18 @@ li */
     padding: 10px;
     list-style-type: none;
 }
-
 /* skills section */
-
 #skills-div{
     display: flex;
     flex-direction: column;
     margin: auto;
-
 }
-
 #sk-title{
     font-family: 'NTR', sans-serif;
     font-size: 50px;
     width:100vh;
     padding-top: 80px;   
 }
-
 #sk-list{
     font-family: NTR;
     font-size: 20px;
@@ -377,16 +310,6 @@ li */
     list-style-type: none;
     flex-wrap: wrap;
 }
-
-/* 
-.lists{
-    font-family: 'NTR', sans-serif;
-    color: #b1d4f1;
-    flex-wrap: wrap;
-    border: 1px solid #a87ab3;
-    list-style-type: none;
-} */
-
 /* projects section */
 
 #proj-title{
@@ -395,9 +318,7 @@ li */
     padding: 10px;
     margin: 5px;
     padding-top: 80px;
-
 }
-
 /* connect section */
 #container-4{
     display: flex;
@@ -405,16 +326,13 @@ li */
     margin: auto;
     flex-wrap: wrap;
 }
-
 #connect{
     font-family: 'NTR', sans-serif;
     font-size: 50px;
     padding: 10px;
     padding-top: 80px;
 }
-
 /* links for connect */
-
 #git{
     font-size: 25px;
     color: #b1d4f1;
@@ -422,11 +340,9 @@ li */
     padding: 10px;
     margin: 5px;
 }
-
 #git:hover{
     color: #a87ab3;
 }
-
 #linked{
     font-size: 25px;
     color: #b1d4f1;
@@ -434,17 +350,14 @@ li */
     padding: 10px;
     margin: 5px;
 }
-
 #linked:hover{
     color: #a87ab3;
 }
-
 /* leave a message section */
 #message-div{
     display: flex;
     flex-direction: column;
     flex-wrap:wrap;
-
 }
 #mess-sect{
     font-family: 'NTR', sans-serif;
@@ -453,25 +366,21 @@ li */
     margin: 5px;
     padding-top: 80px;
 }
-
 #container-5{
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
 }
-
 #mess-sect-2{
     font-family: "NTR", sans-serif;
     font-size: 50px;
     flex-wrap: wrap;
 }
-
 #message-list-2{
     flex-wrap: wrap;
     font-family: "NTR", sans-serif;
     font-size: 20px;
 }
-
 #sub-button{
     font-family: 'NTR', sans-serif;
     font-size: 20px;
@@ -482,11 +391,9 @@ li */
     border-radius: 10px;
     border: none;
 }
-
 #sub-button:hover{
     color: #a87ab3;
 }
-
 .LAM{
     font-family: 'NTR', sans-serif;
     font-size: 20px;
@@ -496,46 +403,34 @@ li */
     margin: 5px;
     padding-top: 80px;
     border: none;
-
 }
-
 input{
     background-color: #b1d4f1;
     border-radius: 10px;
     border: none;
-  
 }
-
 textarea{
     background-color: #b1d4f1;
     border-radius: 10px;
     border: none;
 }
-
-
-
 h2, p, form, img, span {
     opacity: 0; 
     transition: all 0.8s ease-out;
 }
-
 .show {
     opacity: 1;
     bottom: 0;
 }
-
 .exp(2) p.show {
     transition-delay: 0.5s;
 }
-
 .exp(3) p.show {
     transition-delay: 2s;
 }
-
 .title(1) h2.show{
     transition-delay: 0.5s;
 }
-
 #foot{
     font-family: 'NTR', sans-serif;
     text-align: center;
@@ -543,7 +438,6 @@ h2, p, form, img, span {
     position: relative;
     width: 100%;
 }
-
 p.copyright {
     position: absolute;
     width: 100%;
@@ -553,17 +447,9 @@ p.copyright {
     text-align: center;
     bottom:0;
 }
-
-
 @media only screen and (max-width: 800px) {
 
     body{
-    /* display: flex;
-    padding: 40px 24px;
-    flex-direction: column;
-    flex-wrap: wrap; */
-    /* display: flex;
-    flex-direction: column; */
     background-image: linear-gradient(to top, #000033, #222255);
     color: white;
     font-family: 'NTR', sans-serif; 
@@ -574,9 +460,7 @@ p.copyright {
     text-align: center;
     padding: 10px 24px;
     align-items: left;
-
 }
-
 .column{
     width: 50%;
     padding:20px;
@@ -586,14 +470,12 @@ p.copyright {
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 #container-intro{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     /* width: 50%; */
 }
-
 .typing-effect{
     display:block;
     flex-wrap: wrap;
@@ -602,24 +484,20 @@ p.copyright {
     /* width: 90vw; */
     font-size: 40px;
     line-height: 10px;
-
 }
 .container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 .container-nav{
     display: block;
     position: fixed;
-
 }
 #navbar{
     display: inline-block;
     text-align: center;
     align-items: center;
-
 }
 #container-2{
     display: flex;
@@ -632,7 +510,6 @@ p.copyright {
     flex-wrap: wrap;
     padding-top: 80px;
     align-items: flex-start;
-
 }
 #about-descrip{
     display: flex;
@@ -738,7 +615,6 @@ p.copyright {
     align-items: flex-start;
 }
 }
-
 /* @media screen and (min-width: 688px) {
     display: flex;
     flex-direction: column;

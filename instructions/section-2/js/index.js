@@ -33,7 +33,6 @@ messageForm.addEventListener('submit', (event) => {
     newMessage.innerHTML = `<a href = "mailto:${email.value}" target "_blank"> ${name.value}</a><span> wrote: ${message.value} </span>`
 
     const removeButton = document.createElement('button');
-
     removeButton.innerText = 'remove';
 
     removeButton.type = 'button'
