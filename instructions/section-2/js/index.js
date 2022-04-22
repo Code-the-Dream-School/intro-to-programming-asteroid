@@ -1,4 +1,3 @@
-
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
