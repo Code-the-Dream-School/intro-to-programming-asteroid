@@ -474,7 +474,6 @@ p.copyright {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* width: 50%; */
 }
 .typing-effect{
     display:block;
@@ -530,7 +529,7 @@ p.copyright {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 80px;
+    padding-top: 60px;
     align-items: flex-start;
 }
 .container-3{
@@ -554,7 +553,6 @@ p.copyright {
     flex-wrap: wrap;
     align-self: auto;
     height: 35px;   
-}
 }
 .lists{
     flex-wrap: wrap;
@@ -615,18 +613,3 @@ p.copyright {
     align-items: flex-start;
 }
 }
-/* @media screen and (min-width: 688px) {
-    display: flex;
-    flex-direction: column;
-}
-
-}
-
-
-@media  and (min-width: 992px) {
-    body{
-        display: flex;
-        flex-direction: column;
-    }
-    
-} */
