@@ -1,3 +1,4 @@
+
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
@@ -47,3 +48,36 @@ messageForm.addEventListener('submit', (event) => {
     messageForm.reset();  
 });
 
+
+//intersection observer
+window.addEventListener('DOMContentLoaded', setup); 
+
+function setup() {
+    const options = {
+        rootMargin: '0px 0px -200px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            } else {
+                return;
+            }
+        })
+    }, options);
+
+    //for h2s
+    const comeIn = document.querySelectorAll('h2');
+    comeIn.forEach(h2 => observer.observe(h2));
+    //for <p>
+    const paras = document.querySelectorAll('p');
+    paras.forEach(p => observer.observe(p));
+    //for form
+    const frm = document.querySelectorAll('form');
+    frm.forEach(form => observer.observe(form)); 
+    //for img
+    const image = document.querySelectorAll('img');
+    image.forEach(img => observer.observe(img));
+}
