@@ -1,0 +1,58 @@
+/*<img src="image/meInColor2.jpeg" alt="Me" class="center" width="300px" height="300px">*/
+/*#center{
+    background-color: black;
+}
+*/
+/*Nav bar style*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:rgb(228, 226, 226); 
+}      
+/*Nav name logo class style*/
+.name-logo{
+    color:#a30000;
+    text-transform: none;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+/*Nav bar links style*/
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+/*Nav bar links li style*/
+.nav-links li{
+    list-style: none;
+}
+/*Nav bar links a tags style*/
+.nav-links a{
+    color:#a30000;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+/*Body font style*/
+body{
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color:#fdfdfd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
