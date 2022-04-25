@@ -12,35 +12,79 @@ body {
   font-size: 100%; /* 100% = 16px on most screens */
 }
 
-/* type selectors */
-section {
-  margin: -5% 5%;
-  border-style: solid;
-  border-left-color: rgb(219, 9, 126);
-  border-right-color: rgb(36, 70, 142);
-  border-top: none;
-  border-bottom: none;
-  padding: 3% 5%;
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
+
+.nav {
+  position: fixed; /*set navbar to fixed position*/
+  top: 0; /*position navbar at top of page*/
+  width: 100%; /*full width*/
+  background-color: white;
+  /* =====================================
+  the "fixed" navbar has a big empty 
+  space underneath that needs something
+  ===================================== */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: auto;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(219, 9, 126);
+  padding: 2%;
+  align-items: baseline;
+}
+.my-name {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  border-top-style: none;
+
+  margin: 0%;
+  padding: 2% 0%;
+  list-style: none;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  margin: 0;
+  padding: 1%;
+  list-style: none;
+}
+
+section {
+  margin-top: -10%;
+  padding: 2%;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Monoton", cursive;
   font-size: 2em;
-  font-weight: lighter;
+  font-weight: bolder;
   color: rgb(36, 70, 142);
+  border-top-style: dotted;
+  border-top-color: rgb(219, 9, 126);
+  margin-top: 10%;
+  padding-top: 1.5%;
 }
+
 ul {
   padding: 0% 0.5% 0% 0%;
   list-style-type: none;
 }
-li {
-  margin-bottom: 5%;
-  text-align: center;
-}
+
 a:link {
   color: rgb(0, 81, 255);
 }
@@ -55,6 +99,7 @@ a:hover,
 a:active {
   color: rgb(219, 9, 126);
 }
+
 button {
   margin: 1% 1% 1% 0%;
   border-style: double;
@@ -65,90 +110,87 @@ button {
   font-size: 1em;
   font-weight: bold;
 }
-footer {
-  margin: 5%;
-  border-top: solid rgb(140, 87, 156);
-  border-right: dotted rgb(36, 70, 142);
-  border-bottom: dotted rgb(140, 87, 156);
-  border-left: dotted rgb(219, 9, 126);
-  padding: 5%;
-  background-color: rgba(219, 9, 126, 0.05);
-  text-align: center;
-  font-size: 0.75em;
-}
 
-/* class selectors */
-.header {
-  margin: 10% 5% 5%;
-  border-style: solid;
-  border-left-color: rgb(219, 9, 126);
-  border-top-color: rgb(140, 87, 156);
-  border-right-color: rgb(36, 70, 142);
-  border-bottom: none;
-  padding: 5%;
-  text-align: center;
-  font-family: "Monoton", cursive;
-  font-size: 2.5em;
-  color: rgb(219, 9, 126);
-}
-
-/* ID selectors */
 #about {
-  color: rgb(219, 9, 126);
+  margin: 10% 0 0 0;
 }
-#experience {
-  color: rgb(36, 70, 142);
-}
-#experience ul li {
-  background: rgb(191, 208, 247);
-}
+
 #skills {
   color: rgb(36, 70, 142);
 }
-#skills ul li {
+#skills li {
   border: dotted;
   border-color: rgb(199, 145, 175);
   padding: 2%;
 }
+
+#experience {
+  color: rgb(36, 70, 142);
+}
+.experience-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  margin: 0;
+}
+/* ========================================
+  experience list needs spaces between each
+  role - may need to redo entire grid here
+  ======================================= */
+
+.experience-list li {
+  background: rgb(191, 208, 247);
+}
+.bold {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.right-align {
+  text-align: right;
+}
 #connect {
   color: rgb(36, 70, 142);
 }
-#connect ul li {
+#connect li {
   color: rgb(1, 43, 134);
 }
-#messageForm form label {
+.message-form {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
   margin: auto;
-  font-family: "Nothing You Could Do", cursive;
+  padding: 0%;
+}
+#messageForm label {
+  margin: 0;
   color: rgb(140, 87, 156);
   font-size: 1.25em;
+  text-align: left;
 }
-#messageForm form input {
+#messageForm input {
   margin: 0% 0% 2% 0%;
   border-style: dotted;
   padding: 1%;
   font-size: 0.9rem;
 }
-#messageForm form textarea {
+#messageForm textarea {
   border-style: dashed;
   padding: 1%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
-#messageForm form button[type="reset"] {
-  padding: 0% 1.75%;
-}
-#messageForm form button[type="submit"] {
+#messageForm button[type="reset"] {
   padding: 1% 2%;
-  font-family: "Monoton", cursive;
+}
+#messageForm button[type="submit"] {
+  padding: 1% 2%;
   font-weight: bolder;
   font-size: 1.5rem;
 }
+
 #messages {
-  font-family: "Nothing You Could Do", cursive;
   color: rgb(140, 87, 156);
 }
-#messages ul li {
-  background-color: rgb(199, 145, 175);
+#messages li {
   text-align: left;
   font-size: 1.25em;
 }
@@ -161,7 +203,19 @@ footer {
 }
 /* Media Queries */
 @media screen and (min-width: 768px) {
-  ul li {
+  li {
     display: inline-block;
   }
 }
+
+footer {
+  margin: 0;
+  border-top-style: solid;
+  border-top-color: rgb(219, 9, 126);
+  padding: 5%;
+  background-color: rgba(219, 9, 126, 0.05);
+  text-align: center;
+  font-size: 0.75em;
+}
+/* ideas for footer: email, linkedIn, and github links */
+/* HAVE A LOT OF WORK TO DO!!! */

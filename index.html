@@ -9,11 +9,23 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Nothing+You+Could+Do&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
   </head>
   <body>
-    <h1 class="header">Amy Sandoval</h1>
+    <main class="main-grid">
+      <header>
+        <nav class="nav">
+          <h1 class="my-name">Amy Sandoval</h1>
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#messageForm">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
     <section id="about">
       <h2>About</h2>
       <p>
@@ -25,18 +37,30 @@
         <br><br>Pronouns: she/her
       </p>
     </section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>Property Administrator</li>
-        <li>Facilities Coordinator</li>
-        <li>Workplace Support Specialist</li>
-      </ul>
-    </section>
+
     <section id="skills">
       <h2>Skills</h2>
     <ul></ul>
     </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="experience-list">
+        <li class="bold">Property Administrator</li>
+        <li class="right-align">September 2021 - Present</li>
+        <li>Cushman & Wakefield</li>
+        <li></li>
+        <li class="bold">Facilities Coordinator</li>
+        <li class="right-align">November 2019 - September 2021</li>
+        <li>Cushman & Wakefield @ Adobe</li>
+        <li></li>
+        <li class="bold">Workplace Support Specialist</li>
+        <li class="right-align">August 2018 - November 2019</li>
+        <li>Cushman & Wakefield @ Adobe</li>
+        <li></li>
+      </ul>
+    </section>
+
     <section id="connect">
       <h2>Connect</h2>
       <ul>
@@ -51,19 +75,15 @@
         </li>
       </ul>
     </section>
+
     <section id="messageForm">
       <h2>Leave a Message</h2>
-      <form name="leave_message">
+      <form class="message-form" name="leave_message">
         <label for="name">Name</label>
-        <br>
         <input type="text" name="name" required="true">
-        <br>
         <label for="email">Email Address</label>
-        <br>
         <input type="email" name="email" required="true">
-        <br>
         <label for="message">Message</label>
-        <br>
         <textarea name="message" required="true"></textarea>
         <br>
         <button type="reset">Clear Form</button>
@@ -71,11 +91,13 @@
         <button type="submit">Submit</button>
       </form>
     </section>
+
     <section id="messages">
       <h2>Messages</h2>
       <ul></ul>
     </section>
     <footer></footer>
     <script src = ./js/index.js></script>
+  </main>
   </body>
 </html>
