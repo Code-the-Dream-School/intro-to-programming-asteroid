@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(160, 230, 126);
+    background-color:#3e3c52;
 }
 
 *{
@@ -8,53 +8,62 @@ body{
     font-size: 16pt;
     font-weight:bold ;
     text-align: center;
+    /* note to self: reconsider font choices */
 }
 
 section{
-    margin-bottom: 8px;
-    margin-right: 50px;
-    margin-left:50px;
-    padding-left: 25px;
-    padding-right: 100px;
-    background-color:rgba(134, 27, 27, 0.856);
-    border-bottom: 5px dashed rgb(97, 10,10);
-    border-top: 9px solid rgb(73, 113, 54);
+    margin-bottom: 10px;
+    margin-right: 10%;
+    margin-left:10%;
+    /* background-color:#4c74c9; */
+    border-radius: 3%;
+    border-bottom: 3px dashed #50cb86;
+    border-top: 5px solid #50cb86;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, #4c74c9 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* note to self: background gray or light blue? */
+}
+
+h1{
+    font-size:50px;
+    font-weight: bold;
+    font-family: 'source code pro', monospace;
+    text-shadow: -1px 0px 0px #50cb86, 0 0 5px #f5ff8d;
+    /* note to self: love shadow coloring, try carved, maybe apply to h2s */
 }
 
 #theWorks{
-   font-style:bold;
-   font-size: 20pt;
-   background-color: rgba(132, 77, 77, 0.856);
-   text-align: center;
-   /* figure out why isn't this centered? did i mess up padding/margins? next lesson on grids?*/
-   text-decoration: none;
-   border-top-left-radius: 30pt;
-   border-top-right-radius: 30pt;
-   border-top-color:rgba(132, 77, 77, 0.856) ;
-   border-style: double;
-   border-left-width: 20px;
-   border-right-width: 20px;
-   margin: 25px 50px 20px;
-   width:150px;
+   font-family: vt323, monospace;
+   font-size: 30px;
+   background-color:#f5ff8d;
+   margin-left: 40%;
+   margin-right: 40%;
+   grid-area: header;
+   text-align: center; 
+   /* note to self:consider alternative styling */
 }
 
 #worksList{
-    text-align: center;
     list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    /* note to self: icons or restyling, rewording */
 }
 
 .portfolioItems{
-    /* background-color: i like it plain rn and want to combine with skills section in 2 columns; */
-    color:rgba(38, 139, 202, 0.762);
-    border-top-left-radius: 10pt;
-    border-top-right-radius: 10pt;
+    color:#f5ff8d;
+    font-family: vt323, monospace;
+    font-size: 30pt;
+    letter-spacing:3px; 
 }
 
 #skillsTitle{
+    font-family: vt323, monospace;
    font-style:bold;
    font-size: 20pt;
    text-align: center;
-   /* why not centered--same issue as above? */
    text-decoration: none;
    border-top-left-radius: 30pt;
    border-top-right-radius: 30pt;
@@ -65,96 +74,108 @@ section{
    margin: 25px 50px 20px;
    width:100px;
    background-color: rgba(132, 77, 77, 0.856);
+   /* note to self: condense this within experience section grid or highlight in experience blurb and delete section? */
 }
 
 .skillsList{
+    font-family: vt323, monospace;
     color:rgba(2, 2, 21, 0.085);
     border-top-left-radius: 10pt;
     border-top-right-radius: 10pt;
     list-style-type: none;
     text-align: center;
-    font-family: 'VT323', monospace;
-    /* why doesn't font work? html? */
-    /* Combine with experience section for final */
+    /* note to self: any non web skills? */
 
+}
+
+ul>li{
+    font-family: vt323, monospace;
+    /* note to self: cool but not really readable */
 }
 
 .headerLink {
     display:inline;  
     text-decoration: none;
     font-weight: bolder;
-    text-align:right ;
-    /* why doesnt align work? */
+    /* note to self: rename li's, fixed top center with different block properties? */
 }
 
 h2{
     font-size:24pt;
     font-weight: bold;
     color:black;
+    /* position:sticky;
+    top:0; */
+    /* note to self: turn these into sticky banners instead of nav menu? */
 }
 
 #messageForm h2{
     color:black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Source Code Pro', monospace;
+    /* note to self: maybe combine with contacts, use icons instead? */
 }
 
 label{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Source Code Pro', monospace;
     font-size: 14pt;
     color:black;
     font-style: bold;
+    grid-column: labels;
+    grid-row: auto;
+    /* note to self: these need more style */
 }
 
 form{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Source Code Pro', monospace ;
     font-size: 14pt;
-    ;
     padding-bottom: 25pt;
     margin-bottom: 25pt;
     margin margin-top: 25pt;
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: column;
+    grid-gap: .8em;
 }
 
 input, textarea{
-    border: none;
-    background-color: black;
+    background-color: #63686e;
     color:white;
     size: 100pt;
-    border-color: olivedrab;
-    border-style: dotted;
-    margin-bottom: 10pt;
+    border: 5px dashed #50cb86;
+    border-radius: 5px;
+    grid-column: controls;
+    grid-row: auto;
+    /* note to self: adjust border color and size? */
 }
 
 button{
-    padding: 5px 15px;
     background: #fefe03;
     border: 0 none;
     border-radius: 5px;
-    /* position: relative; */
-    height:30pt;
-    width: 70pt;
-    /* how to add spacing that looks good with remove button without effecting submit button? eventually add click effect like color/text change */
+    grid-row-start:4;
+    grid-column-start: 2;
+    /* note to self: how to add spacing that looks good with remove button without effecting submit button? grid message section. eventually add click effect */
 }
 
 #messages, h2{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    /* how to say remove button needs to be 4ish spaces away? */
+    /* note to self: how to say remove button needs to be 4ish spaces away?*/
 }
 
 .messageList{
     list-style-type: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* what if this looked like a Jam board or clipboard and the messages stayed until someone removed them, not on refresh like on myspace? would look good if parallel to form and above footer*/
+    /* note to self: spacing between list item and button what if this looked like a Jam board or clipboard and the messages stayed until someone removed them, not on refresh like on myspace? would look good if parallel to form and above footer*/
 }
+
 
 .contactsList{
     list-style: none;
-    /* make these 8bit style icons for final if possible and combine with message form and footer*/
+    /* note to self: make these 8bit style icons for final if possible and combine with message form and footer*/
 }
 
 footer{
-    background-color: antiquewhite;
-    margin-right: 75%;
-    text-align: right;
-    /* will combine with contacts and message form, add cool icons or hover effect */
+    text-shadow: -1px 0px 0px #50cb86, 0 0 5px #f5ff8d;
+    /* note to self: will combine with contacts and message form, add cool icons or hover effect */
 }
