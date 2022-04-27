@@ -65,7 +65,6 @@ Stage the file(s) that you edited:
 Check the status again and notice that the changes from before are now staged:
 
     git status
-
 Create a commit for the changes you made and add a message describing the changes you made:
 
 > Note: Replace `<message>` with your message
