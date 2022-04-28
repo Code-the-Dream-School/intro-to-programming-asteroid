@@ -23,65 +23,58 @@
   </head>
   <body>
     <header id="header-container">
-      <h1>I'm Xeniya</h1>
-      <p>a web designer.</p>
-      <nav>
-        <ul class="li">
-          <li><a href="#about-container">About</a></li>
-          <li><a href="#experience-container">Experience</a></li>
-          <li><a href="#skills-container">Skills</a></li>
-          <li><a href="#leave-a-message-container">Connect</a></li>
+      <nav class="navbar">
+        <img
+          class="profilephoto"
+          src="img/xeniya.png"
+          alt="xeniya profile picture"
+        />
+        <ul class="nav-li">
+          <li class="list-item"><a href="#about-container">About</a></li>
+          <li class="list-item">
+            <a href="#experience-container">Experience</a>
+          </li>
+          <li class="list-item"><a href="#skills-container">Skills</a></li>
+          <li class="list-item">
+            <a href="#leave-a-message-container">Connect</a>
+          </li>
         </ul>
       </nav>
+      <h1>I'm Xeniya</h1>
+      <p>a web designer.</p>
     </header>
     <section id="about-container">
       <h2>About</h2>
       <p>
-        I started to learn how to code about one year ago. As a visual person
-        I<br />
+        I started to learn how to code about one year ago. As a visual person I
         enjoy web development. I find the most interesting part of programmimng
-        to<br />
-        write some code and see results immediately on the screen. <br />
-        These days my time is spent learning, researching, designing, and
-        coding.
+        is to be able to write some code and see the results immediately on the
+        screen. These days my time is spent learning, researching, designing,
+        and coding.
       </p>
     </section>
 
     <section id="experience-container">
-      <div class="experience-text">
-        <h2>Experience</h2>
-        <!-- 2013-2014 Mountain View,CA -->
-        <h3>Sales Assosiate</h3>
-        <ul class="li">
-          <li>
-            Assisted in the quick and most comfortable purchase and selection of
-            goods.
-          </li>
-          <li>
-            Consulted in detail, explained the properties and characteristics of
-            the buyer's goods.
-          </li>
-          <li>
-            Advising this or that thing helped to choose the most suitable
-            product.
-          </li>
-        </ul>
-      </div>
+      <h2>Experience</h2>
+      <ul class="li">
+        <li class="li-items">
+          <span class="position">Sales Assosiate -- </span>
+          <span class="location">2013-2014 Mountain View,CA</span><br />
 
-      <!-- 2004-2012 Nur Sultan,Kazakhstan-->
-      <div class="experience-text">
-        <h3>Architect</h3>
-        <ul class="li">
-          <li>
-            Prepared construction documentation, drawings, followed by
-            architectural supervision of the construction.
-          </li>
-          <li>
-            Designed civil buildings, industrial facilities, social and cultural
-            facilities.
-          </li>
-        </ul>
-      </div>
+          Assisted in the quick and most comfortable purchase and selection of
+          goods. Consulted in detail, explained the properties and
+          characteristics of the buyer's goods. Advising this or that thing
+          helped to choose the most suitable product.
+        </li>
+        <li class="li-items">
+          <span class="position">Architect -- </span>
+          <span class="location">2004-2012 Nur-Sultan,Kazakhstan</span><br />
+
+          Prepared construction documentation, drawings, followed by
+          architectural supervision of the construction. Designed civil
+          buildings, industrial facilities, social and cultural facilities.
+        </li>
+      </ul>
     </section>
     <section id="skills-container">
       <h2>Skills</h2>
@@ -92,15 +85,20 @@
     <!--<section id="connect-container"></section>-->
     <section id="leave-a-message-container">
       <h2>Leave a Message</h2>
-      <form name="leave_message">
-        <label for="name">Name</label><br />
-        <input type="text" id="name" name="name" required /><br />
-
-        <label for="email">Email</label><br />
-        <input type="email" id="email" name="email" required /><br />
-
-        <label for="message">Message</label><br />
-        <textarea name="message" id="message" required></textarea><br />
+      <form class="form" name="leave_message">
+        <div class="person">
+          <div class="name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="content">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" required></textarea>
         <button type="submit" id="submit-button">Submit</button>
       </form>
     </section>
@@ -113,14 +111,14 @@
         href="https://www.linkedin.com/in/xeniya-dobrogorskaya-b49083225/"
         class="icon"
         target="_blank"
-        >LinkedIn</a
-      >
+        ><img class="logo" src="img/linkedin.png" alt="linkedin logo"
+      /></a>
       <a
         href="https://github.com/XeniyaDob?tab=overview&from=2022-02-01&to=2022-02-28"
         class="icon"
         target="_blank"
-        >GitHub</a
-      >
+        ><img class="logo" src="img/github.png" alt="github logo"
+      /></a>
     </footer>
     <script src="js/index.js"></script>
   </body>
