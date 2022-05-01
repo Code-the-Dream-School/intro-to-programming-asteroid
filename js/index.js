@@ -51,6 +51,7 @@ messageForm.addEventListener("submit", (event) => {
 
   const newMessage = document.createElement("li");
   console.log(newMessage);
+
   messageList.appendChild(newMessage);
 
   /*On the next line, set the inner HTML of your newMessage element with the following information:
@@ -65,7 +66,7 @@ messageForm.addEventListener("submit", (event) => {
      3a) Inside the callback function, find the button's parent element using DOM Traversal
         (hint: parentNode property) and store it in a variable named entry
      3b) Remove the entry element from the DOM (hint: remove method)*/
-  const removeButton = document.querySelector("button");
+  const removeButton = document.createElement("button");
   removeButton.innerText = "remove";
   removeButton.setAttribute("type", "button");
 
@@ -73,7 +74,6 @@ messageForm.addEventListener("submit", (event) => {
     var entry = events.target.parentNode;
     entry.remove();
   });
-
   newMessage.appendChild(removeButton);
 
   document.getElementsByName("leave_message")[0].reset(); //reset form
