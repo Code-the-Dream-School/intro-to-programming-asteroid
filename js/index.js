@@ -17,7 +17,7 @@ Located where I want my list of skills to be by using desendant selector (#skill
 Using a for of loop I add each element of my skills array within a newly created list element
 Added each list element with array value into the skills list
 */
-let skills = ["HTML", "CSS", "Javascript"];
+let skills = ["HTML", "CSS", "JavaScript", "React.js"];
 let skillsList = document.querySelector("#skills ul");
 for (let skill of skills) {
   let newSkill = document.createElement("li");
@@ -160,13 +160,17 @@ const navContent = document.querySelectorAll("nav li");
 let navLink = (i) =>  navContent[i].firstChild;
 let sunSvg = document.querySelector("#lightDark svg")
 let hamSvg = document.querySelector("#hamburger svg")
-let sunClick = 0;
+let sunClick = sessionStorage.getItem("saveLightDarkTheme")!==0?sessionStorage.getItem("saveLightDarkTheme"):0;
+changeThemeOnClick();
 theme.addEventListener("click", (e) =>{
-
   //count the number of clicks
-  sunClick ++;
+  sunClick++
+  sessionStorage.setItem("saveLightDarkTheme", sunClick);
+  changeThemeOnClick();
+})
 
-  //First/odd click runs ELSE second/even click runs IF
+function changeThemeOnClick() {
+  //odd sunClick runs ELSE even sunClick runs IF
   if(sunClick/2 === parseInt(sunClick/2)){
 
     //Make body background white and text color black
@@ -227,8 +231,7 @@ theme.addEventListener("click", (e) =>{
     hamSvg.classList.remove("blackNav");
     hamSvg.classList.add("whiteNav");
   }
-})
-
+};
 
 
 /*
