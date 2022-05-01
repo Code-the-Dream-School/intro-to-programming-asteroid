@@ -80,7 +80,8 @@ h2{
   width: 25%;
   min-width: 230px;
   margin-right: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
   background-color: #94f;
   box-shadow: -10px 5px 10px rgba(153, 68, 255, .65);
   position: relative;
