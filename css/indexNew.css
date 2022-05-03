@@ -1,0 +1,348 @@
+/* font size 100% = 16px = 1em*/
+
+/* ================================= 
+  Base Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("forest4.jpeg");
+  background-size: cover;
+  color: #000000;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+#header-container,
+#experience-container,
+#footer-container,
+#messages-container {
+  background-color: #fff;
+}
+#header-container {
+  position: relative;
+  padding: 100px 0;
+}
+
+/* ================================= 
+ NavBar Flexbox container
+==================================== */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+/* ================================= 
+  Flexbox items
+==================================== */
+.profilephoto {
+  width: 10%;
+  box-shadow: 0 2px 2px 0 #6d6161;
+  border-radius: 100px;
+}
+
+.nav-li {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.list-item {
+  display: inline-block;
+  padding: 50px;
+}
+/* ================================= 
+ 
+==================================== */
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  padding: 10px 0 10px;
+  border-radius: 5px;
+  box-shadow: inset 100px 0 0 0 #01796f;
+  color: white;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-line {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: #01796f;
+}
+#about-container {
+  margin: auto;
+  padding: 50px;
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+  color: #01796f;
+}
+
+h2 {
+  font-size: 2rem;
+}
+.design {
+  text-align: center;
+}
+.intro {
+  text-align: justify;
+}
+
+#experience-container,
+#projects-container,
+#leave-a-message-container,
+#messages-container {
+  width: 50%;
+  margin: auto;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 2;
+}
+/* ================================= 
+  Experience Flexbox container
+==================================== */
+
+#experience-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+/* ================================= 
+  Experience Flexbox items
+==================================== */
+#experience-container li {
+  width: 100%;
+  margin: 50px auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 0 #7ab6b0;
+  background-color: #fefaf6;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.position {
+  font-size: 1.5rem;
+}
+
+.location {
+  font-size: 0.8rem;
+}
+
+#skills-container {
+  width: 50%;
+  margin: 100px auto;
+  padding: 50px;
+  text-align: left;
+  line-height: 2;
+}
+/* ================================= 
+  Skills Flexbox container
+==================================== */
+.skills-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+/* ================================= 
+  Experience Flexbox items
+==================================== */
+.skills-li {
+  margin: 60px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 0 #7ab6b0;
+  background-color: #fefaf6;
+  text-align: center;
+  flex-grow: 1;
+}
+/* ================================= 
+  Projects Flexbox container
+==================================== */
+#projects-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+/* ================================= 
+  Projects Flexbox items
+==================================== */
+.projects-li {
+  margin: 15px;
+  padding: 50px 50px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 0 #7ab6b0;
+  background-color: #fefaf6;
+  line-height: 2;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+/* ================================= 
+  Leave a message
+==================================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name,
+.email,
+.content {
+  display: block;
+  flex: 1;
+}
+
+label {
+  display: block;
+  text-align: left;
+  padding: 10px;
+  margin: 0;
+}
+
+textarea {
+  width: 50%;
+  height: 80px;
+}
+
+input[name="email"],
+input[name="name"] {
+  width: 50%;
+  height: 40px;
+}
+
+#submit-button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+#submit-button:hover {
+  background-color: #01796f;
+}
+
+#footer-container {
+  margin-top: 50px;
+  padding: 50px 0 20px;
+  font-size: 0.8rem;
+}
+.logo {
+  margin: 10px;
+  width: 2%;
+}
+/* ================================= 
+ Media Query for Mobile Devices
+==================================== */
+
+@media all and (max-width: 480px) {
+  #header-container {
+    position: relative;
+    padding: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .photo-container {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+
+  .nav-li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    display: none;
+  }
+
+  .list-item {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #01796f;
+  }
+
+  .profilephoto {
+    width: 10%;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  /* Active class for Togle menu with JavaScript  */
+  .active {
+    display: block;
+  }
+  #about-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+  }
+
+  #experience-container,
+  #skills-container,
+  #projects-container,
+  #leave-a-message-container,
+  #messages-container {
+    width: 90%;
+    padding: 10px;
+  }
+  #experience-container li {
+    text-align: justify;
+  }
+  #leave-a-message-container {
+    text-align: center;
+  }
+  /* #submit-button {
+    display: inline;
+  } */
+  .logo {
+    margin: 0 10px;
+    width: 10%;
+  }
+}

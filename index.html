@@ -12,7 +12,7 @@
       name="keywords"
       content="Xeniya Dobrogorskaya designer design portfolio creative Raleigh Durham North Carolina"
     />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/indexNew.css" />
     <link rel="icon" href="css/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,31 +24,41 @@
   <body>
     <header id="header-container">
       <nav class="navbar">
-        <img
-          class="profilephoto"
-          src="img/xeniya.png"
-          alt="xeniya profile picture"
-        />
-        <ul class="nav-li">
+        <div class="photo-container">
+          <img
+            class="profilephoto"
+            src="img/xeniya.png"
+            alt="xeniya profile picture"
+          />
+        </div>
+        <ul id="navigation-list" class="nav-li">
           <li class="list-item"><a href="#about-container">About</a></li>
           <li class="list-item">
             <a href="#experience-container">Experience</a>
           </li>
           <li class="list-item"><a href="#skills-container">Skills</a></li>
+          <li class="list-item"><a href="#projects-container">Projects</a></li>
           <li class="list-item">
-            <a href="#leave-a-message-container">Connect</a>
+            <a href="#projects-container">Connect</a>
           </li>
         </ul>
+        <div>
+          <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+          </div>
+        </div>
       </nav>
-      <h1>I'm Xeniya</h1>
-      <p>a web designer.</p>
     </header>
     <section id="about-container">
+      <h1>I'm Xeniya</h1>
+      <p class="design">a web designer.</p>
       <h2>About</h2>
-      <p>
-        I started to learn how to code about one year ago. As a visual person I
-        enjoy web development. I find the most interesting part of programmimng
-        is to be able to write some code and see the results immediately on the
+      <p class="intro">
+        I started to learn how to code about one year ago. As a visual person, I
+        enjoy web development. I find the most interesting part of programming
+        is being able to write some code and see the results immediately on the
         screen. These days my time is spent learning, researching, designing,
         and coding.
       </p>
@@ -56,9 +66,17 @@
 
     <section id="experience-container">
       <h2>Experience</h2>
-      <ul class="li">
-        <li class="li-items">
-          <span class="position">Sales Assosiate -- </span>
+      <ul>
+        <li>
+          <span class="position">Code The Dream Student</span><br />
+          <span class="location">2022 Durham,NC</span><br />
+          Learned the basics of programming through HTML, CSS, and JavaScript.
+          Got extensive practice with hands-on exercises and projects that
+          demonstrate grasp of coding fundamentals, and built confidence in
+          ability to think and problem-solve like a programmer.
+        </li>
+        <li>
+          <span class="position">Sales Associate</span><br />
           <span class="location">2013-2014 Mountain View,CA</span><br />
 
           Assisted in the quick and most comfortable purchase and selection of
@@ -66,8 +84,8 @@
           characteristics of the buyer's goods. Advising this or that thing
           helped to choose the most suitable product.
         </li>
-        <li class="li-items">
-          <span class="position">Architect -- </span>
+        <li>
+          <span class="position">Architect</span><br />
           <span class="location">2004-2012 Nur-Sultan,Kazakhstan</span><br />
 
           Prepared construction documentation, drawings, followed by
@@ -78,13 +96,19 @@
     </section>
     <section id="skills-container">
       <h2>Skills</h2>
-      <ul>
+      <ul class="skills-ul">
         <!-- Skills li elements are added via JavaScript-->
       </ul>
     </section>
-    <!--<section id="connect-container"></section>-->
+    <section id="projects-container">
+      <h2>Projects</h2>
+      <ul>
+        <!-- Projects li elements are added via JavaScript-->
+      </ul>
+    </section>
     <section id="leave-a-message-container">
       <h2>Leave a Message</h2>
+
       <form class="form" name="leave_message">
         <div class="person">
           <div class="name">
@@ -123,3 +147,5 @@
     <script src="js/index.js"></script>
   </body>
 </html>
+
+

@@ -1,3 +1,12 @@
+//Navbar mobile size
+
+const toggleButton = document.getElementById("toggle-button");
+const navigationList = document.getElementById("navigation-list");
+
+toggleButton.addEventListener("click", () => {
+  navigationList.classList.toggle("active");
+});
+//////////////////////////////////////////////////
 var today = new Date();
 
 var thisYear = today.getFullYear();
@@ -9,7 +18,7 @@ copyright.innerHTML = `&copy;Xeniya Dobrogorskaya  ${thisYear}`;
 
 footer.appendChild(copyright);
 
-const skills = ["HTML", "CSS", "JavaScript"];
+const skills = ["JavaScript", "HTML", "CSS"];
 const skillsSection = document.querySelector("#skills-container");
 const skillsList = skillsSection.querySelector("ul");
 
@@ -84,3 +93,25 @@ messageForm.addEventListener("submit", (event) => {
   messageList.appendChild(newMessage);
   messageForm.reset();
 });
+//Fetch GitHub Repositories
+var githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/XeniyaDob/repos");
+githubRequest.send();
+
+//Handle Response from Server
+
+githubRequest.onload = function () {
+  var repositories = JSON.parse(this.response);
+  //console.log(repositories);
+  //Display Repositories in List
+  let projectSection = document.getElementById("projects-container");
+  let projectList = projectSection.querySelector("ul");
+  for (let i = 0; i < repositories.length; i++) {
+    let project = document.createElement("li");
+    let linkProject = document.createElement("a");
+
+    project.innerText = repositories[i].name; //set the inner text of a project variable to the current Array element's name property
+    project.className = "projects-li";
+    projectList.appendChild(project);
+  }
+};
