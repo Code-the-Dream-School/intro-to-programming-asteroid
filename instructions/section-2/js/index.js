@@ -69,17 +69,29 @@ function setup() {
 
     //for h2s
     const comeIn = document.querySelectorAll('h2');
-    comeIn.forEach(h2 => observer.observe(h2));
-    //for <p>
-    const paras = document.querySelectorAll('p');
-    paras.forEach(p => observer.observe(p));
-    //for form
-    const frm = document.querySelectorAll('form');
-    frm.forEach(form => observer.observe(form)); 
+    comeIn.forEach(h2 => observer.observe(h2)); 
     //for img
     const image = document.querySelectorAll('img');
     image.forEach(img => observer.observe(img));
-    //for span
-    const spans = document.querySelectorAll('span');
-    spans.forEach(span => observer.observe(span));
 }
+
+//JSON
+
+var githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', (event) => {
+    
+    const repositories = JSON.parse(this.response);
+    console.log(repositories); 
+
+});
+
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+for (i = 0; i < repositories.length; i++ ){
+    const project = document.createElement('li');
+    project.innerText = project[i];
+    project.appendChild(projectList);
+
+};

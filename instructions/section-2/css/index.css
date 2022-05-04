@@ -4,7 +4,7 @@ body {
     color: white;
     font-family: 'NTR', sans-serif; ;
     text-align: left;
-    margin: 0;
+    margin: 10px;
 }
 
 
@@ -210,9 +210,6 @@ intro section */
     flex-wrap: wrap;
     text-align: justify;
 }
-*, :after, :before {
-    box-sizing: border-box;
-}
 #myself{
     max-width: 300px;
     height: auto;
@@ -225,44 +222,33 @@ intro section */
 /* experience section */
 .exp-div{
     display: flex;
-    margin: auto;
-    padding-bottom: 40px;
-    width: 100vw;
+    flex-direction: row;
 }
 .container-3{
     display: flex;
-    flex-grow: 1;
-    margin: auto;
+    flex-direction: column;
 }
 #experience{
     font-size: 50px;
     font-family: 'NTR', sans-serif;
-    width: 100vh;
     padding-top: 80px;    
 } 
-
-#place{
-    font-family: NTR;
-    font-size: 20px;
+#locat{
+    font-size: 25px;
     font-weight: 700px;
+    width: 540px;
+    flex-wrap: wrap;
     line-height: 1.5;
-    width: 400px;
-    display: inline-flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start!important;
+    letter-spacing: 2px;
 }
 #title{
-    font-family: NTR;
     font-size: 25px;
     font-weight: 700px;
     flex-wrap: wrap;
     line-height: 1.5;
     letter-spacing: 2px;
     padding: 10px;
-
 }
-
 #time{
     font-size: 15px;
     flex-wrap: wrap;
@@ -271,17 +257,18 @@ intro section */
     letter-spacing: 2px;
     padding: 10px;
 }
-
-
+#job-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 #exp-sect{
     font-size: 20px;
     line-height: 1.5;
     flex-wrap: wrap;
-    justify-content:flex-start;
-    max-width: 600px;
-    position: relative;
+    max-width: 450px;
     list-style: none;
-    padding-right: 60px;
+
 }
 /* 
 li */
@@ -303,7 +290,7 @@ li */
     padding-top: 80px;   
 }
 #sk-list{
-    font-family: NTR;
+    font-family: 'NTR';
     font-size: 20px;
     font-weight: 700px;
     line-height: 1.5;
@@ -414,7 +401,7 @@ textarea{
     border-radius: 10px;
     border: none;
 }
-h2, p, form, img, span {
+h2, img {
     opacity: 0; 
     transition: all 0.8s ease-out;
 }
