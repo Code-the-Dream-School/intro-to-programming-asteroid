@@ -77,28 +77,8 @@ messageForm.addEventListener('submit', (event) => {
 });
 
 
-//AJAX 
-
-// const githubRequest = new XMLHttpRequest();
-
-// githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
-
-// githubRequest.send();
-
-// githubRequest.addEventListener('load', function (){
-//     const repositories = JSON.parse(this.response)
-//     console.log(repositories);
-// });
-
-// const projectSection = document.querySelector('#projects'); 
-// const projectList = projectSection.querySelector('ul');
-// for (i = 0; repositories.length; i++) {
-//     const project = createElement('li')
-//     project.innerHTML = repositories[i].name;
-//     projectList.appendChild(project);
-// }
-
-      
+//AJAX
+   
 let githubRequest = new XMLHttpRequest();
 githubRequest.onreadystatechange = function() {};
 githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
@@ -107,6 +87,8 @@ githubRequest.send();
 githubRequest.addEventListener('load', (event) => {
     let repositories = JSON.parse(githubRequest.responseText);
     console.log(repositories);
+const projectSection = document.querySelector('#projects'); 
+const projectList = projectSection.querySelector('ul');
     for (let i = 0; i < repositories.length; i++) {
         let project = document.createElement('li');
         project.innerHTML = repositories[i].name;
