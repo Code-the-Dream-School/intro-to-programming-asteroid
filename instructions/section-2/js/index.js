@@ -1,4 +1,3 @@
-
 const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
@@ -15,7 +14,7 @@ for (i = 0; i < skills.length; i++) {
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 };
-
+//DOM
 const messageForm = document.getElementsByName("leave_message")[0];
 console.log(messageForm);
 messageForm.addEventListener('submit', (event) => {
@@ -33,7 +32,6 @@ messageForm.addEventListener('submit', (event) => {
     newMessage.innerHTML = `<a href = "mailto:${email.value}" target "_blank"> ${name.value}</a><span> wrote: ${message.value} </span>`
 
     const removeButton = document.createElement('button');
-
     removeButton.innerText = 'remove';
 
     removeButton.type = 'button'
@@ -80,4 +78,7 @@ function setup() {
     //for img
     const image = document.querySelectorAll('img');
     image.forEach(img => observer.observe(img));
+    //for span
+    const spans = document.querySelectorAll('span');
+    spans.forEach(span => observer.observe(span));
 }
