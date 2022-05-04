@@ -402,22 +402,17 @@ textarea{
     border: none;
 }
 h2, img {
-    opacity: 0; 
+    opacity: 1; 
     transition: all 0.8s ease-out;
 }
 .show {
     opacity: 1;
     bottom: 0;
 }
-.exp(2) p.show {
+
+/* .title(1) h2.show{
     transition-delay: 0.5s;
-}
-.exp(3) p.show {
-    transition-delay: 2s;
-}
-.title(1) h2.show{
-    transition-delay: 0.5s;
-}
+} */
 #foot{
     font-family: 'NTR', sans-serif;
     text-align: center;
@@ -481,9 +476,7 @@ p.copyright {
     position: fixed;
 }
 #navbar{
-    display: inline-block;
-    text-align: center;
-    align-items: center;
+    display: none;
 }
 #container-2{
     display: flex;
@@ -523,6 +516,7 @@ p.copyright {
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
+    padding-right: 10px;
 }
 #locat{
     display: flex;
@@ -539,7 +533,6 @@ p.copyright {
     flex-direction: column;
     flex-wrap: wrap;
     align-self: auto;
-    height: 35px;   
 }
 .lists{
     flex-wrap: wrap;
