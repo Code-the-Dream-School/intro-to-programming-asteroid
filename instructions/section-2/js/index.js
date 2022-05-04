@@ -49,49 +49,79 @@ messageForm.addEventListener('submit', (event) => {
 
 
 //intersection observer
-window.addEventListener('DOMContentLoaded', setup); 
+// window.addEventListener('DOMContentLoaded', setup); 
 
-function setup() {
-    const options = {
-        rootMargin: '0px 0px -200px 0px'
-    }
+// function setup() {
+//     const options = {
+//         rootMargin: '0px 0px -200px 0px'
+//     }
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target);
-            } else {
-                return;
-            }
-        })
-    }, options);
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if(entry.isIntersecting) {
+//                 entry.target.classList.add('show');
+//                 observer.unobserve(entry.target);
+//             } else {
+//                 return;
+//             }
+//         })
+//     }, options);
 
-    //for h2s
-    const comeIn = document.querySelectorAll('h2');
-    comeIn.forEach(h2 => observer.observe(h2)); 
-    //for img
-    const image = document.querySelectorAll('img');
-    image.forEach(img => observer.observe(img));
-}
+//     //for h2s
+//     const comeIn = document.querySelectorAll('h2');
+//     comeIn.forEach(h2 => observer.observe(h2)); 
+//     //for img
+//     const image = document.querySelectorAll('img');
+//     image.forEach(img => observer.observe(img));
+// };
 
-//JSON
+//AJAX 
 
-var githubRequest = new XMLHttpRequest();
+const githubRequest = new XMLHttpRequest();
+
 githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', (event) => {
-    
-    const repositories = JSON.parse(this.response);
-    console.log(repositories); 
 
+githubRequest.send();
+
+githubRequest.addEventListener('load', function (){
+    const repositories = JSON.parse(this.response)
+    console.log(repositories);
 });
 
-const projectSection = document.getElementById('projects');
+const projectSection = document.querySelector('#projects'); 
 const projectList = projectSection.querySelector('ul');
-for (i = 0; i < repositories.length; i++ ){
-    const project = document.createElement('li');
-    project.innerText = project[i];
-    project.appendChild(projectList);
+for (let i = 0; repositories.length; i++) {
+    const project = createElement('li')
+    project.innerHTML = repositories.name
+    projectList.appendChild(project);
 
-};
+}
+
+
+
+// intersection observer
+// window.addEventListener('DOMContentLoaded', setup); 
+
+// function setup() {
+//     const options = {
+//         rootMargin: '0px 0px -200px 0px'
+//     }
+
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if(entry.isIntersecting) {
+//                 entry.target.classList.add('show');
+//                 observer.unobserve(entry.target);
+//             } else {
+//                 return;
+//             }
+//         })
+//     }, options);
+
+//     //for h2s
+//     const comeIn = document.querySelectorAll('h2');
+//     comeIn.forEach(h2 => observer.observe(h2)); 
+//     //for img
+//     const image = document.querySelectorAll('img');
+//     image.forEach(img => observer.observe(img));
+// };
