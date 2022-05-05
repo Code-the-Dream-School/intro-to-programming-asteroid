@@ -20,6 +20,7 @@ body {
 }
 
 header {
+    background-color: var(--color-black);
     position: sticky;
     top: 10px;
 }
@@ -84,20 +85,21 @@ p, ul, #leave_message, #connect a {
     color: var(--color-purple);
 }
 
-#about-me, #skills {
+#about-me, #skills, #connect {
     border-style: groove dotted;
     border-color: var(--medium-pink);
 }
 
-#connect, #experience {
+#experience, #projects {
     border-style: dotted groove;
-    border-color: var(--color-purple);
+    border-color: var(--color-purple); 
 }
 
 #experience ul {
     display: flex;
     flex-direction: row;
     padding: 0;
+    gap: 5px;
 }
 
 /* Makes the bullets line up properly in the center of the page with the text. */
@@ -146,6 +148,43 @@ p, ul, #leave_message, #connect a {
     border-style: double;
     border-color: var(--medium-pink);
     border-radius: 40px;
+} 
+
+#projects {
+    align-content: space-between;
+}
+
+#projects ul {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding: 10px;
+    list-style: var(--list-style);
+    gap: 7px;
+}
+
+#projects a {
+    color: var(--color-black);
+}
+
+#projects a:hover {
+    color: var(--color-greenyellow);
+}
+
+#projects li:nth-child(odd) {
+    background-color: var(--color-purple);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--medium-pink);
+    border-radius: 5px;
+}
+
+#projects li:nth-child(even) {
+    background-color: var(--medium-pink);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--color-purple);
+    border-radius: 5px;
 } 
 
 #connect {
@@ -234,7 +273,7 @@ label {
 }
 
 #messages a:hover {
-    color: var(--color-purple);
+    color: var(--color-greenyellow);
 }
 
 #messages li:nth-child(odd) button {
@@ -311,7 +350,7 @@ footer p {
 }
 
 
-@media screen and (max-width: 1600) {
+@media screen and (min-width: 1600) {
     #experience li {
         margin-left: 0;
     }
@@ -334,6 +373,3 @@ footer p {
         width: 50px;
     }
 }
-
-/* I still need to work on the remove button to remove messages and I need to create and work on the hide 
-button to hide messages. */
