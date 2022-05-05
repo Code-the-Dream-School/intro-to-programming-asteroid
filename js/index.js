@@ -33,7 +33,7 @@ const skills = ['HTML', 'JavaScript', 'CSS'];
 // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 // hint: querySelector or getElementById method
 // const skillsSection = document.getElementById('#skills');
-const skillsSection = document.querySelector("#skills");
+const skillsSection = document.querySelector(".skills");
 // console.log(skills)
 
 // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element 
@@ -105,7 +105,7 @@ messageForm.addEventListener('submit', (event) => {
     // newMessage element with the following information:
     // <a> element that displays the "name" and links to the 
     // "email" (hint: use the mailto: prefix) - <span> element that displays the "message"
-    newMessage.innerHTML = `<a href="mailto: ${email}" target="_blank" style="text-decoration: none;"><span><bold> ${name}</bold></span> <span><bold> wrote: ${message} </bold> </span><span> </span></a>`;
+    newMessage.innerHTML = `<a href="mailto: ${email}" target="_blank" style="text-decoration: none;"><span class="hi"><bold> ${name}</bold></span> <span><bold> wrote: ${message} </bold> </span><span> </span></a>`;
     messageList.appendChild(newMessage);
 
     // Create a new <button> element and store it in a variable named removeButton

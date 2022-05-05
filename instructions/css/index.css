@@ -9,14 +9,15 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color:rgb(228, 226, 226); 
+    background-color:#999; 
 }      
 /*Nav name logo class style*/
 .name-logo{
-    color:#a30000;
+    /* color:#a30000; */
+    color:#0c0c0c;
     text-transform: none;
     letter-spacing: 5px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 /*Nav bar links style*/
@@ -31,23 +32,251 @@ nav{
 }
 /*Nav bar links a tags style*/
 .nav-links a{
-    color:#a30000;
+    color:#0c0c0c;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 16px;
 
 }
+/* About h1 Style */
+.about h1{
+    font-display: flex;  
+    align-items: center;   
+    justify-content:center; 
+    letter-spacing: 5px; 
+}
+/* About Style */
+.about{
+    font-display: flex; 
+    /* background-color: #d9d9d9; */
+    letter-spacing: 2px;
+    align-items: center;  
+    justify-content:center; 
+
+}
+
 /*Body font style*/
 body{
     font-family: 'Rajdhani', sans-serif;
     font-family: 'Raleway', sans-serif;
-    background-color:#fdfdfd;
+    background-color:#f2f2f2;
+}
+/*Experience style*/
+.experience-section{
+    background-color: #b3b3b3;
+    /* justify-content: space- space-between; */
+    /* width: 50%; */
+}
+/*Experience-name style*/
+.experience-section h1{
+    display: flex; 
+    color:#0c0c0c;
+    background-color: #d9d9d9;
+    letter-spacing: 5px;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+   
+}
+/*Experience-list li style*/
+.experience-section li{
+    font-display: flex; 
+    /* background-color: #d9d9d9; */
+    letter-spacing: 2px;
+    align-items: center;  
+    justify-content:center; 
+    padding: 10px;
+    list-style: none;
+
+}
+/* Skils Style */
+/* .skills{ */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* letter-spacing: 5px; */
+    /* list-style: none; */
+/* } */
+
+/* Skills h2 Style */
+.skills h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+.skills h2:before, .skills h2:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px outset ;
+    /* border-bottom-color: #808080;  */
+    /* border-; */
+    /* background-color: gray; */
+    /* margin:auto; */
+    /* color: #808080; */
+}
+/* Skills Style */
+.skills li{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    letter-spacing: 3px; 
+    list-style: none; 
+} 
+/*Connect Style - No working properly */
+.connect h1{
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    /* background-color: #d9d9d9; */
+    /* padding-left: 540px;   */
+    /* padding-right: 540px; */
+
+}
+/* Connect p Style - No working properly */
+.connect p{
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    /* background-color: #d9d9d9; */
+    /* padding-left: 410px; */
+    /* padding-right: 410px;   */
+
 }
 
+/*Leave a Message Style*/
+#leave-a-message{ 
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+/*Leave a Message h2 Style*/
+#leave-a-message h2{
+    font-weight: bolder; 
+    letter-spacing: 5px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#0c0a0a
 
+}
+/*Leave Message Form Style*/
+.leave_message{
+    /* border-width: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     /* font-weight: bolder;  */
+     /* letter-spacing: 5px;  */
+    /* justify-content: space-between; */
 
+}
+/*Leave a Message Form name Style*/
+.name{
+    /* border: none;  */
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    width:50%;
+    height: 30px;
+    
+}
+/* Label Name Style */
+.your-name{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+    /* flex-direction:column; */
+    
+    
+}
+/*Leave a Message Form email Style*/
+.email{
+    /* border: none;  */
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    width:50%;
+    height: 30px;
+}
+/* Label Email Style */
+.your-email{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+/*Leave a Message Form message Style*/
+.message{
+    border: 1px solid #d3d3d3; 
+    border-radius: 6px;
+    width:50%;
+    height: 30px;
+}
+/* Label Message Style */
+.your-message{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
 
+}
+/*Button Style*/
+.submit{
+    /* color: #a9a9a9; */
+    /* border: none; */
+    border: 1px solid #d3d3d3;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 5px;
+    border-radius: 15px;
+    background-color: #d3d3d3;
+    width:30%; 
+    height: 30px;
+
+}
+/* Button Hover Style */
+.submit:hover{
+    background-color: #808080;
+    border: none; 
+    /* color: black;  */
+    /* border: solid #2b2828; */
+
+}
+/* Messages Style */
+#messages{
+    letter-spacing: 5px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#messages li{
+    list-style: none; 
+}
+/* Footer Style*/
+.footer{
+    background-color: #808080;
+    height: 100px;
+    width: 100%;
+    /* position: flex; */
+    /* align-items: center; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* color:#0c0c0c */
+    color:#ffffff;
+    
+}
+/*Media */
+@media (max-width: 400px) {
+    .experience-section li{
+        flex-direction: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 
 
