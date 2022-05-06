@@ -14,6 +14,35 @@ for (i = 0; i < skills.length; i++) {
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 };
+
+//intersection observer
+window.addEventListener('DOMContentLoaded', setup); 
+
+function setup() {
+    const options = {
+        rootMargin: '0px 0px -200px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            } else {
+                return;
+            }
+        })
+    }, options);
+
+    //for h2s
+    const comeIn = document.querySelectorAll('h2');
+    comeIn.forEach(h2 => observer.observe(h2)); 
+    //for img
+    const image = document.querySelectorAll('img');
+    image.forEach(img => observer.observe(img));
+};
+
+
 //DOM
 const messageForm = document.getElementsByName("leave_message")[0];
 console.log(messageForm);
@@ -47,80 +76,21 @@ messageForm.addEventListener('submit', (event) => {
 });
 
 
-//intersection observer
-// window.addEventListener('DOMContentLoaded', setup); 
-
-// function setup() {
-//     const options = {
-//         rootMargin: '0px 0px -200px 0px'
-//     }
-
-//     const observer = new IntersectionObserver((entries, observer) => {
-//         entries.forEach(entry => {
-//             if(entry.isIntersecting) {
-//                 entry.target.classList.add('show');
-//                 observer.unobserve(entry.target);
-//             } else {
-//                 return;
-//             }
-//         })
-//     }, options);
-
-//     //for h2s
-//     const comeIn = document.querySelectorAll('h2');
-//     comeIn.forEach(h2 => observer.observe(h2)); 
-//     //for img
-//     const image = document.querySelectorAll('img');
-//     image.forEach(img => observer.observe(img));
-// };
-
-//AJAX 
-
-const githubRequest = new XMLHttpRequest();
-
+//AJAX
+   
+let githubRequest = new XMLHttpRequest();
+githubRequest.onreadystatechange = function() {};
 githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
+githubRequest.send(); 
 
-githubRequest.send();
-
-githubRequest.addEventListener('load', function (){
-    const repositories = JSON.parse(this.response)
+githubRequest.addEventListener('load', (event) => {
+    let repositories = JSON.parse(githubRequest.responseText);
     console.log(repositories);
-});
-
 const projectSection = document.querySelector('#projects'); 
 const projectList = projectSection.querySelector('ul');
-for (let i = 0; repositories.length; i++) {
-    const project = createElement('li')
-    project.innerHTML = repositories.name
-    projectList.appendChild(project);
-
-}
-
-
-
-// intersection observer
-// window.addEventListener('DOMContentLoaded', setup); 
-
-// function setup() {
-//     const options = {
-//         rootMargin: '0px 0px -200px 0px'
-//     }
-
-//     const observer = new IntersectionObserver((entries, observer) => {
-//         entries.forEach(entry => {
-//             if(entry.isIntersecting) {
-//                 entry.target.classList.add('show');
-//                 observer.unobserve(entry.target);
-//             } else {
-//                 return;
-//             }
-//         })
-//     }, options);
-
-//     //for h2s
-//     const comeIn = document.querySelectorAll('h2');
-//     comeIn.forEach(h2 => observer.observe(h2)); 
-//     //for img
-//     const image = document.querySelectorAll('img');
-//     image.forEach(img => observer.observe(img));
-// };
+    for (let i = 0; i < repositories.length; i++) {
+        let project = document.createElement('li');
+        project.innerHTML = repositories[i].name;
+        projectList.appendChild(project);
+    }
+});
