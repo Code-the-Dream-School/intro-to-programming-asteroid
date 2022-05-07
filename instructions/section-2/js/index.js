@@ -78,19 +78,48 @@ messageForm.addEventListener('submit', (event) => {
 
 //AJAX
    
-let githubRequest = new XMLHttpRequest();
-githubRequest.onreadystatechange = function() {};
-githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
-githubRequest.send(); 
+// let githubRequest = new XMLHttpRequest();
+// githubRequest.onreadystatechange = function() {};
+// githubRequest.open('GET', 'https://api.github.com/users/Armanchi/repos');
+// githubRequest.send(); 
 
-githubRequest.addEventListener('load', (event) => {
-    let repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
+// githubRequest.addEventListener('load', (event) => {
+//     let repositories = JSON.parse(githubRequest.responseText);
+//     console.log(repositories);
 const projectSection = document.querySelector('#projects'); 
 const projectList = projectSection.querySelector('ul');
-    for (let i = 0; i < repositories.length; i++) {
-        let project = document.createElement('li');
-        project.innerHTML = repositories[i].name;
-        projectList.appendChild(project);
-    }
-});
+//     for (let i = 0; i < repositories.length; i++) {
+//         let project = document.createElement('li');
+//         project.innerHTML = repositories[i].name;
+//         projectList.appendChild(project);
+//     }
+// });
+
+
+    //Stetch Goal: Transform your repository names into `<a>` tags that link to GitHub
+    //  for (i = 0; i < repositories.length; i++)
+    // {
+    //     const project = document.createElement('li');
+    //     const projectLink = document.createElement('a');
+    //     projectLink.textContent = repositories[i].name;
+    //     projectLink.setAttribute("href", repositories[i].html_url);
+    //     project.appendChild(projectLink);
+    //     projectList.appendChild(project);
+    //     console.log("List", projectList);
+
+    // }
+//Fetch
+fetch('https://api.github.com/users/Armanchi/repos')
+    .then(res => res.json())
+    .then(data => {
+            for (let i = 0; i < data.length; i++) {
+            const project = document.createElement('li');
+            const projectLink = document.createElement('a');
+            projectLink.textContent = data[i].name;
+            projectLink.setAttribute("href", data[i].html_url);
+            project.appendChild(projectLink);
+            projectList.appendChild(project);
+            console.log("List", projectList);
+
+            }
+        });
