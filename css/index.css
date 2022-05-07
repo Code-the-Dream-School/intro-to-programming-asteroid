@@ -561,10 +561,4 @@ button:hover {
         grid-gap: 135px;
         padding: 10px;
     }
-     .main-footer {
-        display: flex;
-        padding-left: 10px;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-    }
 }
