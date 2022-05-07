@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="George's Portfolio">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <title>Portfolio</title>  
+    </head>
+
+    <body>
+        <!-----------------------
+             Navigation 
+        ------------------------>
+        <a name="top"></a> <!-- Anchor -->
+        <header class="main-header"> 
+            <h1 class="name"><a href="#banner">George K Owusu Jr</a></h1>
+            <ul  class="main-nav"> 
+                <li><a class="active" href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header> 
+
+        <header>
+            <section id="secondHeader">
+                <div class="hero">
+                    <h1 class="headline">Let's jump into it!</h1>
+                </div>
+            </section>
+        </header>
+    
+        <div class="slider"></div>
+
+        <!-- Banner -->
+        <div id="banner" class="banner" data-aos="fade-in">
+            <img id="profile-img" src="img/portrait.jpg" alt="man in suit"/>
+            <div>
+                <p id="bannerPhrase"> I am the liaison <br/>that will connect your business <br/> with the world!</p>
+            </div>
+        </div>
+                
+        <!-- About Me Section -->
+        <section id="aboutSection">
+            <div class="grid">
+                <div class="item" data-aos="fade-right"><h2 id="about">About</h2>
+                    <img class="aboutSectionImg" data-aos="fade-left" src="img/remy_loz-3S0INpfREQc-unsplash.jpg" alt="clipart with the word about">
+                    <p data-aos="fade-in">Mr. Owusu is currently employed as an  Operations Supervisor at Best Buy. <br/> He has been with the company since 2013. Mr. Owusu has had a long term goal of <br/>developing and maintaining web, phone and game applications. <br/>To begin making progress with his goal, he began coding in 2021.<br/> Mr. Owusu aspires to obtain a career as a Full-Stack Developer. </p> 
+                </div>
+
+                <hr/>
+
+                <div class="item"> 
+                    <h1 data-aos="fade-left">Education</h1> 
+                    <img class="aboutSectionImg" data-aos="fade-up"src="img/education.jpg" alt="clipart of kids who graduated">
+                    <p data-aos="fade-in"><strong>Virginia State University</strong>, Petersburg, VA August 2008-2012<br/>Bachelor’s of Science (degree in progress)<br/>Major: Interdisciplinary Studies, Minor: Community Based Education </p> 
+                    <p data-aos="fade-in"><strong>Morgan State University</strong>, Baltimore, MD August 2006-August 2008<br/>Bachelor’s of Science (transfer)<br/>Major: Mass Communication</p></div>
+              </div>
+        </section>
+       
+        <!-- Experience Section -->
+        <section id="experience">
+                <h2>Experience</h2>
+                    <ul class="experienceGridContainer">
+                        <li class="list" data-aos="fade-left">Intro to Programming, Code the Dream, January 2022</li>
+                        <li class="list" data-aos="fade-right">Operations Supervisor Best Buy, Colonial Heights, VA May 2015-present</li>
+                        <li class="list" data-aos="fade-left">Inventory Specialist(SWAT)  Best Buy, Colonial Heights, VA January 2015-May 2015</li>
+                        <li class="list" data-aos="fade-right">Inventory Specialist Best Buy Colonial Heights, VA July 2013-January 2015</li>
+                    </ul>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="row" data-aos="fade-in"><h2>Skills</h2>
+             <ul data-aos="fade-up"> </ul>
+             </div>            
+        </section>
+        
+        <section id="projects">
+            <h2 data-aos="fade-in">Projects</h2>
+            <ul></ul>
+        </section>
+
+        <!-- Form Section -->
+        <section id="contact">
+            <h2 id="messageHeader" data-aos="fade-left">Leave a Message</h2>
+                <div class="formContainer">
+                    <form action="index.html" method="post" name="leave_message" id="leaveMessage">
+                      <ul class="flex-outer">
+                        <li>
+                          <label for="submitterName">Name</label>
+                          <input type="text" id="submitterName" placeholder="Enter your name here" name="submitterName" required="true">
+                        </li>
+                        <li>
+                          <label for="email">Email</label>
+                          <input type="email" id="email" placeholder="Enter your email here" name="email" required="true">
+                        </li>
+                        <li>
+                          <label for="submitterMessage">Message</label>
+                          <textarea id="submitterMessage" placeholder="Enter your message here" required="true"></textarea>
+                        </li>
+                        <button class="btn" type="submit">Submit</button> 
+            </section>
+            
+            <!-- Message Section -->
+            <section id="messages">
+                <h2 data-aos="fade-up">Messages</h2>
+                <ul id="messageList"></ul>
+            </section>
+            
+            <footer class="main-footer">
+                <div class="footerGrid">
+                    <div class="item-1 item"><a href="https://www.facebook.com/george.gmoney" target="_blank"><img src="img/facebook-icon.png" alt="facebook icon" height="40px" width="30px"></a></div>
+                    <div class="item-2 item"><a href="https://github.com/gkojunior"target="_blank"><img src="img/github-logo.png" alt="github icon" height="40px"></a></div>
+                    <div class="item-3 item"><a href="https://www.linkedin.com/in/george-owusu-2a853411b/"target="_blank"><img src="img/linkedin-icon.png" alt="linked in icon" height="40px" width="30px"></a></div>
+                    <div class="item-4 item"><a href="#top" class="link_to_top"><img src="img/return-to-top-white-icon-back-to-top.png" alt="rocket icon" height="40px" width="30px"></a></div>
+                </div>  
+            </footer>
+        </div> <!-- End wrapper div  -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            duration: 2000
+          });
+        </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+        <script src="js/index.js"></script>  
+    </body>
+</html>
