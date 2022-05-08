@@ -68,7 +68,7 @@ Now, open the project directory in your code editor and continue to the next sec
   - [ ] 2. `callback`: the function that runs when this event occurs
 - [ ] Inside the callback function you just created, parse the response and store it in a variable named `repositories`
   - [ ] hint: `JSON.parse(this.response)`
-- [ ] Log the value of `repositories` in the console
+
 - [ ] Save and refresh your browser
   - You should see your list of GitHub repositories logged in the console
 
