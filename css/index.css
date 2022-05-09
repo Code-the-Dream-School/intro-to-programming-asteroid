@@ -1,63 +1,124 @@
 /* universal selector - applies everywhere  */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 /* applies to the entire body of the HTML document (except where overriden by more specific selectors) */
 body {
-  margin: auto;
   background-color: rgb(255, 255, 255);
   color: rgb(36, 70, 142);
   font-family: "Roboto", sans-serif;
   font-size: 100%; /* 100% = 16px on most screens */
+  /* max-width: 1000px;
+  margin: 1rem auto; 
+  big MAYBE*/
 }
 
-.main-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-}
-
-.nav {
+header {
   position: fixed; /*set navbar to fixed position*/
   top: 0; /*position navbar at top of page*/
-  width: 100%; /*full width*/
-  background-color: white;
-  /* =====================================
-  the "fixed" navbar has a big empty 
-  space underneath that needs something
-  ===================================== */
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: auto;
+  width: 100%;
+
+  background-color: rgb(255, 255, 255);
   border-bottom-style: solid;
   border-bottom-color: rgb(219, 9, 126);
-  padding: 2%;
-  align-items: baseline;
+  text-align: center;
+  /* min-height: 10vh; */
 }
-.my-name {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+/* .logo {
   justify-content: left;
-  border-top-style: none;
-
-  margin: 0%;
-  padding: 2% 0%;
-  list-style: none;
-}
-
-.nav-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 2rem;
+  border-style: dashed;
+  border-color: red;
 
   margin: 0;
-  padding: 1%;
+  padding: 0;
+  text-transform: uppercase;
+} */
+
+.nav-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  background-color: rgb(255, 255, 255);
+
+  /* display: flex; */
+  /* flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2rem; */
+
+  /* margin: 0;
+  padding: 1%; */
+  /* justify-content: space-around;
+  width: 40%;
+  list-style: none; */
+  border-style: dashed;
+  border-color: red;
+}
+
+.nav-links {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  text-transform: uppercase;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  border: 1px solid red;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: rgb(36, 70, 142);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
 }
 
 section {
@@ -65,12 +126,7 @@ section {
   padding: 2%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-size: 2em;
   font-weight: bolder;
   color: rgb(36, 70, 142);
@@ -123,7 +179,11 @@ button {
   border-color: rgb(199, 145, 175);
   padding: 2%;
 }
-
+#projects li {
+  border: dotted;
+  border-color: rgb(199, 145, 175);
+  padding: 2%;
+}
 #experience {
   color: rgb(36, 70, 142);
 }
@@ -155,28 +215,34 @@ button {
   color: rgb(1, 43, 134);
 }
 .message-form {
-  display: grid;
-  grid-template-columns: 1fr 10fr;
   margin: auto;
   padding: 0%;
 }
+.form-box {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+/* for small screens */
+/* .form-box label{
+  display:none;
+} */
 #messageForm label {
   margin: 0;
   color: rgb(140, 87, 156);
   font-size: 1.25em;
   text-align: left;
 }
-#messageForm input {
-  margin: 0% 0% 2% 0%;
-  border-style: dotted;
-  padding: 1%;
-  font-size: 0.9rem;
-}
-#messageForm textarea {
-  border-style: dashed;
-  padding: 1%;
+.form-box input,
+.form-box textarea {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+.form-box textarea {
+  min-height: 5em;
 }
 #messageForm button[type="reset"] {
   padding: 1% 2%;
@@ -191,6 +257,7 @@ button {
   color: rgb(140, 87, 156);
 }
 #messages li {
+  display: block;
   text-align: left;
   font-size: 1.25em;
 }
@@ -200,12 +267,6 @@ button {
   border-color: rgb(219, 9, 126);
   font-size: 1rem;
   color: rgb(219, 9, 126);
-}
-/* Media Queries */
-@media screen and (min-width: 768px) {
-  li {
-    display: inline-block;
-  }
 }
 
 footer {
@@ -219,3 +280,10 @@ footer {
 }
 /* ideas for footer: email, linkedIn, and github links */
 /* HAVE A LOT OF WORK TO DO!!! */
+
+/* Media Queries */
+/* @media screen and (min-width: 768px) {
+  li {
+    display: inline-block;
+  }
+} */

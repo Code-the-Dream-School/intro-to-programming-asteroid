@@ -74,3 +74,22 @@ messageForm.addEventListener("submit", (event) => {
 });
 
 ///OPTIONAL: Create an "edit" button for each message entry that allows user to input a new/modified message
+
+let githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/SandovalAmy/repos");
+githubRequest.send();
+
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
+
+githubRequest.onload = function () {
+  if (githubRequest.readyState === 4 && githubRequest.status === 200) {
+    const repositories = JSON.parse(githubRequest.responseText);
+    console.log(repositories);
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerHTML = `${repositories[i].name}`;
+      projectList.appendChild(project);
+    }
+  }
+};
