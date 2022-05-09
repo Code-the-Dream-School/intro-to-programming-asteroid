@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  background-image: url("forest4.jpeg");
+  /* background-image: url("forest4.jpeg"); */
   background-size: cover;
   color: #000000;
   text-align: center;
@@ -21,7 +21,13 @@ body {
 #experience-container,
 #footer-container,
 #messages-container {
-  background-color: #fff;
+  /* background-color: #ffffff; */
+  background: linear-gradient(
+      314.25deg,
+      rgba(10, 185, 149, 0.7) 1.09%,
+      rgba(10, 185, 149, 0) 43.26%
+    ),
+    #dacdff;
 }
 #header-container {
   position: relative;
@@ -103,6 +109,7 @@ h2 {
 }
 .design {
   text-align: center;
+  color: #8973c7;
 }
 .intro {
   text-align: justify;
@@ -181,7 +188,7 @@ h2 {
   margin: 60px;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 5px 5px 0 #7ab6b0;
+  box-shadow: 0 5px 5px 0 #a88afa;
   background-color: #fefaf6;
   text-align: center;
   flex-grow: 1;
@@ -193,6 +200,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+
   padding-left: 0;
   border-radius: 10px;
   line-height: 2;
@@ -205,6 +213,7 @@ h2 {
   margin: 15px;
   padding: 50px 50px;
   border-radius: 5px;
+
   box-shadow: 0 5px 5px 0 #7ab6b0;
   background-color: #fefaf6;
   line-height: 2;
@@ -212,6 +221,15 @@ h2 {
   text-align: center;
   flex-grow: 1;
 }
+.project-link {
+  color: #01796f;
+  text-decoration: none;
+}
+
+.projects-li a:hover {
+  color: #a88afa;
+}
+
 /* ================================= 
   Leave a message
 ==================================== */
@@ -303,7 +321,7 @@ input[name="name"] {
   .list-item {
     display: block;
     padding: 20px;
-    border-bottom: 1px solid #01796f;
+    /* border-bottom: 1px solid #01796f; */
   }
 
   .profilephoto {
