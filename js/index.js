@@ -64,37 +64,39 @@ messageForm.addEventListener("submit", (event) => {
     entry.remove();
 });  
 
-let githubRequest = new XMLHttpRequest();  // Creating a new request
-// githubRequest.onreadystatechange === function () {
-//     if (githubRequest.readyState === 4) {
-//         console.log(typeof githubRequest.responseText);
-//     }
-// };
-githubRequest.open("GET", "https://api.github.com/users/CaSaundra-Salgado/repos"); // Getting my repositories from Github
-githubRequest.send(); // Sending the request
+// let githubRequest = new XMLHttpRequest();  // Creating a new request
+// // githubRequest.onreadystatechange === function () {
+// //     if (githubRequest.readyState === 4) {
+// //         console.log(typeof githubRequest.responseText);
+// //     }
+// // };
+// githubRequest.open("GET", "https://api.github.com/users/CaSaundra-Salgado/repos"); // Getting my repositories from Github
+// githubRequest.send(); // Sending the request
 
-githubRequest.addEventListener("load", () => {
-    const repositories = JSON.parse(githubRequest.responseText);  // Parsing the JSON data
-    console.log(repositories); 
 
-    projectSection = document.getElementById("projects");
-    projectList = projectSection.querySelector("ul");
-
-    for (let i = 0; i < repositories.length; i++) {  // Looping through my repositories starting with index 0
-    let project = document.createElement("li");
-    project.innerText = `${repositories[i].name} - Date Created: ${repositories[i].created_at}`; // Displaying all projects by their name and date
-    projectList.appendChild(project);
-    };
-
-    var repoLinks = projectSection.getElementsByTagName("li");
-    for(var i = 0; i < repoLinks.length; i++) {
-    var text = repoLinks[i].textContent;
-    repoLinks[i].textContent = "";
-    var a = document.createElement("a");
-    a.href = "https://github.com/CaSaundra-Salgado?tab=repositories";
-    // Have to figure out how to get only 1 tab to open when the page is loaded
-    //a.href = window.open("https://github.com/CaSaundra-Salgado?tab=repositories", "_blank").focus; 
-    a.textContent = text;
-    repoLinks[i].appendChild(a);
-    }
-});  
+fetch("https://api.github.com/users/CaSaundra-Salgado/repos")
+    .then(response => response.json())
+    .then(githubRequest => { 
+        let projectSection = document.getElementById("projects");
+        let projectList = projectSection.querySelector("ul");
+    
+        for (let i = 0; i < githubRequest.length; i++) {  // Looping through my repositories starting with index 0
+            let project = document.createElement("li");
+            // Displaying all projects by their name and date
+            project.innerText = `${githubRequest[i].name} - Date Created: ${githubRequest[i].created_at}`; 
+            projectList.appendChild(project);
+        };
+    
+        let repoLinks = projectSection.getElementsByTagName("li");
+        
+        for(let i = 0; i < repoLinks.length; i++) {
+            let text = repoLinks[i].textContent;
+            repoLinks[i].textContent = "";
+            let a = document.createElement("a");
+            a.href = "https://github.com/CaSaundra-Salgado?tab=repositories";
+            // Going to work on getting the value of only 1 tab to open when the page is loaded as suggested
+            a.textContent = text;
+            repoLinks[i].appendChild(a);
+        }
+    })
+    .catch(error => alert("Looks like there was a problem!", error)); // catching an error and displaying an alert dialog box
