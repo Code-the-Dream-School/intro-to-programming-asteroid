@@ -13,91 +13,109 @@
 
   </head>
   <body>
-    <main class="main-grid">
+    <main>
       <header>
-        <nav class="nav">
-          <h1 class="my-name">Amy Sandoval</h1>
-          <ul class="nav-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#messageForm">Contact</a></li>
-          </ul>
-        </nav>
+          <h1 class="logo">Amy Sandoval</h1>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+          <nav>
+            <ul class="nav-list">
+              <li class="nav-links"><a href="#about">About</a></li>
+              <li class="nav-links"><a href="#skills">Skills</a></li>
+              <li class="nav-links"><a href="#projects">Projects</a></li>
+              <li class="nav-links"><a href="#experience">Experience</a></li>
+              <li class="nav-links"><a href="#messageForm">Contact</a></li>
+            </ul>
+          </nav>
       </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        Hi, I’m Amy! I am a queer Mexican-American woman, born and raised in the
-        San Francisco Bay Area. I began learning to code with Code the Dream in
-        January 2022. When I’m not coding or working my full-time job, I enjoy
-        hiking and supporting local vegan restaurants. I’ve been vegan since
-        April 2016 and I only wish I had gone vegan sooner!
-        <br><br>Pronouns: she/her
-      </p>
-    </section>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Hi, I’m Amy! I am a queer Mexican-American woman, born and raised in the
+          San Francisco Bay Area. I began learning to code with Code the Dream in
+          January 2022. When I’m not coding or working my full-time job, I enjoy
+          hiking and supporting local vegan restaurants. I’ve been vegan since
+          April 2016 and I only wish I had gone vegan sooner!
+          <br><br>Pronouns: she/her
+        </p>
+      </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-    <ul></ul>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul class="experience-list">
-        <li class="bold">Property Administrator</li>
-        <li class="right-align">September 2021 - Present</li>
-        <li>Cushman & Wakefield</li>
-        <li></li>
-        <li class="bold">Facilities Coordinator</li>
-        <li class="right-align">November 2019 - September 2021</li>
-        <li>Cushman & Wakefield @ Adobe</li>
-        <li></li>
-        <li class="bold">Workplace Support Specialist</li>
-        <li class="right-align">August 2018 - November 2019</li>
-        <li>Cushman & Wakefield @ Adobe</li>
-        <li></li>
-      </ul>
-    </section>
-
-    <section id="connect">
-      <h2>Connect</h2>
-      <ul>
-        <li>
-          <a href="mailto:Amy.Jen.Sandoval@gmail.com" target="_blank">Email</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/amyjensandoval/" target="_blank">LinkedIn</a>
-        </li>
-        <li>
-          <a href="https://github.com/SandovalAmy" target="_blank">Github</a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="messageForm">
-      <h2>Leave a Message</h2>
-      <form class="message-form" name="leave_message">
-        <label for="name">Name</label>
-        <input type="text" name="name" required="true">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" required="true">
-        <label for="message">Message</label>
-        <textarea name="message" required="true"></textarea>
-        <br>
-        <button type="reset">Clear Form</button>
-        <br>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section id="messages">
-      <h2>Messages</h2>
+      <section id="skills">
+        <h2>Skills</h2>
       <ul></ul>
-    </section>
-    <footer></footer>
-    <script src = ./js/index.js></script>
-  </main>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+          <li class="bold">Property Administrator</li>
+          <li class="right-align">September 2021 - Present</li>
+          <li>Cushman & Wakefield</li>
+          <li></li>
+          <li class="bold">Facilities Coordinator</li>
+          <li class="right-align">November 2019 - September 2021</li>
+          <li>Cushman & Wakefield @ Adobe</li>
+          <li></li>
+          <li class="bold">Workplace Support Specialist</li>
+          <li class="right-align">August 2018 - November 2019</li>
+          <li>Cushman & Wakefield @ Adobe</li>
+          <li></li>
+        </ul>
+      </section>
+
+      <section id="connect">
+        <h2>Connect</h2>
+        <ul>
+          <li>
+            <a href="mailto:Amy.Jen.Sandoval@gmail.com" target="_blank">Email</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/amyjensandoval/" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/SandovalAmy" target="_blank">Github</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="messageForm">
+        <h2>Leave a Message</h2>
+        <form class="message-form" name="leave_message">
+          <div class="form-box">
+            <label for="name">Name</label>
+            <input type="text" name="name" required="true">
+          </div>
+          <div class="form-box">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" required="true">
+          </div>
+          <div class="form-box">
+            <label for="message">Message</label>
+            <textarea name="message" required="true"></textarea>
+          </div>
+          <div class="form-box">
+            <button type="reset">Clear Form</button>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+      </section>
+      <footer></footer>
+      <script src = ./js/index.js></script>
+    </main>
   </body>
 </html>
