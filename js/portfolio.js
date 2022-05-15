@@ -99,32 +99,49 @@ form.addEventListener('submit', (e) => {
     }
   });
 
-// Fetch GitHub Repositories
+// Fetch GitHub Repositories using AJAX
+
+// const url = 'https://api.github.com/users/gkojunior/repos'
+// const githubRequest = new XMLHttpRequest();
+// githubRequest.onreadystatechange = function () {
+//   if (githubRequest.readyState === 4 && githubRequest.status === 200) {     
+//   githubRequest.responseText
+//   }
+// };
+// githubRequest.open('GET', url);
+// githubRequest.send();
+
+
+// //Handle Response from Server
+// githubRequest.addEventListener('load', function () {
+//   const repositories = JSON.parse(this.response);
+//   console.log(repositories)
+
+//   const projectSection = document.getElementById('projects');
+//   const projectList = projectSection.querySelector('ul');
+//   //   Display Repositories in List
+//   for (let i = 0; i <= repositories.length; i++) {
+//     const project = document.createElement('li');
+//     project.innerText = repositories[0].name
+//     projectList.appendChild(project);
+//   }
+// });
+
+// Fetch GitHub Repositories using fetch
 const url = 'https://api.github.com/users/gkojunior/repos'
-const githubRequest = new XMLHttpRequest();
-githubRequest.onreadystatechange = function () {
-  if (githubRequest.readyState === 4 && githubRequest.status === 200) {     
-  githubRequest.responseText
-  }
-};
-githubRequest.open('GET', url);
-githubRequest.send();
-
-
-//Handle Response from Server
-githubRequest.addEventListener('load', function () {
-  const repositories = JSON.parse(this.response);
-  console.log(repositories)
-
-  const projectSection = document.getElementById('projects');
-  const projectList = projectSection.querySelector('ul');
-  //   Display Repositories in List
-  for (let i = 0; i <= repositories.length; i++) {
-    const project = document.createElement('li');
-    project.innerText = repositories[i].name;
-    projectList.appendChild(project);
-  }
-});
-
+fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+    
+        //   Display Repositories in List
+        for (let i = 0; i < data.length; i++) {
+        const project = document.createElement('li');
+        project.innerText = data[i].name
+        projectList.appendChild(project);
+        }
+      })
 
   
