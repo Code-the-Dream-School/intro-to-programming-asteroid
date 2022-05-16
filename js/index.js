@@ -75,21 +75,32 @@ messageForm.addEventListener("submit", (event) => {
 
 ///OPTIONAL: Create an "edit" button for each message entry that allows user to input a new/modified message
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/SandovalAmy/repos");
-githubRequest.send();
-
+//API: https://api.github.com/users/SandovalAmy/repos
 const projectSection = document.getElementById("projects");
 const projectList = projectSection.querySelector("ul");
 
-githubRequest.onload = function () {
-  if (githubRequest.readyState === 4 && githubRequest.status === 200) {
-    const repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
-    for (let i = 0; i < repositories.length; i++) {
+const api_url = "https://api.github.com/users/SandovalAmy/repos";
+
+function fetchData() {
+  fetch(api_url)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const html = data
+        .map((repos) => {
+          return `<li>${repos.name}</li>`;
+        })
+        .join("");
       const project = document.createElement("li");
-      project.innerHTML = `${repositories[i].name}`;
+      project.innerHTML = html;
       projectList.appendChild(project);
-    }
-  }
-};
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+fetchData();
