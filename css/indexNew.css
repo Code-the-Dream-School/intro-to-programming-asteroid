@@ -10,7 +10,6 @@
 
 body {
   margin: 0;
-  /* background-image: url("forest4.jpeg"); */
   background-size: cover;
   color: #000000;
   text-align: center;
@@ -21,7 +20,6 @@ body {
 #experience-container,
 #footer-container,
 #messages-container {
-  /* background-color: #ffffff; */
   background: linear-gradient(
       314.25deg,
       rgba(10, 185, 149, 0.7) 1.09%,
@@ -74,7 +72,7 @@ body {
 .navbar a:hover {
   padding: 10px 0 10px;
   border-radius: 5px;
-  box-shadow: inset 100px 0 0 0 #01796f;
+  box-shadow: inset 100px 0 0 0 #7ab6b0;
   color: white;
 }
 
@@ -108,6 +106,7 @@ h2 {
   font-size: 2rem;
 }
 .design {
+  font-size: 1.5rem;
   text-align: center;
   color: #8973c7;
 }
@@ -193,6 +192,9 @@ h2 {
   text-align: center;
   flex-grow: 1;
 }
+.fab {
+  font-size: 3rem;
+}
 /* ================================= 
   Projects Flexbox container
 ==================================== */
@@ -210,18 +212,38 @@ h2 {
   Projects Flexbox items
 ==================================== */
 .projects-li {
-  margin: 15px;
-  padding: 50px 50px;
-  border-radius: 5px;
-
-  box-shadow: 0 5px 5px 0 #7ab6b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin: 50px;
   background-color: #fefaf6;
   line-height: 2;
   font-weight: bold;
   text-align: center;
   flex-grow: 1;
+  --x: 10px;
+  --y: 5px;
+  transform: perspective(1000px) rotateX(var(--_a, 30deg));
+  clip-path: polygon(
+    var(--y) var(--y),
+    calc(100% - var(--y)) var(--y),
+    calc(100% - var(--y)) calc(100% - var(--y)),
+    calc(100% - var(--y) - var(--x)) var(--_c, 100%),
+    calc(var(--x) + var(--y)) var(--_c, 100%),
+    var(--y) calc(100% - var(--y))
+  );
+  outline: var(--y) solid #7ab6b0;
+  outline-offset: calc(-1 * var(--y));
+  padding: var(--y) var(--y) 0 var(--y);
+  transition: 1s;
+}
+.projects-li:hover {
+  --_a: 0deg;
+  --_c: calc(100% - var(--y));
 }
 .project-link {
+  font-size: 1.5rem;
   color: #01796f;
   text-decoration: none;
 }
@@ -272,23 +294,72 @@ input[name="name"] {
   margin-top: 50px;
 }
 #submit-button:hover {
-  background-color: #01796f;
+  background-color: #7ab6b0;
 }
 
 #footer-container {
   margin-top: 50px;
   padding: 50px 0 20px;
-  font-size: 0.8rem;
+
+  justify-content: space-around;
+  align-items: baseline;
 }
-.logo {
-  margin: 10px;
-  width: 2%;
+
+/* ================================= 
+ Social-media links
+==================================== */
+.social-media {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
 }
+.fab {
+  position: relative;
+  z-index: 2;
+}
+.social-media li {
+  position: relative;
+  list-style: none;
+  font-size: 3rem;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 10%;
+  margin: 0 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+.social-media a {
+  color: #fefaf6;
+}
+.social-media li:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #a88afa;
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+.social-media li:hover:before {
+  filter: blur(3px);
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #a88afa;
+}
+
+.social-media a:hover {
+  color: #7ab6b0;
+}
+
 /* ================================= 
  Media Query for Mobile Devices
 ==================================== */
 
-@media all and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   #header-container {
     position: relative;
     padding: 0;
@@ -331,7 +402,7 @@ input[name="name"] {
     left: 20px;
     top: 20px;
   }
-  /* Active class for Togle menu with JavaScript  */
+  /* Active class for Toggle menu with JavaScript  */
   .active {
     display: block;
   }
@@ -356,11 +427,73 @@ input[name="name"] {
   #leave-a-message-container {
     text-align: center;
   }
-  /* #submit-button {
-    display: inline;
-  } */
-  .logo {
-    margin: 0 10px;
+}
+@media only screen and (max-width: 1024px) {
+  #header-container {
+    position: relative;
+    padding: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .photo-container {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+
+  .nav-li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    display: none;
+  }
+
+  .list-item {
+    display: block;
+    padding: 20px;
+    /* border-bottom: 1px solid #01796f; */
+  }
+
+  .profilephoto {
     width: 10%;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  /* Active class for Toggle menu with JavaScript  */
+  .active {
+    display: block;
+  }
+  #about-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+  }
+
+  #experience-container,
+  #skills-container,
+  #projects-container,
+  #leave-a-message-container,
+  #messages-container {
+    width: 90%;
+    padding: 10px;
+  }
+  #experience-container li {
+    text-align: justify;
+  }
+  #leave-a-message-container {
+    text-align: center;
   }
 }
