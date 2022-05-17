@@ -93,25 +93,67 @@ messageForm.addEventListener("submit", (event) => {
   messageList.appendChild(newMessage);
   messageForm.reset();
 });
-//Fetch GitHub Repositories
-var githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/XeniyaDob/repos");
-githubRequest.send();
 
-//Handle Response from Server
+//////////////////////////////////////////////////
+//Fetch API
+//////////////////////////////////////////////////
+fetch("https://api.github.com/users/XeniyaDob/repos") //fetch the data
+  .then((response) => {
+    //fire a function when there is a success
 
-githubRequest.onload = function () {
-  var repositories = JSON.parse(this.response);
-  //console.log(repositories);
-  //Display Repositories in List
-  let projectSection = document.getElementById("projects-container");
-  let projectList = projectSection.querySelector("ul");
-  for (let i = 0; i < repositories.length; i++) {
-    let project = document.createElement("li");
-    let linkProject = document.createElement("a");
+    console.log("resolved", response);
+    return response.json(); //returns a promise
+  })
+  .then((repositories) => {
+    //fire function  when there is the access to the data
+    //Display Repositories in the browser
+    let projectSection = document.getElementById("projects-container");
+    let projectList = projectSection.querySelector("ul");
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+      let linkProject = document.createElement("a");
+      linkProject.className = "project-link";
+      linkProject.href = repositories[i].html_url;
+      linkProject.innerText = repositories[i].description;
+      project.className = "projects-li";
+      projectList.appendChild(project);
+      project.appendChild(linkProject);
+    }
+  })
+  .catch((err) => {
+    //fire a function when there is an error
+    console.log("rejected", err.message);
+  });
 
-    project.innerText = repositories[i].name; //set the inner text of a project variable to the current Array element's name property
-    project.className = "projects-li";
-    projectList.appendChild(project);
-  }
-};
+//////////////////////////////////////////////////
+//Fetch API
+//////////////////////////////////////////////////
+// const getTodos = async () => {
+//   //async returns a promise
+//   const response = await fetch("https://api.github.com/users/XeniyaDob/repos");
+//   if (response.status !== 200) {
+//     throw new Error("Cannot fetch the data");
+//   }
+
+//   const repositories = await response.json();
+
+//   return repositories;
+// };
+
+// getTodos()
+//   .then((repositories) => {
+//     //Display Repositories in the browser
+//     let projectSection = document.getElementById("projects-container");
+//     let projectList = projectSection.querySelector("ul");
+//     for (let i = 0; i < repositories.length; i++) {
+//       let project = document.createElement("li");
+//       let linkProject = document.createElement("a");
+//       linkProject.className = "project-link";
+//       linkProject.href = repositories[i].html_url;
+//       linkProject.innerText = repositories[i].description;
+//       project.className = "projects-li";
+//       projectList.appendChild(project);
+//       project.appendChild(linkProject);
+//     }
+//   })
+//   .catch((err) => console.log("rejected:", err.message));
