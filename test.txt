@@ -1,0 +1,192 @@
+Hello!
+
+Tags in HTML:
+
+- Paragraph: <p>Hi! I am in Code the Dream!</p>
+- Headers:
+    - H1: <h1>Intro to Programming</h1>
+    - H2:
+- Hyperlink:
+    - A: <a href="https://www.google.com" target="_blank">Google</a>
+- Image:
+    - IMG: <img src="https://www.google.com" alt="Image Description" width="500" height="90">
+pixels: how the image is represented, smallest element
+
+What does body do for us?
+ - Shows us content
+
+Doc Type: At the very top
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+
+
+    </body>
+</html>
+
+
+Lesson 4.2: DOM
+- Document Object Model
+
+- Document: HTML, Web Page
+- Object: HTML Elements - 
+    1. <p></p> is an Object
+    2. <h1></h1>
+    3. <head></head>
+    4. <body></body>
+
+- Head: Metadata, Top of the page. Placed between the <html> tag and the <body> tag
+    - What is inside the Head? Title
+- Body: Content, defines the docuemnt's body   
+    - Contains all the contents of an HTML Document
+    - Example: Paragraph, Images, Tables, Lists
+- Model: 
+
+
+            HTML
+        /         \
+
+    Head         BODY
+
+      |          /  \
+
+    TITLE       P    H2
+
+- Nodes:
+    - We can change the Headers
+    - Background of the text
+    - Text itself within the Elements
+    - attributes that are being represented
+
+
+    a - b
+
+    a - c - b
+
+- How can we access elements?
+    - document.body 
+    - Access properties of objects with dot notation
+
+    - document.body.style.backgroundColor = "blue";
+- What can we do with the DOM?
+    - Style
+    - Elements
+    - Add/remove Elements
+    - Can we dynamically update the DOM?
+        - Javascript: Allows us to be more interactive
+
+    - DOM Methods:
+        - getElementById()
+        What does this do?
+        Getting the element based on the ID that we provide
+        Return the value that we are retrieving and if it doesn't exist, we will return null
+
+        - getElementsByClassName()
+
+        Return the value  (HTML Collection) that we are retrieving the class and if it doesn't exist, we will return null
+
+        - getElementsByTagName()
+
+        Get all the elements with a specific tag. Code shorter, 
+    
+        - Nodes:
+            - node.childNodes
+            - node.parentNode
+            - node.nextSibling
+            - node.previousSibling
+        
+        - createElement()
+            - create a new element within the DOM structure
+            - var myNewBackgroundColor = document.createElement("background_color");
+        
+        - appendChild()
+            - Adding the element
+            - Specify the parent node
+            - List of the children, I will be able to add this new child node to the list of children
+
+        - getAttribute()
+            - provide the element that we are trying to access
+            - grabbing the value that comes out of the element that we have provided
+            - .getAttribute({name_of_the_element})
+            
+
+Class:
+ - What is a class?
+  - .brighten {
+      color:
+      border:
+      margin:
+      background-color:
+  }
+
+<div class="brighten">
+    <h2>New Page</h2>
+    <p>This is going to be used for going into a new page.</p>
+</div>
+
+<div class="brighten">
+    <h2>Next Page</h2>
+    <p>This is going to be used for looking at the next page.</p>
+</div>
+
+  Can we use classes multiple times?
+
+Javascript:
+- startsWith()
+
+Event Listeners:
+
+- Add an event listener when the user clicks on a button
+
+- addEventListener() method
+- action or (event): some type of action that we want to perform
+    - "click"
+- button with a specific ID (element)
+- reaction (function): What we do when the event occurs
+
+element.addEventListener(event, function, True/False boolean value for event bubbling or event capturing)
+
+- Add an event listener
+
+- addEventListener() method
+- callback function: action/response
+
+Methods:
+document.getElementById(button).addEventListener(click)
+
+------------------
+|    _  _         |
+|   |   |         |
+|    - -          |
+|-----------------
+
+
+Function:
+
+function getMessage(message) {
+    console.log(message);
+}
+
+
+
+function addNumbers(number1, number2) {
+    return number1 + number2;
+}
+
+function myDisplayer(value) {
+    document.getElementById("retrieve_value").innerHTML = value;
+}
+
+
+function addNumbers(number1, number2, myDisplayer) {
+    let addition = number1 + number2;
+    myDisplayer(addition);
+}
+
+addNumbers(4, 6, myDisplayer);
+

@@ -1,0 +1,81 @@
+Clients and Servers
+
+- Clients: Devices, provides service to other machines/computers (client). Requestor to the services
+- Server: Specific machine, something hosted on the cloud, going to respond to that client Requestor
+
+
+- TCP/IP:
+ - IP: Internet Protocol
+    - Address: IP Address is the unique identifier
+- TCP: Transmission Control Protocol
+    - Defines how the applications can create the channels of communication between networks
+
+Four Layers:
+
+1. Application Layer: The payload is the actual application data. 
+It it going to provide applications with standardized data exchange. Examples: HTTP, Simple Mail Transfer Protocol
+
+2. Transport Layer: Maintaining the end-to-end communications across the newtork. 
+TCP handles the communications between hosts and provides reliability
+
+3. Network Layer: request is sent as packets through the network. Connect the independent neworks to transport the packets across the netowrk boundaries. 
+Internet Protocol
+
+4. Physical Layer: Consists of protocols that operate only on a link -- the netowrk component that interconnects nodes or hosts in the networks. 
+Ethernet
+
+
+
+
+
+
+- DNS: Domain Name Service
+
+- Requests:
+    - Do we need to know what other requests are being made?
+    - Stateless vs Stateful
+    - One request doesn't have really have anything to do with another request
+    - Frees up that network path so that is can be Used
+
+    - Stateless: One request doesn't have really have anything to do with another request
+    - Stateful: Storing the request within the layer that we are working in
+
+
+REST APIs:
+- GET: Retrieving a response from our endpoint
+- POST: Create a new request and will retrieve response based on the information provided
+
+Example:
+- A list of items on your website
+- Your list contains: [Waterbottle, pens, hats]
+
+- GET: A list of all the current products
+  /retrieve-all-products
+  /retrieve-product-by-customer/1234
+
+Add notebooks to our list:
+- POST /create-product
+
+Body:
+{
+    "item_name": "Notebook",
+    "price" : 4
+}
+
+
+[Waterbottle, pens, hats, Notebook]
+
+- PATCH
+
+- PUT
+
+- DELETE
+
+
+Debugging:
+
+- Google to see what the issue might be
+- Code Editor
+- console.log
+- Writing tests
+

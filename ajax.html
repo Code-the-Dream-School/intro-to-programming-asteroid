@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <div id="ajax example">
+        <h1>This is the text that will be displayed</h1>
+        <button type="button" onclick="ajaxLoad()">Update This</button>
+    </div>
+</body>
+
+<script>
+    function ajaxLoad() {
+        var xml_http_request  = new XMLHttpRequest();
+        xml_http_request.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Can add anything that I want to happen here
+                console.log("Hello, I have been updated!")
+            }
+        }
+    }
+</script>
+
+
+</html>
+

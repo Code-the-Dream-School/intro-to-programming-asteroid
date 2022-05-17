@@ -1,0 +1,68 @@
+p {
+    color: hotpink;
+    font-size: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* padding: 10px; All four top left right bottom get updated*/
+    /* padding: 10px 5px; 10px is for top and bottom, 5px is for left and right*/
+    /* padding: 10px 7px 5px; */
+    /* padding: 10px 8px 7px 5px; 4 different values, top, right, bottom, left */
+    /* padding-left: 10px; */
+    padding-bottom: 5px;
+  }
+
+p.demo {display: inline;}
+p.demo2 {display: inline-block;}
+
+body {
+  background-color: palevioletred;
+}
+  
+
+h1 {
+  color: white;
+  font-size: 45px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  position: fixed;
+}
+
+
+h2 {
+  color: greenyellow;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: deepskyblue;
+  }
+  .column {
+    width: 50%
+  }
+}
+
+@media screen and (min-width: 1312px) {
+  body {
+    background-color: aliceblue;
+  }
+  .column {
+    width: 25%
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    background-color: aqua;
+  }
+}
+
+div {
+  border: 10px blue;
+  padding: 20px;
+  margin: 40px;
+  width: 320px;
+  color: red;
+}
+
+h2 {
+  color: initial;
+}

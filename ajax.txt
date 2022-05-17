@@ -1,0 +1,52 @@
+Introduction to AJAX:
+
+- AJAX: Asynchronous Javascript and XML
+- Asynchronous vs synchronous
+
+-Synchronous: There is a queue and the task won't start until the previous task has completed
+    - Baton Relay Race Example
+- Asynchronous: We can run multiple tasks together, concurrently on a single thread. 
+    - 500m (each person is running there own race)
+
+
+- XMLHttpRequest: Going to request data from a web Server
+
+    Helpful:
+        - Update the web page without reloading the whole page
+        - Request data from a server - after the page has loaded
+        - Receive data from a server - after a page has loaded
+        - Sends the data to the server in the background
+
+- ReadyState:
+    - Property that describes the loading state of the document
+    - 4: DONE The operation has been completed
+    - 3: Loading: It holds partial data
+    - 2: The HEADERS_RECEIVED: Headers and status is available
+    - 1: OPENED
+    - 0: UNSENT
+
+
+- Fetch API
+    - Can perform all the tasks that XMLHttpRequest can
+    - Promise: 
+        - Making web requests in the browser
+        - A Javascript Promise Object contains calls to the consuming code and the producing code
+        - Supports two properties: state and result
+            - States: Pending, Fulfilled, Rejected
+            - Result: Undefined, The result value, error Object
+
+    - Allow us to asynchronously request for a resource
+    - Can use the status and grab the result from the Response object that gets displayed and returned
+    - Try catch: Do something and if it errors, then don't throw the error, buthandle it quietly
+    - Fetch also uses the promise. The promise is going to give us Response object
+        - Handle the response via json() or text()
+        - Grab the data that we are looking for
+        
+
+- Promise All
+    - We will take in and consume the `Promise.all()` method and this consumes an iterable of promises as an input.
+        This means that we will take in multiple promises
+    - Returns a single Promise which will resolve to an array of the results of the inputs promises
+    
+
+

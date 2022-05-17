@@ -1,0 +1,153 @@
+CSS - Cascading Style Sheets
+
+- Design of the page
+- More simple
+- Can edit one line and many other components
+
+
+Absolute Lengths:
+
+- px: pixels
+- pt: points
+- pc: picas (1pc = 12 pt)
+
+
+- color: Is the color of the text
+- background-color: Color of the background
+
+
+Media Screens:
+- People viewing the same browser page with different mediums (tablet, phone, laptop)
+- Orientation
+- max-width
+- min-width
+- resolution
+
+Padding:
+- Space between element's content and the defined borders
+
+
+- Orientation setting:
+    - landscape when the screen is horizontal
+    - portrait when the screen is vertical
+- Ranges 
+
+mobile device  - 688 px
+
+
+tablet  - 992 px
+
+
+laptop - 1312 px
+
+
+
+monitor - 1600 px
+
+
+
+
+|          |           |           |
+
+
+
+|          |
+
+
+CSS Box Model:
+
+-----------
+|          |
+|          |
+|          |
+___________
+
+- margin: The area outside the border.
+- border: Goes around the padding and content
+- Padding: The area around the content.
+- content: Text, image
+
+- Total Element Width:
+ - Sum of multiple attributes
+ - total_element_width = width + left_padding + right_padding + left_border + right_border + left_margin + right_margin
+- Total Element Height
+ - total_element_height = height + top_padding + bottom_padding + top_border + bottom_border + top_margin + bottom_margin
+
+CSS Display Property:
+- Specifying the display behavior (the type of rendering box) of an element
+- inline: Display the element as an inline element. Any height and width properties have no effect
+    - Hello! I am in Code the Dream!
+- block: <p> Display the element as a block element. It will start on a new line, and take up the whole width
+    - Hello! 
+    I am in Code the Dream!                                             
+    I am very excited to be here, I am learning a lot about CSS and HTML.
+
+- inline-block: Center on the page. The element itself is formatted as an inline element, and we can also apply height and width to it
+
+Hello! 
+I am in Code the Dream!                                             
+I am very excited to be here, I am learning a lot about CSS and HTML.
+
+                    Home        About the Code the Dream     Contact Information
+
+CSS Positioning:
+- static: Default value, elements are going to be rendered in the order defined within our document flow
+- Absolute: Position the element based on the first positioned parent/ancestor element
+
+    <h1>Absolute Positioning</h1>
+    <h2>This is the header</h2>
+    <p>I am adding some text here, to talk about absolute positioning</p>
+
+h2 {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+}
+
+
+Absolute Positioning
+
+I am adding some text here, to talk about absolute positioning
+
+
+
+
+
+                                             This is the header
+
+
+
+
+- sticky: Stays in the spot based on where the user is scrolling. 
+- fixed: The element is positioned relative to the browser.
+- relative: "left:40px" The element is positioned based on the normal position and the metric defined
+- initial: Set the property to the default value
+
+
+
+
+
+
+ 
+- Demo                                                                          
+- This is for the Demo
+............
+............
+............
+.............
+
+
+
+
+
+
+
+
+
+
+
+CSS Media Query:
+- Used for responsiveness
+- Different mediums
+
+
