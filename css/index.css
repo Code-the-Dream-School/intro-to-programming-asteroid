@@ -141,7 +141,7 @@ input, textarea{
     background-color: #63686e;
     color:white;
     size: 100pt;
-    border: 5px dashed #50cb86;
+    border: 3px dashed #50cb86;
     border-radius: 5px;
     grid-column: controls;
     grid-row: auto;
@@ -149,7 +149,7 @@ input, textarea{
 }
 
 button{
-    background: #fefe03;
+    background: #f5ff8d;
     border: 0 none;
     border-radius: 5px;
     grid-row-start:4;
