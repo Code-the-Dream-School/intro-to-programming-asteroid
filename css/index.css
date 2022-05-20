@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300&display=swap');
+
+/* I have duplicate properties and values so assigning a var and just calling that var is 
+much more efficient. */
+:root {
+    --text-align: center;
+    --list-style: none;
+    --color-purple: blueviolet;
+    --color-greenyellow: greenyellow;
+    --color-black: black;
+    --color-whitesmoke: whitesmoke;
+    --medium-pink: rgb(233, 94, 159);
+    --font-weight: bold;
+}
+
+body {
+    background-color: var(--color-black);
+    font-family:'Source Serif Pro', serif;
+    font-weight: var(--font-weight);
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 10px;
+}
+
+#logo {
+    float: left;
+}
+
+nav {
+    text-align: var(--text-align);
+}
+
+nav ul {
+    min-height: 70px;
+    margin: 0;
+    padding-left: 740px;
+    list-style: var(--list-style);
+}
+
+nav li {
+    display: inline-block;
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-greenyellow);
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: var(--medium-pink);
+    font-weight: var(--font-weight);
+}
+
+li {
+    list-style: none;
+}
+
+nav ul li a:hover {
+    color: var(--medium-pink);
+    font-weight: var(--font-weight);
+}
+
+h1, h2 {
+    font-size: 30px;
+    font-weight: var(--font-weight);
+    text-align: var(--text-align);
+}
+
+h1 {
+    text-align: var(--text-align);
+    background-color: var(--color-purple);
+    box-shadow: inset 0px 24px 0px rgba(255, 255, 255, 0.14);
+    /* background-image: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.5) 10%); */
+    color: var(--color-greenyellow);
+}
+
+h2 {
+    color: var(--color-greenyellow);
+}
+
+#about-me h2 {
+    color: var(--medium-pink);
+}
+
+#avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    padding: 5px;
+    margin: 10px;
+}
+
+p, ul, #leave_message, #connect a {
+    color: var(--color-purple);
+}
+
+#about-me, #skills, #connect {
+    border-style: groove dotted;
+    border-color: var(--medium-pink);
+}
+
+#experience, #projects {
+    border-style: dotted groove;
+    border-color: var(--color-purple); 
+}
+
+#experience ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 5px;
+}
+
+/* Makes the bullets line up properly in the center of the page with the text. */
+#experience ul li{
+    list-style-type: none;
+}
+
+#experience li:nth-child(odd) {
+    background-color: var(--color-purple);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--medium-pink);
+    border-radius: 5px;
+} 
+
+#experience li:nth-child(even) {
+    background-color: var(--color-greenyellow);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--color-purple);
+    border-radius: 5px;
+} 
+
+#skills h2 {
+    color: var(--color-purple);
+    text-align: var(--text-align);
+}
+
+#skills ul {
+    list-style: none;
+    text-align: var(--text-align); 
+    font-weight: var(--font-weight);
+}
+
+#skills li:nth-child(odd) {
+    background-color: var(--medium-pink);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--color-purple);
+    border-radius: 40px;
+} 
+
+#skills li:nth-child(even) {
+    background-color: var(--color-purple);
+    color: var(--color-black);
+    border-style: double;
+    border-color: var(--medium-pink);
+    border-radius: 40px;
+} 
+
+#projects {
+    align-content: space-between;
+}
+
+#projects ul {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding: 10px;
+    list-style: var(--list-style);
+    gap: 7px;
+}
+
+#projects a {
+    color: var(--color-black);
+}
+
+#projects a:hover {
+    color: var(--color-greenyellow);
+}
+
+#projects li:nth-child(odd) {
+    background-color: var(--color-purple);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--medium-pink);
+    border-radius: 5px;
+}
+
+#projects li:nth-child(even) {
+    background-color: var(--medium-pink);
+    color: var(--color-black);
+    border-style: groove;
+    border-color: var(--color-purple);
+    border-radius: 5px;
+} 
+
+#connect {
+    padding-bottom: 20px;
+}
+
+#connect a {
+    padding: 3px;
+}
+
+#connect a:hover {
+    color: var(--medium-pink);
+}
+
+#leave_message {
+    display: flex;
+}
+
+/* This centers everything from the message area down to the footer. */
+#message_area, #messages, #connect, footer {
+    text-align: var(--text-align);
+}
+
+/* Settings for the form fields in the "leave a message" area. */
+#name, #email, #message {
+    color: var(--medium-pink);
+    font-weight: var(--font-weight);
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-style: double;
+    border-color: var(--color-purple) var(--color-greenyellow) var(--color-black) var(--medium-pink);
+    border-radius: 40px;
+    border-width: 10px;
+}
+
+label { 
+    color: var(--medium-pink);
+    font-size: 18px;
+    font-weight: var(--font-weight);
+    margin-bottom: 10px;
+    line-height: 65px;
+    padding-right: 5px;
+    padding-left: 30px;
+} 
+    
+
+/* This is to make the message text area a little wider. */
+#message {
+    width: 230px;
+}
+
+#submit-btn {
+    background-color: var(--medium-pink);
+    color: var(--color-purple);
+    font-weight: var(--font-weight);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 35px;
+    border-color: var(--color-purple);
+    margin-left: 40px;
+    margin: 20px;
+}
+
+/* Reverses the colors of the submit button when the user hovers over it. */
+#submit-btn:hover {
+    background-color: var(--color-purple);
+    color: var(--color-greenyellow);
+    cursor: pointer;
+}
+
+#messages {
+    flex-grow: 1;
+}
+
+#messages li:nth-child(odd) {
+    background-color: var(--medium-pink);
+    color: var(--color-whitesmoke);
+    list-style: none;
+}
+
+#messages li:nth-child(even) {
+    background-color: var(--color-purple);
+    color: var(--color-whitesmoke);
+    list-style: none;
+}
+
+#messages a {
+    color: var(--color-black);
+}
+
+#messages a:hover {
+    color: var(--color-greenyellow);
+}
+
+#messages li:nth-child(odd) button {
+    background-color: var(--color-purple);
+    color: var(--medium-pink);
+    font-weight: var(--font-weight);
+    padding: 3px;
+    border-radius: 20px;
+    border-color: var(--color-black);
+}
+
+#messages li:nth-child(even) button  {
+    background-color: var(--medium-pink);
+    color: var(--color-purple);
+    font-weight: var(--font-weight);
+    padding: 3px;
+    border-radius: 20px;
+    border-color: var(--color-black);
+}
+
+#messages li:nth-child(odd) button:hover {
+    background-color: var(--color-black);
+    color: var(--color-greenyellow);
+    font-weight: var(--font-weight);
+    padding: 5px;
+    border-radius: 35px;
+    border-color: var(--color-purple);
+}
+
+#messages li:nth-child(even) button:hover {
+    background-color: var(--color-black);
+    color: var(--color-greenyellow);
+    font-weight: var(--font-weight);
+    padding: 5px;
+    border-radius: 35px;
+    border-color: var(--medium-pink);
+}
+
+footer {
+    background-color: var(--color-purple);
+    font-weight: bold;
+    /* box-shadow: inset 0px 24px 0px rgba(255, 255, 255, 0.14); */
+}
+
+footer p {
+    color: var(--color-whitesmoke);
+}
+
+nav ul li {
+    animation-name: sliding;
+    animation-duration: 3s;
+}
+
+@keyframes sliding {
+    from {
+        margin-left: 50%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+}
+
+
+/* Setting the media queries for responsive web design: mobile, tablet, and laptop. */
+
+@media screen and (min-width: 275px) and (max-width: 1200px) {
+    #experience li {
+        margin-left: 0;
+    }
+
+    nav ul {
+        padding-left: 60px;
+        list-style: var(--list-style);
+    }
+
+    #experience ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #leave_message {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }  
+}
+
+
+@media screen and (min-width: 1600) {
+    #experience li {
+        margin-left: 0;
+    }
+
+    nav ul {
+        padding-left: 700px;
+        list-style: var(--list-style);
+    }
+
+    #experience ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #leave_message {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+
+    #message_area {
+        display: flex;
+        justify-content: center;
+    }
+}
