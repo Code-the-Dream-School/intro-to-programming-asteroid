@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background-color: var(--color-black);
+    background-color: rgba(0, 0, 0, 0.8);
     position: sticky;
     top: 10px;
 }
@@ -34,6 +34,7 @@ nav {
 }
 
 nav ul {
+    min-height: 70px;
     margin: 0;
     padding-left: 740px;
     list-style: var(--list-style);
@@ -47,6 +48,16 @@ nav li {
 nav ul li a {
     text-decoration: none;
     color: var(--color-greenyellow);
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: var(--medium-pink);
+    font-weight: var(--font-weight);
+}
+
+li {
+    list-style: none;
 }
 
 nav ul li a:hover {
@@ -74,6 +85,12 @@ h2 {
 
 #about-me h2 {
     color: var(--medium-pink);
+}
+
+#avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section {
@@ -256,6 +273,10 @@ label {
     cursor: pointer;
 }
 
+#messages {
+    flex-grow: 1;
+}
+
 #messages li:nth-child(odd) {
     background-color: var(--medium-pink);
     color: var(--color-whitesmoke);
@@ -322,6 +343,23 @@ footer p {
     color: var(--color-whitesmoke);
 }
 
+nav ul li {
+    animation-name: sliding;
+    animation-duration: 3s;
+}
+
+@keyframes sliding {
+    from {
+        margin-left: 50%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+}
+
 
 /* Setting the media queries for responsive web design: mobile, tablet, and laptop. */
 
@@ -345,8 +383,9 @@ footer p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 150px;
-    }
+        justify-content: space-evenly;
+        align-items: center;
+    }  
 }
 
 
@@ -370,6 +409,12 @@ footer p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+
+    #message_area {
+        display: flex;
+        justify-content: center;
     }
 }
