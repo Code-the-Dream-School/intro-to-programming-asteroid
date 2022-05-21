@@ -11,21 +11,23 @@ body {
   color: rgb(36, 70, 142);
   font-family: "Roboto", sans-serif;
   font-size: 100%; /* 100% = 16px on most screens */
-  /* max-width: 1000px;
-  margin: 1rem auto; 
-  big MAYBE*/
+}
+
+.section-container {
+  padding: 0 1em;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 header {
   position: fixed; /*set navbar to fixed position*/
   top: 0; /*position navbar at top of page*/
   width: 100%;
-
   background-color: rgb(255, 255, 255);
+  padding: 2%;
   border-bottom-style: solid;
   border-bottom-color: rgb(219, 9, 126);
   text-align: center;
-  /* min-height: 10vh; */
 }
 
 nav {
@@ -34,38 +36,16 @@ nav {
   top: 100%;
   left: 0;
   width: 100%;
-  display: none;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
 }
-
-/* .logo {
-  justify-content: left;
-  border-style: dashed;
-  border-color: red;
-
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-} */
 
 .nav-list {
   margin: 0;
   padding: 0;
   list-style: none;
   background-color: rgb(255, 255, 255);
-
-  /* display: flex; */
-  /* flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 2rem; */
-
-  /* margin: 0;
-  padding: 1%; */
-  /* justify-content: space-around;
-  width: 40%;
-  list-style: none; */
-  border-style: dashed;
-  border-color: red;
 }
 
 .nav-links {
@@ -75,6 +55,8 @@ nav {
 
 nav a {
   text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
 .nav-toggle {
@@ -86,7 +68,6 @@ nav a {
   top: 0;
   left: 0;
   margin-left: 1em;
-  border: 1px solid red;
   height: 100%;
   display: flex;
   align-items: center;
@@ -118,7 +99,12 @@ nav a {
 }
 
 .nav-toggle:checked ~ nav {
-  display: block;
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 
 section {
@@ -171,27 +157,20 @@ button {
   margin: 10% 0 0 0;
 }
 
-#skills {
-  color: rgb(36, 70, 142);
-}
-#skills li {
+#skills li,
+#projects li,
+#connect li {
   border: dotted;
   border-color: rgb(199, 145, 175);
   padding: 2%;
 }
-#projects li {
-  border: dotted;
-  border-color: rgb(199, 145, 175);
-  padding: 2%;
-}
-#experience {
-  color: rgb(36, 70, 142);
-}
+
 .experience-list {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   margin: 0;
+  gap: 0;
 }
 /* ========================================
   experience list needs spaces between each
@@ -199,7 +178,7 @@ button {
   ======================================= */
 
 .experience-list li {
-  background: rgb(191, 208, 247);
+  background: rgba(191, 208, 247, 0.4);
 }
 .bold {
   font-size: 1.5rem;
@@ -218,36 +197,42 @@ button {
   margin: auto;
   padding: 0%;
 }
-.form-box {
+.form-box,
+.btn-group {
   padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
 }
-/* for small screens */
-/* .form-box label{
-  display:none;
-} */
-#messageForm label {
+.form-label {
   margin: 0;
   color: rgb(140, 87, 156);
   font-size: 1.25em;
   text-align: left;
+  display: none;
 }
-.form-box input,
-.form-box textarea {
+.form-input {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
-.form-box textarea {
+.form-input,
+.form-message-area {
+  font-family: inherit;
+  font-size: inherit;
+}
+.form-input:focus::placeholder,
+.form-message-area:focus::placeholder {
+  color: rgb(36, 70, 142);
+}
+.form-message-area {
   min-height: 5em;
 }
-#messageForm button[type="reset"] {
+.reset-button {
   padding: 1% 2%;
 }
-#messageForm button[type="submit"] {
+.submit-button {
   padding: 1% 2%;
   font-weight: bolder;
   font-size: 1.5rem;
@@ -278,12 +263,63 @@ footer {
   text-align: center;
   font-size: 0.75em;
 }
-/* ideas for footer: email, linkedIn, and github links */
-/* HAVE A LOT OF WORK TO DO!!! */
 
 /* Media Queries */
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(200px, 3fr);
+  }
+  .logo {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
+  }
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: rgb(36, 70, 142);
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-links {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
   li {
     display: inline-block;
   }
-} */
+  .form-label {
+    display: block;
+  }
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

@@ -30,90 +30,98 @@
             </ul>
           </nav>
       </header>
+      <div class="section-container">
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            Hi, I’m Amy! I am a queer Mexican-American woman, born and raised in the
+            San Francisco Bay Area. I began learning to code with Code the Dream in
+            January 2022. When I’m not coding or working my full-time job, I enjoy
+            hiking and supporting local vegan restaurants. I’ve been vegan since
+            April 2016 and I only wish I had gone vegan sooner!
+            <br><br>Pronouns: she/her
+          </p>
+        </section>
 
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          Hi, I’m Amy! I am a queer Mexican-American woman, born and raised in the
-          San Francisco Bay Area. I began learning to code with Code the Dream in
-          January 2022. When I’m not coding or working my full-time job, I enjoy
-          hiking and supporting local vegan restaurants. I’ve been vegan since
-          April 2016 and I only wish I had gone vegan sooner!
-          <br><br>Pronouns: she/her
-        </p>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-      <ul></ul>
-      </section>
-
-      <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <ul>
-
-        </ul>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <ul class="experience-list">
-          <li class="bold">Property Administrator</li>
-          <li class="right-align">September 2021 - Present</li>
-          <li>Cushman & Wakefield</li>
-          <li></li>
-          <li class="bold">Facilities Coordinator</li>
-          <li class="right-align">November 2019 - September 2021</li>
-          <li>Cushman & Wakefield @ Adobe</li>
-          <li></li>
-          <li class="bold">Workplace Support Specialist</li>
-          <li class="right-align">August 2018 - November 2019</li>
-          <li>Cushman & Wakefield @ Adobe</li>
-          <li></li>
-        </ul>
-      </section>
-
-      <section id="connect">
-        <h2>Connect</h2>
-        <ul>
-          <li>
-            <a href="mailto:Amy.Jen.Sandoval@gmail.com" target="_blank">Email</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/amyjensandoval/" target="_blank">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/SandovalAmy" target="_blank">Github</a>
-          </li>
-        </ul>
-      </section>
-
-      <section id="messageForm">
-        <h2>Leave a Message</h2>
-        <form class="message-form" name="leave_message">
-          <div class="form-box">
-            <label for="name">Name</label>
-            <input type="text" name="name" required="true">
-          </div>
-          <div class="form-box">
-            <label for="email">Email Address</label>
-            <input type="email" name="email" required="true">
-          </div>
-          <div class="form-box">
-            <label for="message">Message</label>
-            <textarea name="message" required="true"></textarea>
-          </div>
-          <div class="form-box">
-            <button type="reset">Clear Form</button>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </section>
-
-      <section id="messages">
-        <h2>Messages</h2>
+        <section id="skills">
+          <h2>Skills</h2>
         <ul></ul>
-      </section>
+        </section>
+
+        <section id="projects" class="projects">
+          <h2>Projects</h2>
+          <ul></ul>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+          <ul class="experience-list">
+            <li class="bold">Property Administrator</li>
+            <li class="right-align">September 2021 - Present</li>
+            <li>Cushman & Wakefield</li>
+            <li></li>
+            <li class="bold">Facilities Coordinator</li>
+            <li class="right-align">November 2019 - September 2021</li>
+            <li>Cushman & Wakefield @ Adobe</li>
+            <li></li>
+            <li class="bold">Workplace Support Specialist</li>
+            <li class="right-align">August 2018 - November 2019</li>
+            <li>Cushman & Wakefield @ Adobe</li>
+            <li></li>
+          </ul>
+        </section>
+
+        <section id="connect">
+          <h2>Connect</h2>
+          <ul>
+            <li>
+              <a href="mailto:Amy.Jen.Sandoval@gmail.com" target="_blank">Email</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/amyjensandoval/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/SandovalAmy" target="_blank">Github</a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="messageForm">
+          <h2>Leave a Message</h2>
+          <form class="message-form" name="leave_message">
+            <div class="form-box">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="name" required="true"
+              class="form-input"
+              placeholder="name"
+              aria-label="name">
+            </div>
+            <div class="form-box">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" name="email" required="true"
+              class="form-input"
+              placeholder="email"
+              aria-label="email">
+            </div>
+            <div class="form-box">
+              <label for="message" class="form-label">Message</label>
+              <textarea name="message" required="true" 
+              class="form-message-area" 
+              placeholder="type your message here" 
+              aria-label="type your message here"></textarea>
+            </div>
+            <div class="btn-group">
+              <button type="submit" class="submit-button">Submit</button>
+              <button type="reset" class="reset-button">Clear Form</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="messages">
+          <h2>Messages</h2>
+          <ul></ul>
+        </section>
+      </div>
       <footer></footer>
       <script src = ./js/index.js></script>
     </main>
