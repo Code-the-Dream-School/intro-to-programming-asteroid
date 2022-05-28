@@ -1,8 +1,229 @@
+/* navigation style set up */
+.navigation {
+    margin:0;
+    padding:0;
+    height: 40px;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: #F86e07;
+    font-family: 'Zilla Slab', serif;
+    border-radius: 0.5em;
+  }
+  .navigation ul li a {
+    color: #f2f2f2;
+    line-height:40px;
+    font-size: 25px;
+    display: block;
+    padding: 0 8px;
+    text-decoration:none;
+  }
+
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 5px;
+}
+    .navigation li {
+    list-style-type: none;
+    display:inline-block;
+}
+  .navigation a:hover {
+    background-color: #f65343;
+    color: #9a342a;
+  }
+  .navigation a.active {
+    background-color: #7d1308;
+    color: white;
+}
+@media only screen and (min-width: 370px){
+    .navigation {
+        display:list-item;
+    }
+}
 
 body {
-    background-color: #e9aaa8;
+    background-image: url('https://i.pinimg.com/564x/b8/9b/59/b89b59207783734e4ce12eb35e8de951.jpg')
 }
 
-text {
-    color: #e9a8c7
+/* Self image */
+#me {
+    color:#f65343;
+    border-radius: 50%;
+    border-top: 6px dotted;
+    border-bottom: 6px dotted;
+    border-left: 6px dotted;
+    border-right: 6px dotted;
+    float:left;
+    margin: 20px 100px 60px 200px;
 }
+
+
+#Introduction {
+    color:#f36f22;
+    text-align: center;
+    display: table;
+    margin: 30px 25px 15px 25px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+}
+
+#About_Me {
+    color: #f36f22;
+    font-size: 18px;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    display: table;
+    margin: 30px 25px 15px 25px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+}
+
+/* coffee image */
+#coffee {
+    color:#f65343;
+    border-radius: 50%;
+    border-top: 6px dotted;
+    border-bottom: 6px dotted;
+    border-left: 6px dotted;
+    border-right: 6px dotted;
+    float: left;
+    max-width: 100%;
+    max-height: 100%;
+    height: 225px;
+    width: 225px;
+    margin: 20px 100px 60px 200px;
+}
+
+#Experience {
+    color: #f36f22;
+    font-size: 20px;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    display: table;
+    margin: 30px 100px 50px 25px;
+    padding: 5px;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+}
+
+#Experience ul {
+    list-style: none;
+}
+
+#skills {
+    color:#f36f22;
+    font-size: 18px;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    display: table;
+    margin: 30px 50px 50px 550px;
+    padding: 5px;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+}
+
+#skills li {
+    display: inline;
+}
+#skills li::before {
+    content: '\25cf\a0';
+}
+
+#Connect {
+    color:#f36f22;
+    font-size: 18px;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+}
+
+.icon {
+    color:#9a342a;
+    font-size: 30px;
+}
+
+#messageForm {
+    color:#f36f22;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
+    display:block;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+    margin:auto;
+}
+
+label {
+    color: #088496;
+    font-size: 18px;
+}
+
+input {
+    color: #1F1B18;
+    background-color: #FAD6C2;
+    border-radius: 2em;
+    border-top: 3px dotted;
+    border-bottom: 3px dotted;
+    border-left: 3px dotted;
+    border-right: 3px dotted;
+    padding: 0.5em;
+}
+textarea {
+    color: #1F1B18;
+    padding: 1em;
+    background-color: #FAD6C2; 
+    border-radius: 2em;
+    border-top: 3px dotted;
+    border-bottom: 3px dotted;
+    border-left: 3px dotted;
+    border-right: 3px dotted;
+}
+
+#button {
+    color:#181A18;
+    padding: 5px;
+    border: 1px;
+    background-color: #BFD3BD;
+    border-radius: 2em;
+    border-top: 2px dotted;
+    border-bottom: 2px dotted;
+    border-left: 2px dotted;
+    border-right: 2px dotted;
+}
+
+#messages {
+    color:#f36f22;
+    font-size: 18px;
+    font-family: 'Zilla Slab', serif;
+    justify-content: center;
+    display: block;
+    margin: 30px 25px 15px 25px;
+    padding: 10px;
+    background-color: #fbd6b7;
+    border-radius: 2.0em;
+}
+
+#copyright {
+    color:#f36f22;
+    font-size: 10px;
+    font-family: 'Zilla Slab', serif;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    background: #f65343;
+    margin-left: auto;
+    margin-right: auto;
+}
+

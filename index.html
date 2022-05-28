@@ -2,98 +2,186 @@
 <html>
 
 <head>
-        <title>Jennifer Tellez</title>
+    <title>Jennifer Tellez</title>
 
     <link rel="stylesheet" href="css/index.css">
 
 </head>
-
+<!-- Navigation Set Up -->
 <body>
-   <div>
-       <header>
-           <center><h1>Jennifer Tellez Vera</h1></center>
-           <center><p> A <em>Software Engineer</em> in the making. </p></center>
-
-          <nav>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#About Me">About Me</a></li>
-                  <li><a href="#Experience">Experience</a></li>
-                  <li><a href="#Skills">Skills</a></li>
-                  <li><a href="#Connect">Connect</a></li>
-              </ul>
-          </nav> 
-       </header>
-
-    <section id="About Me">
-        <center>
-            <h2>ABOUT ME</h2>
-        </center>
-        <center><img src="https://i.pinimg.com/564x/af/b1/2e/afb12e750e081d69e964257441fb2022.jpg"
-                alt="Painting of light-skin woman with no face and holding flowers."></center>
-        <p>
-            <font size="4" face="verdana" color="red">
-                <center>
-                    <strong>Hello,</strong> my name is Jennifer Tellez and I am a junior software engineer. <br>
-                    I currently have a degree in Business Management from San Diego State University. <br>
-                    Some of my favorite things to do are reading, watching anime, and playing Animal Crossing. <br>
-                    I have chosen to learn how to code because I would love to make my own video game and one day work
-                    for Pixar. <br>
-                </center>
-            </font>
-        </p>
-    </section>
- </div>
-
-    <section id="Experience">
-        <center>
-            <h2>EXPERIENCE</h2>
-        </center>
-        <center><img src="https://i.pinimg.com/564x/77/4b/ac/774bacc416267c75e125548f35cb4d8b.jpg"
-                alt="Warm milk pitcher being poured into a teacup full of coffee."></center>
-        <font size="4" face="verdana" color="red">
-            <center>
+    <div>
+        <header>
+            <div class="navigation">
                 <ul>
-                    <li><strong>Barnes and Noble</strong> - Bookseller/Barista</li>
-                    <li><strong>School in the Park</strong> - Museum Educator Assistant</li>
-                    <li><strong>Charlotte Russe</strong> - Sales Associate</li>
-                    <li><strong>Under Armour</strong> - Sales Associate</li>
-                    <li><strong>Coronado Recreation Center</strong> - Program Assistant</li>
+                    <li><a href="#">
+                            <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#About Me">
+                            <span class="icon">
+                                <ion-icon name="flower-outline"></ion-icon>
+                            </span>
+                            <span class="text">About Me</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#Experience">
+                            <span class="icon">
+                                <ion-icon name="newspaper-outline"></ion-icon>
+                            </span>
+                            <span class="text">Experience</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#skills">
+                            <span class="icon">
+                                <ion-icon name="laptop-outline"></ion-icon>
+                            </span>
+                            <span class="text">Skills</span>
+                        </a>
+                    </li>
+
+                    <li><a href="#Connect">
+                            <span class="icon">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </span>
+                            <span class="text">Connect</span>
+                        </a>
+                    </li>
+
                 </ul>
-            </center>
-        </font>
+        </header>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+<!-- Self Image -->
+        <img src="https://media-exp1.licdn.com/dms/image/C5603AQElZbUHjRdQHA/profile-displayphoto-shrink_200_200/0/1564901160247?e=1658966400&v=beta&t=noP46_n6BPyxVh3ThyQ7VM7_eW77hWNj9MHx-bWH6T0"
+            id="me" alt="Young girl standing in front of greenery with her graduation cap and sash.">
+
+<!-- Introduction of myself -->
+<section id="Introduction">
+        <h1>Hola. I am Jennifer Tellez.</h1>
+        <h2> I'm a <em>Software Engineer</em> in the making based in California. </h2>
     </section>
 
-    <section id="Skills">
-        <center>
-        <h2> Skills </h2>   
-        <font size="4" face="verdana" color="red">
-        <strong><ul>   
-        </ul></strong>
+    &nbsp;&nbsp;
+
+<!-- About me Section  -->
+<section id="About_Me">
+    <p>
+        <h2>A BIT ABOUT ME... </h2>
+        I currently have a degree in Business Management from San Diego State University. <br>
+        Some of my favorite things to do are reading, watching anime, and playing Animal Crossing. <br>
+        I have chosen to learn how to code because I would love to make my own video game and one day work
+        for Pixar. <br>
+    </p>
+</section>
+
+&nbsp;&nbsp;
+
+<!-- Work Image -->
+    <img src="https://i.pinimg.com/564x/18/86/50/18865061b1309bcd11f9f9126be16cf4.jpg"
+            id="coffee" alt="Warm milk pitcher being poured into a teacup full of coffee."></center>
+
+<!-- Experience Section -->
+<section id="Experience">
+    <h2>EXPERIENCE</h2>
+
+        <ul>
+            <li><strong>Barnes and Noble</strong> - Bookseller/Barista</li>
+            <li><strong>School in the Park</strong> - Museum Educator Assistant</li>
+            <li><strong>Charlotte Russe</strong> - Sales Associate</li>
+            <li><strong>Under Armour</strong> - Sales Associate</li>
+            <li><strong>Coronado Recreation Center</strong> - Program Assistant</li>
+        </ul>
+    
+    </font>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    
+        <h2> SKILLS </h2>
+
+        <strong>
+            <ul>
+            </ul>
+        </strong>
+    
+</section>
+
+<!-- Connect Section -->
+<section id="Connect">
+
+        <center><h2>CONNECT</h2>
+
+        <!-- Email -->
+        <a href="mailto:jennyfertellez@gmail.com">
+            <span class="icon">
+                <ion-icon name="mail-outline"></ion-icon>
+            </span>
+        </a>
+
+        <!-- Github     -->
+        <a href="https://github.com/jennyfertellez">
+            <span class="icon">
+                <ion-icon name="logo-github"></ion-icon>
+            </span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/jennifer.tellez/">
+            <span class="icon">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </span>
+        </a>
     </center>
-    </section>
 
-    <section id="Connect">
-        <center>
-            <h2>CONNECT</h2>
-        </center>
-        <font size="4" face="verdana" color="red">
-            <center>
-                <strong>EMAIL:</strong> <br>
-                <a href="mailto:jennyfertellez@gmail.com">jennyfertellez@gmail.com</a><br>
-                <strong>GITHUB:</strong><br>
-                <a href="https://github.com/jennyfertellez">https://github.com/jennyfertellez</a><br>
-                <strong>INSTAGRAM</strong><br>
-                <a href="https://www.instagram.com/jennifer.tellez/">https://www.instagram.com/jennifer.tellez/</a><br>
-            </center>
+</section>
 
-    </section>
+<!-- Get in Touch Section -->
+<section id="messageForm">
 
-<footer>
+    <center><h2> GET IN TOUCH </h2>
+
+    <form name="leave_message">
+
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" required><br>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" required></textarea><br>
+        <button type="submit" id="button">Submit</button>
+
+
+    </form></center>
+
+</section>
+
+<!-- Messages left on site -->
+<section id="messages">
+    <center><h2> MESSAGES </h2>
+    <ul class="messageList"></ul></center>
+
+</section>
+
+<!-- Copyright -->
+<footer id="copyright">
 
     <script src='js/index.js'></script>
 
 </footer>
 
 </body>
+
 </html>
