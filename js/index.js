@@ -82,7 +82,6 @@ messageForm.addEventListener('submit', (event) => {
     // console.log statement to log the three variables you created in the previous step
     console.log(name, email, message);
 
-
     // Using "DOM Selection", select the #messages 
     // section by id and store it in a variable named messageSection
     const messageSection = document.getElementById("messages");
@@ -114,8 +113,8 @@ messageForm.addEventListener('submit', (event) => {
     const removeButton = document.createElement("button");
     removeButton.innerHTML = "remove";
     removeButton.type = "button";
-    //document.body.appendChild(removeButton);
-    //Button - remove
+    // document.body.appendChild(removeButton);
+    // Button - remove
   
     // Add an event listener to the removeButton element that handles the "click" event
     // Inside the callback function, find the button's parent element using DOM Traversal 
@@ -140,15 +139,108 @@ messageForm.addEventListener('submit', (event) => {
 });
 // (Optional) Hide the #messages section when the list is empty
 const hideMessageSection = document.getElementById("messages");
-//hideMessageSection.innerHTML = " ";
-
+// hideMessageSection.innerHTML = " ";
 
 // (Optional) Create an "edit" button for each message entry that allows the user 
-// to input a new/modified message
+// to input a new/modified message...
+
+// Fetch GitHub Repositories:
+// Create a new XMLHttpRequest object and store it in a variable named githubRequest
+const githubRequest = new XMLHttpRequest();
+
+// Call the open method on your githubRequest object and pass the necessary arguments
+// method: the method of your request (in this case, "GET")
+// url: the url of your request (in this case, "https://api.github.com/users/{GITHUB_USERNAME}/repos")
+githubRequest.open("GET", "https://api.github.com/users/Karla1981/repos");
+
+// Finally, call the send method on your githubRequest object to actually send the request
+githubRequest.send();
+
+// Handle Response from Server:
+// Below the last line of code you just wrote, add a "load" event listener on your 
+// githubRequest object and pass the necessary arguments
+// 1. event: the event that is being handled (in this case, "load")
+//  callback: the function that runs when this event occurs
+// Inside the callback function you just created, parse the response and store it in a variable named repositories
+//  hint: JSON.parse(this.response)
+//  Log the value of repositories in the console
+githubRequest.addEventListener("load", function () {
+    const repositories = JSON.parse(this.response);
+    //console.log("Repositories: ",repositories);------------------------------------------------------tooday
+
+    // Save and refresh your browser
+    // You should see your list of GitHub repositories logged in the console
+    // Note: at this point, you have the response data but nothing is being displayed on the webpage itself
+
+    // Display Repositories in List
+    // Using "DOM Selection", select the #projects section by id and store it in a variable named projectSection
+    const projectSection = document.getElementById("projects");
+    //console.log("Project Section: ", projectSection)
+
+    //  Using "DOM Selection", query the projectSection (instead of the entire document) to find the <ul> element and
+    // store it in a variable named projectList
+    const projectList = projectSection.querySelector("ul");
+    //console.log("Project List: ", projectList);
+    
+    // Create a for loop to iterate over your repositories Array, starting at index 0
+    for (let i = 0; i < repositories.length; i++){
+        // console.log("Arraym: ", repositories[i])
+        // Inside the loop, create a new list item (li) element and store it in a variable named project
+        // hint: createElement method
+        let project = document.createElement("li");
+        project.innerText =  repositories[i].html_url;
+        //repositories[i].name
+
+        // On the next line, set the inner text of your project variable to the current Array element's name property
+        // hint: access the Array element using bracket notation- Check here!
+        
+        // On the next line, append the project element to the projectList element
+        // hint: appendChild method
+        projectList.appendChild(project);
+        console.log("Project: ", project);    
+
+    }
+    // Stretch Goals
+    // (Optional) Transform your repository names into <a> tags 
+    // that link to GitHub (hint: html_url property)
+    // name: "intro-to-programming-asteroid"
+    // html_url: "https://github.com/Karla1981/intro-to-programming-asteroid"
+    // name: "intro-to-programming-section-5"
+    // html_url: "https://github.com/Karla1981/intro-to-programming-section-5"
 
 
+        const project_1 = document.createElement("a");
+        project_1.href="https://github.com/Karla1981/intro-to-programming-asteroid";
+        project_1.innerText = "intro-to-programming-asteroid";
+        ///console.log(project_1);--------------------------------------------------------today
+        const addToProjects = document.getElementById("projects");
+        addToProjects.appendChild(project_1 );
 
 
+        const project_2 = document.createElement("a");
+        project_2.href="https://github.com/Karla1981/intro-to-programming-section-5";
+        project_2.innerText = "intro-to-programming-section-5";
+        ///console.log(project_2);--------------------------------------------------------today
+        // const addToProjects2 = document.getElementById("proj");
+        addToProjects.appendChild(project_2);
 
+    // (Optional) Display additional information about your 
+    // repositories (i.e. description, date, etc.)
 
+    // (Optional) Customize the styling of your "Projects" section list
 
+});
+
+    // project.innerText = `<a href="https://github.com/Karla1981/intro-to-programming-asteroid" target="_blank">${repositories[i].html_url}</a>`;
+
+    //`<a href="https://github.com/Karla1981/intro-to-programming-asteroid" target="_blank">project</a>`;
+    // ${repositories[i].html_url} 
+    
+    // let anchor = document.createElement("a");// <a>
+    // anchor.href="https://github.com/Karla1981/intro-to-programming-asteroid";
+    // anchor.innerText = "intro-to-programming-asteroid";
+    // console.log(anchor);
+    // let addToProjects = document.getElementById("projects");
+    // addToProjects.appendChild(anchor);
+
+    
