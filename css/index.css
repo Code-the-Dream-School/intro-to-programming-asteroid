@@ -1,0 +1,59 @@
+body {
+  /* Typography Declarations */
+  background-color: #ceb5b5;
+  color: rgb(27, 3, 73);
+  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 10px;
+  padding: 5px;
+}
+body h1 {
+  text-align: center;
+  font-size: 46px;
+  font-weight: bold;
+  border: thick double #f0ecf6;
+  background-color: #984482;
+
+}
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color:rgb(27, 3, 73);
+  border: thick double #f3edf0;
+  background-color: #8e536c;
+}
+.section {
+  color:#3e021b
+} 
+#skills {
+  border: double;
+  background-color: antiquewhite;
+}
+#skillset {
+  border: double;
+  background-color: antiquewhite;
+}
+.form td {
+  font-size: medium;
+  color:#984482;
+  background-color: aqua;
+  margin: auto;
+  padding: auto;
+}
+#submit-button {
+  background-color: grey;
+  font-weight: bold;
+  color: black;
+  margin:auto;
+  padding: auto;
+}
+#messages ul {
+  border:rgb(27, 3, 73);
+  background-color: aliceblue;
+  color:#984482;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#footer {
+  color: blueviolet;
+  text-align: center;
+}

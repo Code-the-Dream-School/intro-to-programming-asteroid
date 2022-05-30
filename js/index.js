@@ -3,16 +3,17 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
-const skills = ['JavaScript', 'CSS', 'HTML', 'JQuery', 'NodeJS'];
-const skillsSection = document.querySelector('#skills');
-const skillsList = skillsSection.querySelector('ul');
+const skills = ['JavaScript', 'CSS', 'HTML', 'JQuery', 'NodeJS', 'React/ReactJS/native', 'Redux', 'Express', 'MongoDB', 'MySQL/noSQL'];
+const skillsSection = document.getElementById('skills');
+console.log(skillsSection);
+//const skillsList = skillsSection.querySelector('ul');
 
 for(let i = 0; i < skills.length; i++){
   let skill = document.createElement('li');
   skill.innerHTML = skills[i];
-  skillsList.appendChild(skill);
+  //console.log(skill);
+  skillsSection.appendChild(skill);
 }
-
 const messageForm = document.getElementsByName("leave_message")[0];
 messageForm.addEventListener('submit', (event) => {
   event.preventDefault();
