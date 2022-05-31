@@ -1,181 +1,198 @@
 body{
-    background-color:#3e3c52;
+    background-image:url(https://images.unsplash.com/photo-1636953056323-9c09fdd74fa6?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+    background-size:cover;
+    background-position:center bottom;
+    background-color:#759746;
+    background-blend-mode:multiply;
 }
 
 *{
-    color:rgb(19, 20, 19);
-    font-family: 'Source Code Pro', monospace;
+    color:#fefefe;
+    font-family: consolas, monospace;
+    font-weight: lighter;
     font-size: 16pt;
-    font-weight:bold ;
-    text-align: center;
-    /* note to self: reconsider font choices */
+    text-align:center;
+    list-style-type: none;
+    text-shadow:-1px -1px 0px black;
 }
 
-section{
-    margin-bottom: 10px;
-    margin-right: 10%;
-    margin-left:10%;
-    /* background-color:#4c74c9; */
-    border-radius: 3%;
-    border-bottom: 3px dashed #50cb86;
-    border-top: 5px solid #50cb86;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, #4c74c9 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    /* note to self: background gray or light blue? */
+#avatar img{
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: -2px 0px 0px #759746, 2px 0 5px #f5ff8d, -4px 0px 7px #50cb86;
+    justify-items: center;
 }
 
 h1{
     font-size:50px;
-    font-weight: bold;
-    font-family: 'source code pro', monospace;
-    text-shadow: -1px 0px 0px #50cb86, 0 0 5px #f5ff8d;
-    /* note to self: love shadow coloring, try carved, maybe apply to h2s */
+    text-shadow: -2px 0px 0px #759746, 2px 0 5px #f5ff8d, -4px 0px 7px #50cb86;
 }
 
-#theWorks{
-   font-family: vt323, monospace;
-   font-size: 30px;
-   background-color:#f5ff8d;
-   margin-left: 40%;
-   margin-right: 40%;
-   grid-area: header;
-   text-align: center; 
-   /* note to self:consider alternative styling */
+#abQuote{
+    display:inline-flex
 }
 
-#worksList{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    /* note to self: icons or restyling, rewording */
+@media only screen and (max-width: 800px) { 
+    #abQuote, #myWork{
+      flex-direction: column;
+    }
+  }
+
+#about{ 
+  justify-items:left;
+  display:inline-flex;
+  flex-wrap: wrap;
 }
 
-.portfolioItems{
-    color:#f5ff8d;
-    font-family: vt323, monospace;
-    font-size: 30pt;
-    letter-spacing:3px; 
+.about{
+    border-width: 10px;
+    text-align: left;
+    display:inline-flex;
 }
+
+blockquote{
+    display:inline-flex;
+    justify-items: end;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    text-align:right;
+    border-width: 25px;
+  border-style: solid;
+    border-image: linear-gradient(132deg, rgb(117, 151, 70) 0%, rgb(0, 0, 0) 100%);
+}
+
+.experience{
+    text-align: left;
+}
+
+
+#rolesProjSect{
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#roles{
+    text-align: center;
+}
+
+
+.rolesList{
+    display:inline-flex;
+    flex-direction: column;
+}
+
+#projects{
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#projTitle{
+   text-align:center;
+}
+
 
 #skillsTitle{
-    font-family: vt323, monospace;
-   font-style:bold;
-   font-size: 20pt;
-   text-align: center;
-   text-decoration: none;
-   border-top-left-radius: 30pt;
-   border-top-right-radius: 30pt;
-   border-top-color:rgba(132, 77, 77, 0.856) ;
-   border-style: double;
-   border-left-width: 20px;
-   border-right-width: 20px;
-   margin: 25px 50px 20px;
-   width:100px;
-   background-color: rgba(132, 77, 77, 0.856);
-   /* note to self: condense this within experience section grid or highlight in experience blurb and delete section? */
-}
+    display:inline-flex;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+    text-align: left;
+} 
 
 .skillsList{
-    font-family: vt323, monospace;
-    color:rgba(2, 2, 21, 0.085);
-    border-top-left-radius: 10pt;
-    border-top-right-radius: 10pt;
-    list-style-type: none;
-    text-align: center;
-    /* note to self: any non web skills? */
-
+    display: inline-flex;
+    flex-flow: row wrap;
+    
 }
 
-ul>li{
-    font-family: vt323, monospace;
-    /* note to self: cool but not really readable */
+.skillsList li{
+    background-color:rgb(15, 14, 14);
+    height:fit-content;
+    width: fit-content;
+    margin: 10px;
+    padding: 5px;
+    border: 5px solid black;
+    border-radius:5%; 
+    box-shadow:-1px 0px 0px #759746, 0 0 5px #0c0d00, -2px 0px 7px #50cb86;
+    
 }
 
 .headerLink {
     display:inline;  
-    text-decoration: none;
-    font-weight: bolder;
+    margin-top: 10px;
     /* note to self: rename li's, fixed top center with different block properties? */
 }
 
 h2{
     font-size:24pt;
-    font-weight: bold;
-    color:black;
-    /* position:sticky;
-    top:0; */
-    /* note to self: turn these into sticky banners instead of nav menu? */
+    color:#fefefe;
+    text-shadow:-1px 0px 0px #759746, -1px 0px 7px #50cb86;
+    margin-bottom: .25%;
+    text-align: left;
 }
 
-#messageForm h2{
-    color:black;
-    font-family: 'Source Code Pro', monospace;
-    /* note to self: maybe combine with contacts, use icons instead? */
+#msgPanel{
+    display:flexbox;
+    flex-direction: column;
+}
+
+#messageForm{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#messages{
+    display: inline-flex;
+    flex-direction: column;
 }
 
 label{
-    font-family: 'Source Code Pro', monospace;
     font-size: 14pt;
-    color:black;
-    font-style: bold;
-    grid-column: labels;
-    grid-row: auto;
-    /* note to self: these need more style */
-}
-
-form{
-    font-family: 'Source Code Pro', monospace ;
-    font-size: 14pt;
-    padding-bottom: 25pt;
-    margin-bottom: 25pt;
-    margin margin-top: 25pt;
-    display: grid;
-    grid-template-columns: [labels] auto [controls] 1fr;
-    grid-auto-flow: column;
-    grid-gap: .8em;
+    text-shadow:-1px 0px 0px #759746, -1px 0px 7px #50cb86;
 }
 
 input, textarea{
-    background-color: #63686e;
-    color:white;
+    background-color: black;
+    box-shadow: -1px 0px 0px #759746, 0 0 5px #f5ff8d, -2px 0px 7px #50cb86;
     size: 100pt;
-    border: 3px dashed #50cb86;
+    border: 3px solid #ffffff;
     border-radius: 5px;
-    grid-column: controls;
-    grid-row: auto;
-    /* note to self: adjust border color and size? */
 }
 
 button{
-    background: #f5ff8d;
-    border: 0 none;
+    background-color: #000000ba;
+    box-shadow: -1px 0px 0px #759746, 0 0 5px #f5ff8d, -2px 0px 7px #50cb86;
     border-radius: 5px;
-    grid-row-start:4;
-    grid-column-start: 2;
-    /* note to self: how to add spacing that looks good with remove button without effecting submit button? grid message section. eventually add click effect */
+    margin: 20px;
 }
 
-#messages, h2{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    /* note to self: how to say remove button needs to be 4ish spaces away?*/
-}
-
-.messageList{
-    list-style-type: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* note to self: spacing between list item and button what if this looked like a Jam board or clipboard and the messages stayed until someone removed them, not on refresh like on myspace? would look good if parallel to form and above footer*/
-}
-
-
-.contactsList{
-    list-style: none;
-    /* note to self: make these 8bit style icons for final if possible and combine with message form and footer*/
+button:active{
+    transform: translateY(.3em)
 }
 
 footer{
-    text-shadow: -1px 0px 0px #50cb86, 0 0 5px #f5ff8d;
-    /* note to self: will combine with contacts and message form, add cool icons or hover effect */
+    display: inline-flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    align-content: space-evenly;
 }
+
+i{
+  background-color: black;    
+}
+.contactsList li{
+    display:inline-flex;
+    flex-direction: row;
+}
+
+footer p{
+    text-shadow: -1px 0px 0px #50cb86, 0 0 5px #f5ff8d, -2px 0px 7px #a28dff;
+    display:inline-flex;
+    margin-left: 25px;
+}
+ 
+#tagline{
+    margin-top:-30px;
+    font-style:oblique;
+ }

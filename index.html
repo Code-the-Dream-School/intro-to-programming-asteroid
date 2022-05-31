@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://kit.fontawesome.com/f6d412a39b.js" crossorigin="anonymous">		
+		</script>
+		
 		<title>Sherose B.</title>
 		<meta charset="UTF-8" />
 		<meta name="description" content="developer portfolio" />
@@ -9,22 +12,23 @@
 			content="HTML, CSS, JavaScript, Developer,Games, Education, Teacher, Coder"
 		/>
 		<meta name="author" content="Sherose Badruddin" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			rel="stylesheet"
 			href=" css/index.css"
-			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro|family=VT323"
 		/>
 	</head>
 	<body>
+		<section id="avatar">
+			<img src="https://photos.smugmug.com/photos/i-J6XQLnJ/0/443ea658/XL/i-J6XQLnJ-XL.png"
+			alt="cartoon avatar of Sherose Badruddin" width="200" height="200">
+		</section>
+
 		<h1>Sherose Badruddin</h1>
-		<!-- Horizontal static list -->
+		<p id="tagline">front end developer and educator</p>
 		<section id="header">
 			<nav>
 				<ul>
 					<li class="headerLink"><a href="#about" target="_self">About</a></li>
-					<li class="headerLink"><a href="#goals" target="_self">Goals</a></li>
 					<li class="headerLink">
 						<a href="#experience" target="_self">Experience</a>
 					</li>
@@ -32,76 +36,53 @@
 						<a href="#skills" target="_self">Skills</a>
 					</li>
 					<li class="headerLink">
-						<a href="#contacts" target="_self">Contacts </a>
+						<a href="#projects" target="_self"> Projects</a>
+					</li>
+					<li class="headerLink">
+						<a href="#contacts" target="_self">Connect</a>
 					</li>
 				</ul>
 			</nav>
 		</section>
 		<section id="about">
 			<h2>About</h2>
-			<p>current coder, former teacher, future coding teacher</p>
-			<img
-				src="https://static.wikia.nocookie.net/simpsons/images/e/e0/Mapple_Lisa.png/revision/latest/scale-to-width-down/180?cb=20160518003943"
-				alt="photo of Lisa Simpson typing on an old computer"
-			/>
-		</section>
-		<!-- Add quote -->
-		<section id="goals">
-			<h2>Goals</h2>
-			<p>
-				I'm working towards combining my experience with community organizing
-				and education to bring Full Stack Development opportunities to children
-				and nurturers of historically exploited populations.
-				<q
-					><em
-						>the quote where someone says when you get up you get someone else
-						up. Toni Morrison i think</em
-					></q
-				>
+			<div id="abQuote">
+			<p class="about">
+				I'm working towards combining my experience with community organizing and education to bring Full Stack Development opportunities to children and nurturers of historically exploited populations.
+				
 			</p>
-		</section>
-		<section id="experience">
-			<h2>Experience</h2>
-			<p>
-				Using Javascript, HTML, and CSS, I created a personal portfolio website
-				for future Code the Dream<em> Director of Youth Programming</em>,
-				Sherose Badruddin. I've also produced, directed, and coordinatated
-				educational and recreational programming for K-12 students.
-			</p>
-			<h3 id="theWorks">The Works</h3>
-			<ul id="worksList">
-				<li><a href="#" class="portfolioItems">Web Design samples</a></li>
-				<li><a href="#" class="portfolioItems">Games</a></li>
-				<li><a href="#" class="portfolioItems">Design Challenges</a></li>
-				<li><a href="#" class="portfolioItems">Funsies with Kiddo</a></li>
-			</ul>
+			<blockquote cite="https://www.goodreads.com/author/quotes/3534.Toni_Morrison">
+			“I tell my students, 'When you get these jobs that you have been so brilliantly trained for, just remember that your real job is that if you are free, you need to free somebody else. If you have some power, then your job is to empower somebody else. This is not just a grab-bag candy game.”
+				― Toni Morrison
+			</blockquote>
+			</div>
 		</section>
 		<section id="skills">
 			<h2 id="skillsTitle">Skills</h2>
 			<ul class="skillsList"></ul>
 		</section>
-		<section id="contacts">
-			<nav>
-				<h2>Contacts</h2>
-				<ul class="contactsList">
-					<li><a href="mailto:sheroseb@gmail.com?subject=Hello">Email</a></li>
-					<li>
-						<a
-							href="https://www.linkedin.com/in/sherose-badruddin-60924aa3/"
-							target="LinkedIn"
-							>LinkedIn</a
-						>
-					</li>
-					<li>
-						<a href="https://github.com/essbee23" target="_blank">Github</a>
-					</li>
-				</ul>
-			</nav>
+		<section id="experience">
+			<h2>Experience</h2>
+			<p class="experience">
+				Throughout my adult life, I have participated in some way with work that had community impact. Transforming school environments, developing a statewide social gifting network, and organizing hunger relief programs are where I felt most at home.<br>
+				 While pursuing an education in software development, I am providing circulation related services for Walter Davis Library on the UNC Chapel Hill campus. Before that role, I was employed by the Chapel Hill- Carrboro school system, Chapel Hill Parks & Rec department, and RSI, inc. where I was thrived with increasingly challenging responsibilities. I have produced, directed, and coordinated educational and recreational programming for K-12 students as well as adults with development disabilities.<br> Outside of education-related employment, I funded my college education by working in various roles within the hospitality industry.
+			</p>
+	<section id="rolesProjSect">
+			<h2 id="roles">Roles</h2>
+			<ul class="rolesList">
+				<li class="portfolioItems">System Level Inclusion Facilitator</li>
+				<li class="portfolioItems">Project Site Coordinator</a></li>
+				<li class="portfolioItems">Direct Support Summer Program Coordinator</a></li>
+				<li class="portfolioItems">Asset Management and Trace Technician</a></li>
+			</ul>
 		</section>
 		<section id="projects">
-			<h2>Projects</h2>
+			<h2 id="projTitle">Projects</h2>
 			<ul></ul>
 		</section>
+		</section>
+
+	<Section id="msgPanel">
 		<section id="messageForm">
 			<h2>Leave a Message</h2>
 			<form name="leave_message">
@@ -118,7 +99,26 @@
 			<h2>Messages</h2>
 			<ul class="messageList"></ul>
 		</section>
-		<footer></footer>
+	</Section>
+		<footer>
+			<section id="contacts">
+				<nav>
+					<ul class="contactsList">
+						<li><a href="mailto:sheroseb@gmail.com?subject=Hello"><i class="fa-solid fa-envelope"></i></a></li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/sherose-badruddin-60924aa3/"
+								target="LinkedIn"
+								><i class="fa-brands fa-linkedin"></i></a
+							>
+						</li>
+						<li>
+							<a href="https://github.com/essbee23" target="_blank" ><i class="fa-brands fa-github"></i></a>
+						</li>
+					</ul>
+				</nav>
+			</section>
+		</footer>
 		<script src="js/index.js"></script>
 	</body>
 </html>

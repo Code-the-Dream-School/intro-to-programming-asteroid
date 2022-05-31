@@ -10,7 +10,7 @@ copyright.innerHTML="Sherose Badruddin "+ thisYear
 console.log(footer)
 footer.appendChild(copyright)
 
-const skills = ["Javascript","HTML","CSS"]
+const skills = ["Javascript","HTML","CSS","Ajax","JSON","Fetch API"]
 
 const skillsSection = document.querySelector("#skills")
 
@@ -21,6 +21,7 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerHTML=skills[i]
   skillsList.appendChild(skill)
 }
+
 const messageForm = document.getElementsByName("leave_message")[0]
 
 console.log(messageForm)
@@ -44,28 +45,26 @@ messageForm.addEventListener("submit", (event) => {
   removeButton.addEventListener("click", (e) => {
     const entry = removeButton.parentNode
     entry.remove()
-    
-    
   })
   newMessage.appendChild(removeButton)
-  messageForm.reset()
-  
+  messageForm.reset()  
 });
 
-githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/essbee23/repos");
-githubRequest.send();
+// Create the fetch request
+fetch('https://api.github.com/users/essbee23/repos')
+
+// function to return response
+  .then(response => response.json())
+
+// function with code from previous load event listener
   
-githubRequest.addEventListener('load', () => {
-  const repositories = JSON.parse(githubRequest.response);
-  console.log(repositories, "im a test string");
-
-  const projectSection = document.getElementById("projects");
-  const projectList = projectSection.querySelector("ul");
-
-  for (let i = 0; i < repositories.length; i++) {
-    const project = document.createElement("li")
-    project.innerText =repositories[i].name;
-    projectList.appendChild(project)
-  }
-});
+  .then((repositories) => {
+      const projectSection = document.getElementById("projects");
+      const projectList = projectSection.querySelector("ul");
+  
+      for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement("li")
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project)
+      }
+    })
