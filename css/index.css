@@ -1,0 +1,434 @@
+/*Nav bar style*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color:#808080; 
+}   
+
+/*Nav name logo class style*/
+.name-logo{
+    color: #d9d9d9;
+    text-transform: none;
+    letter-spacing: 5px;
+    font-size: 25px;
+    justify-content: space-around;
+}
+
+/*Nav bar links style*/
+.nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+}
+
+/* Nav links li Style */
+.nav-links li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* Nav a tags Style*/
+.nav-links a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-transform: none;
+    color: #d9d9d9;
+    list-style: none;
+}
+
+/* Nav a tags Hover*/
+.nav-links a:hover{
+    transform: scale(.90); 
+}
+
+/*Body font style*/
+body{
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color:#f2f2f2;
+}
+
+/*Experience style*/
+.experience-section{
+    background-color: #b3b3b3;
+
+}
+
+/*Experience-name style*/
+.experience-section h1{
+    display: flex; 
+    color:#0c0c0c;
+    letter-spacing: 5px;
+    align-items: center;
+    justify-content: center;  
+}
+
+/*Experience-list li style*/
+.experience-section li{
+    display: flex;
+    justify-content: space-around;
+    font-display: flex; 
+    letter-spacing: 2px;
+    align-items: center;  
+    list-style: none;
+}
+
+
+/* Skills h2 Style */
+.skills h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+/* Skills Border Style*/
+.skills h2:before, .skills h2:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 2.5px outset ;
+}
+
+/* Skills Style*/
+.skills li{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    letter-spacing: 3px; 
+    list-style: none; 
+} 
+
+/* About, Experience and Connect Scroll Behaviour*/
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* Conect Style*/
+  #connect {
+    height: 200px;
+    background-color:#f2f2f2; 
+  }
+  /* Section About Container - Parent Element*/
+  #about{
+    /* display: flex; */
+    position: relative;
+    /* flex-wrap:wrap; */
+    /* border-radius: 10px; */
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+    /* flex-direction:column; */
+    /* border-radius: 40px; */
+    /* border:10px #808080; */
+    /* height: 300px; */
+    background-color: #d9d9d9; 
+    padding-bottom: 10px;
+  }
+
+  /* About Photo Style*/
+  #about p{
+      /* flex-direction:column; */
+      font-size: 20px;
+      padding: 30px;
+      margin: 20px 0;
+  }
+  /* About img Style*/
+  #about img {
+      display: flex;
+      padding: 10px;
+      margin: 20px;
+      border-radius: 20px;
+  }
+
+  /* Create a line effect on the about container section*/
+  #about::before,
+  #about::after {
+      content: '';
+      position: absolute;
+      height: 100px;
+      bottom: -75px;
+      right: 0;
+      left: 0;
+    background-color:#f2f2f2;
+      transform: skewY(-3deg);
+      -webkit-transform: skewY(-3deg);
+      -moz-transform: skewY(-3deg);
+      -ms-transform: skewY(-3deg);
+  }
+
+ /* Experience container Style*/
+  #experience {
+    height: 100%;
+    margin: 100px;
+    background-color:#f2f2f2;
+    border: 4.5px solid #808080;
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px #808080;
+  }
+
+/* Connect container Style No taking changes*/
+.connect{
+    height: 400px;
+    width: 100%;
+}
+
+/* Connect p Style - No working properly*/
+.connect p{
+    display: flex;
+    justify-content: center;
+    letter-spacing: 3px;
+}
+
+/* Button Connect Style */
+.button{
+    margin: 0 auto;
+    display: flex;
+    padding: 10px;  
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none;
+    color: #808080 ;
+    /* background-color: #7aa8b7; */
+    background-color:transparent;
+    border: 1.5px #808080 solid;
+    border-radius: 8px;
+    text-transform: uppercase;
+    outline: none;
+    width: 50%; 
+    height: 20px; 
+}
+
+/* Button Connect Hover Effect*/
+.button:hover{
+    background-color: #d3d3d3;
+    border: none; 
+
+}
+
+/* Project class h2 Style */
+.projects_class h2{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    padding: 10px;
+}
+
+/*Projec Class Style*/ 
+.projects_class{
+    display:flex;
+    border: 2.5px solid #808080;
+    border-radius: 10px;
+    background: #d3d3d3;
+    flex-wrap: wrap;
+    margin: 60px;
+
+}
+
+/*Projec Class li Style*/
+.projects_class li{
+    justify-content: space-evenly;
+    list-style: none; 
+    padding: 14px;
+    box-sizing: border-box;
+    margin: 12px;
+    background: #d3d3d3;
+    width: 100%;
+}
+
+/*Leave a Message Style*/
+#leave-a-message{ 
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+/*Leave a Message h2 Style*/
+#leave-a-message h2{
+    font-weight: bolder; 
+    letter-spacing: 5px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#0c0a0a
+
+}
+
+/*Leave Message Form Style*/
+.leave_message{
+    /* border-width: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Leave a Message Form name Style*/
+.name{
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    width:50%;
+    height: 30px;
+
+}
+
+/* Label Name Style*/
+.your-name{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+/*Leave a Message Form email Style*/
+.email{
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    width:50%;
+    height: 30px;
+}
+
+/* Label Email Style */
+.your-email{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+/*Leave a Message Form message Style*/
+.message{
+    border: 1px solid #d3d3d3; 
+    border-radius: 6px;
+    width:50%;
+    height: 30px;
+}
+
+/* Label Message Style */
+.your-message{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+
+}
+
+/*Button Style*/
+.submit{
+    border: 1.5px solid #d3d3d3;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 5px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #808080;
+    width:30%; 
+    height: 30px;
+
+}
+
+/* Button Hover Style */
+.submit:hover{
+    background-color: #d3d3d3;
+}
+
+/* Messages Style */
+#messages{
+    letter-spacing: 5px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#messages li{
+    list-style: none; 
+}
+
+/* Footer Style*/
+.footer{
+    background-color: #808080;
+    height: 100px;
+    width: 100%;
+    /* position: flex; */
+    /* align-items: center; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* color:#0c0c0c */
+    color:#ffffff;
+
+}
+
+/* Footer Icon Style */
+#github-icon{
+    background-color: #f2f2f2;
+    color: #b3b3b3;
+    width: 50px;
+    border-radius: 5px; 
+    font-size: 1.5em;
+}
+#skill-icons{
+    display: flex;
+    width: 50px;
+    background-color: #f2f2f2;
+    color: #b3b3b3;
+}
+
+
+/*Tablets*/
+@media (max-width: 768px) {
+    .experience-section li{
+        flex-direction: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 1px;
+        padding: 1px;
+    }
+    .experience-section h1{
+        flex: content;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+/* Mobile */
+@media (max-width: 500px){
+    .nav-links {
+        height: 70px;
+        flex-direction: row;
+    }
+    .nav-links ul {
+        padding: 10px;
+    }
+    .name-logo {
+        padding: 30px;
+    }
+    #experience {
+        margin: 100px;
+        width: fit-content;
+        padding: 20px;
+        flex: content;
+        align-items: center;
+        justify-content: center;
+    }
+    #projects {
+        margin: 30px;
+        padding: 20px;
+        flex: content;  
+        flex-direction: flex;
+        align-items: center;
+    }
+
+    /* Project id ul Style */
+    #projects ul {
+        flex:content;
+        gap: 30px;
+
+    }
+}

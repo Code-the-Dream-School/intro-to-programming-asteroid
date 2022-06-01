@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
     <title>Karla's Sotware Development Portafolio</title>
-    
-    <link rel="stylesheet" href="instructions/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;600&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/6871aaecaf.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="name-logo">
@@ -25,62 +24,68 @@
       <ul class="nav-links" >
         <li><a href="#about" class="about">About</a></li>
         <li><a href="#experience" class="experience">Experience</a></li>
-        <li><a href="#connet" class="connect">Connect</a></li>
+        <li><a href="#connect" class="connec">Connect</a></li>
       </ul>
     </nav>
 
+    <section class="about" id="about"><br>
+      <img src="image/Me.jpeg" alt="Me" class="photo" width="150px" height="150px">
+      <p>I am an active learner who is developing skills in software development.</p>
+    </section>
 
-  <seccion>
-    <h1>About</h1>
-    <p>I am an active learner who is developing skills in software development.</p>
-  </seccion>
-  <seccion>
-    <h1>Experience</h1>
-      <ul>
-        <li>Mantis Tech LLC - Shipping Manager - February 2018 to Present </li>
-        <li>Aurora University - Bachelor of Science in Computer Science - May 2017</li>
-        <li>Nicholson Elementary School - Teacher Aid - March 2013 to May 2013</li>
-     </ul>
-  </seccion>
+    <section class="experience-section" id="experience">
+      <h1>Experience</h1>
+        <ul>
+          <li>Mantis Tech LLC - Shipping Manager - February 2018 to Present</li>
+          <li>Aurora University - Bachelor of Science in Computer Science - May 2017</li>
+          <li>Nicholson Elementary School - Teacher Aid - March 2013 to May 2013</li>
+       </ul>
+    </section>
 
-  <seccion id="skills">
-    <h2>Skills</h2>
+    <section class="skills">
+      <h2>Skills</h2>
+        <ul>
+  
+        </ul>
+    </section>
+    <section id="projects" class="projects_class">
+      <h2>Projects</h2>
+        <ul>
+        </ul>
+    </section>
+    <section class="connect" id="connect">
+      <h1></h1>
+      <a class="button" href="connect.html"></i>Connect with me!</a>
+    </section>
+
+    <section id="leave-a-message">
+      <h2>Leave a Message</h2>
+      <form name="leave_message" class="leave_message">
+        
+        <label for="name" class="your-name">Name</label><br>
+        <input type="text" id="name" name="name" required="true" class="name"/><br>
+       
+        <label for="email" class="your-email">Email Address</label><br>
+        <input type="email" id="email" name="email" required="true" class="email"/><br>
+       
+        <label for="message" class="your-message">Message</label><br>
+        <textarea name="message" id="message" required="true" class="message"></textarea><br>
+       
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
       <ul>
       </ul>
-  </seccion>
-
-  <seccion>
-    <h1>Connect</h1>
-    <p>llesenia.flores.karla@gmail.com</p>
-  </seccion>
-
-  <section>
-    <h2>Leave a Message</h2>
-    <form name="leave_message">
-      
-      <label for="name">Name</label><br>
-      <input type="text" id="name" name="name" required="true"/><br>
-     
-      <label for="email">Email Address</label><br>
-      <input type="email" id="email" name="email" required="true" /><br>
-     
-      <label for="message">Message</label><br>
-      <textarea name="message" id="message" required="true"></textarea><br>
-     
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-  
-  <section id="messages">
-    <h2>Messages</h2>
-    <ul>
-
-    </ul>
-  </section>
-  
-  <footer></footer>
-
-  <script src="js/index.js"></script>
+    </section>
+    <footer class="footer">
+      <a href="https://github.com/karla1981" class="social-icon" >
+        <i class="fa-brands fa-github-alt fa-fw" id="github-icon"></i>
+      </a>
+    </footer>
+    <script src="js/index.js"></script>
   </body>             
 </html>
 
