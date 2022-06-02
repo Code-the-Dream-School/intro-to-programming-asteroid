@@ -13,6 +13,7 @@ body h1 {
   font-weight: bold;
   border: thick double #f0ecf6;
   background-color: #984482;
+  padding-top: 80px;
 
 }
 h2 {
@@ -22,6 +23,45 @@ h2 {
   border: thick double #f3edf0;
   background-color: #8e536c;
 }
+/* #nav-header {
+  padding: 4px 4px;
+  background: rgb(121, 104, 121);
+  color: antiquewhite;
+} */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+} */
+/* The navigation bar */
+#nav-header {
+  overflow: hidden;
+  background-color: rgb(83, 81, 81);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+#nav-header a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+#nav-header a:hover {
+  background: #ddd;
+  color: darkgray;
+}
+
+/* Main content */
+body {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
 .section {
   color:#3e021b
 } 
@@ -29,9 +69,33 @@ h2 {
   border: double;
   background-color: antiquewhite;
 }
+#skills li {
+  background-color: rgb(234, 247, 248);
+  border: 2px;
+  padding: 2px;
+  margin: 1px;
+}
+#skills {
+  display: inline-flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  padding: 2px;
+  margin: 1px;
+  /* height: 50px; */
+
+}
 #skillset {
   border: double;
   background-color: antiquewhite;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(234, 247, 248);
+  border: 2px;
+  padding: 2px;
+  margin: 1px;
 }
 .form td {
   font-size: medium;
@@ -60,5 +124,6 @@ h2 {
 @media only screen and (max-width: 600px) {
   body {
       width: 100%;
+      background-color: rgb(239, 207, 241);
   }
 }
