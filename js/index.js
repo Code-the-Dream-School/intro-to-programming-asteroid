@@ -44,3 +44,32 @@ messageList.appendChild(newMessage);
 
 copyright.innerHTML = `Dahlak Keleta ${thisYear}`;
 footer.appendChild(copyright);
+
+// let githubRequest = new XMLHttpRequest();
+// // githubRequest.onreadystatechange = function () {
+// //   if(githubRequest.readyState === 4) {
+// //     document.getElementById('projects').innerHTML = githubRequest.responseText;
+// //   }
+// // };
+// githubRequest.open("GET", "https://api.github.com/users/{dahlak76}/repos");
+// githubRequest.send();
+// githubRequest.addEventListener('load', () => {
+//   var repositories = JSON.parse(this.response);
+//   console.log(repositories);
+// })
+let githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/dahlak76/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', function() {
+  var repositories = JSON.parse(this.response);
+  console.log(repositories);
+//});
+let projectSection = document.getElementById('projects');
+let projectList = projectSection.querySelector('ul');
+
+for(let i = 0; i < repositories.length; i++){
+  let project = document.createElement('li');
+  project.innerHTML = repositories[i];
+  projectList.appendChild(project);
+}
+});
