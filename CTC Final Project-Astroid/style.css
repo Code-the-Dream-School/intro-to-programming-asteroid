@@ -1,0 +1,71 @@
+p {
+    color: olive;
+    font-size: 26px;
+    text-align: center;
+  }
+
+header {
+    background-color: orange;
+    text-align: center;
+  }
+
+body {
+  text-align: left;
+  }
+
+footer {
+    background-color: lightcoral;
+  }
+
+a {
+    color: darkblue;
+    background-color: peachpuff;
+    text-decoration: none;
+}
+
+#menu-items {
+    display: flex;
+    padding: 0;
+  }
+
+ #items {
+    list-style: none;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+  }
+
+.form-inline {
+    display: inline;
+  }
+
+ul[role='list'] {
+    list-style: none;
+  }
+
+#Contact {
+    color: black;
+    text-align: center;
+   
+  }
+
+.link {
+    background-color: paleturquoise;
+  }
+
+ul {
+  list-style: none;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(3, 33%)
+}
+
+@media all and (max-width: 500px) {
+  body {
+    color: blue;
+  }
+}

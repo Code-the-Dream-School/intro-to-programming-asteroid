@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="About Me">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Randy's About Webpage">
+    <title>Aspiring Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Randy Trinidad</h1>
+    </header>
+    <nav>
+        <ul id="menu-items">
+            <li id="items"><a href="#About">ABOUT</a></li>
+            <li id="items"><a href="#Experience">EXPERIENCE</a></li>
+            <li id="items"><a href="#Skills">SKILLS</a></li>
+            <li id="items"><a href="#Project">PROJECTS</a></li>
+            <li id="items"><a href="#Contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="About">
+        <h2>ABOUT</h2>
+
+        <img src="/Media/Code programmer.jpeg" alt="Code Programmer Picture">
+
+        <p>Hi, My name is Randy. I aspire to become a software engineer, and I am proud to participate in the <strong>Code The Dream</strong> Bootcamp as a student which aims to promote equity in education by providing equal opportunities to their students of all diverse backgrounds and abilities to further develop valuable professional skills while inspiring students to achieve success.</p>
+    </section>
+
+    <section id="Skills">
+        <h2>Skills</h2>
+        <div class="list"></div>
+    </section>
+
+    <section id="Experience">
+        <h2>Experience</h2>
+        <nav>
+            <ul>
+                <li>Code Tenderloin Job Readiness Program</li>
+                <li>Pre-Code Ramp</li>
+                <li>Code Ramp</li>
+                <li>Code Ramp ++</li>
+                <li>Code the Dream Bootcamp: Intro to Programming</li>
+            </ul>
+        </nav>
+    </section>
+    <section id="Project">
+        <h2>Projects</h2>
+        <nav>
+            <ul>
+                <li>Code The Dream - Intro To Programming (Astroid): Final Project </li>
+                <li><a href="https://github.com/randyalexander">Github</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="Contact">
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <div class="form-inline">
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-inline">
+                <label for="email">Email</label>
+                <input type="text" name="email" required>
+            </div>
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea name="message" placeholder="Leave a message"></textarea>
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="messages" style="display: none">
+        <h2>Messages</h2>
+        <ul class="list" role="list">
+
+        </ul>
+    </section>
+
+    <footer>
+        <h2>Connect</h2>
+        <nav>
+            <ul>
+                <li><a href="mailto:randyalexandre@gmail.com?subject=Software Engineer">Email</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">&copy; Copyright 2022 - <span id="currentYear"></span></p>
+        
+    </footer>
+  
+  <script type="text/javascript" src="webpage.js"></script>
+
+</body>
+
+</html>
