@@ -69,7 +69,7 @@ let projectList = projectSection.querySelector('ul');
 
 for(let i = 0; i < repositories.length; i++){
   let project = document.createElement('li');
-  project.innerHTML = repositories[i];
+  project.innerHTML = repositories[i].name;
   projectList.appendChild(project);
 }
 });
