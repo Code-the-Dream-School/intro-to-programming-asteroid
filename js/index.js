@@ -45,18 +45,6 @@ messageList.appendChild(newMessage);
 copyright.innerHTML = `Dahlak Keleta ${thisYear}`;
 footer.appendChild(copyright);
 
-// let githubRequest = new XMLHttpRequest();
-// // githubRequest.onreadystatechange = function () {
-// //   if(githubRequest.readyState === 4) {
-// //     document.getElementById('projects').innerHTML = githubRequest.responseText;
-// //   }
-// // };
-// githubRequest.open("GET", "https://api.github.com/users/{dahlak76}/repos");
-// githubRequest.send();
-// githubRequest.addEventListener('load', () => {
-//   var repositories = JSON.parse(this.response);
-//   console.log(repositories);
-// })
 let githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/dahlak76/repos');
 githubRequest.send();
@@ -73,3 +61,15 @@ for(let i = 0; i < repositories.length; i++){
   projectList.appendChild(project);
 }
 });
+
+fetch('https://api.github.com/users/dahlak76/repos')
+.then(response => response.json())
+.then(load => {
+  const projectSection = document.getElementById("projects");
+  const projectList= projectSection.querySelector("ul");
+  for (let i = 0; i < load.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = load[i].name;
+      projectList.appendChild(project);
+  }   
+})
