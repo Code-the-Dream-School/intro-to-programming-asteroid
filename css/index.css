@@ -118,19 +118,11 @@ html {
   #about{
     /* display: flex; */
     position: relative;
-    /* flex-wrap:wrap; */
-    /* border-radius: 10px; */
-    /* align-items: center; */
-    /* justify-content: space-evenly; */
-    /* flex-direction:column; */
-    /* border-radius: 40px; */
-    /* border:10px #808080; */
-    /* height: 300px; */
     background-color: #d9d9d9; 
     padding-bottom: 10px;
   }
 
-  /* About Photo Style*/
+  /* About paragraph Style*/
   #about p{
       /* flex-direction:column; */
       font-size: 20px;
@@ -148,40 +140,28 @@ html {
   /* Create a line effect on the about container section*/
   #about::before,
   #about::after {
-      content: '';
-      position: absolute;
-      height: 100px;
-      bottom: -75px;
-      right: 0;
-      left: 0;
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -75px;
+    right: 0;
+    left: 0;
+    margin-bottom: 10px;
     background-color:#f2f2f2;
-      transform: skewY(-3deg);
-      -webkit-transform: skewY(-3deg);
-      -moz-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
   }
 
- /* Experience container Style*/
-  #experience {
+/* Experience container Style*/
+#experience {
     height: 100%;
     margin: 100px;
     background-color:#f2f2f2;
     border: 4.5px solid #808080;
     border-radius: 30px;
     box-shadow: 10px 5px 5px #808080;
-  }
-
-/* Connect container Style No taking changes*/
-.connect{
-    height: 400px;
-    width: 100%;
-}
-
-/* Connect p Style - No working properly*/
-.connect p{
-    display: flex;
-    justify-content: center;
-    letter-spacing: 3px;
 }
 
 /* Button Connect Style */
@@ -193,7 +173,6 @@ html {
     align-items: center; 
     text-decoration: none;
     color: #808080 ;
-    /* background-color: #7aa8b7; */
     background-color:transparent;
     border: 1.5px #808080 solid;
     border-radius: 8px;
@@ -209,15 +188,14 @@ html {
     border: none; 
 
 }
-
-/* Project class h2 Style */
-.projects_class h2{
+/* Project Id Style */
+#projects{
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
     letter-spacing: 5px;
-    padding: 10px;
+    padding: 20px;
 }
 
 /*Projec Class Style*/ 
@@ -228,7 +206,6 @@ html {
     background: #d3d3d3;
     flex-wrap: wrap;
     margin: 60px;
-
 }
 
 /*Projec Class li Style*/
@@ -241,6 +218,15 @@ html {
     background: #d3d3d3;
     width: 100%;
 }
+
+/* 
+.connect .showcase-form-demo{
+    flex-direction: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+ */
 
 /*Leave a Message Style*/
 #leave-a-message{ 

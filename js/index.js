@@ -142,16 +142,12 @@ messageForm.addEventListener('submit', (event) => {
 const hideMessageSection = document.getElementById("messages");
 //hideMessageSection.innerHTML = " ";
 
-
 // (Optional) Create an "edit" button for each message entry that allows the user 
 // to input a new/modified message
 
-
-
-//-------------------------------------------------------------------------------------------------------------------------------
-
 // 6.1 - Fetch GitHub Repositories:
 // Create a new XMLHttpRequest object and store it in a variable named githubRequest
+/*
 const githubRequest = new XMLHttpRequest();
 
 // Call the open method on your githubRequest object and pass the necessary arguments
@@ -172,7 +168,7 @@ githubRequest.send();
 //  Log the value of repositories in the console
 githubRequest.addEventListener("load", function () {
     const repositories = JSON.parse(this.response);
-    //console.log("Repositories: ",repositories);------------------------------------------------------tooday
+    console.log("Repositories: ",repositories)
 
     // Save and refresh your browser
     // You should see your list of GitHub repositories logged in the console
@@ -194,7 +190,7 @@ githubRequest.addEventListener("load", function () {
         // Inside the loop, create a new list item (li) element and store it in a variable named project
         // hint: createElement method
         let project = document.createElement("li");
-        project.innerText =  repositories[i].html_url;
+        project.innerHTML = `Has project:  ${repositories[i].has_projects}<a href="${repositories[i].html_url}">${repositories[i].name} </a> <b>Created On: ${repositories[i].created_at}`;
         //repositories[i].name
 
         // On the next line, set the inner text of your project variable to the current Array element's name property
@@ -206,46 +202,29 @@ githubRequest.addEventListener("load", function () {
         console.log("Project: ", project);    
 
     }
-    // Stretch Goals
-    // (Optional) Transform your repository names into <a> tags 
-    // that link to GitHub (hint: html_url property)
-    // name: "intro-to-programming-asteroid"
-    // html_url: "https://github.com/Karla1981/intro-to-programming-asteroid"
-    // name: "intro-to-programming-section-5"
-    // html_url: "https://github.com/Karla1981/intro-to-programming-section-5"
+*/
 
+//Lesson-6-2
+// Using the Fetch API, create a "GET" request to the same GitHub API url as before
+//  hint: the fetch function
+//  hint: "GET" is the default method for fetch
+fetch('https://api.github.com/users/Karla1981/repos')
+  .then(response => response.json())
+  .then(data => { console.log(data) 
+            console.log(data);
+    
+            const projectSection = document.getElementById("projects");
+            const projectList = projectSection.querySelector("ul");
 
-        const project_1 = document.createElement("a");
-        project_1.href="https://github.com/Karla1981/intro-to-programming-asteroid";
-        project_1.innerText = "intro-to-programming-asteroid";
-        ///console.log(project_1);--------------------------------------------------------today
-        const addToProjects = document.getElementById("projects");
-        addToProjects.appendChild(project_1 );
+            for (let i = 0; i < data.length; i++){
 
+                let project = document.createElement("li");
+                project.innerHTML = `<p>Has project:  ${data[i].has_projects}<p/><a href="${data[i].html_url}">
+                                           ${data[i].name} </a> <p>Created On: ${data[i].created_at}</p>`;
 
-        const project_2 = document.createElement("a");
-        project_2.href="https://github.com/Karla1981/intro-to-programming-section-5";
-        project_2.innerText = "intro-to-programming-section-5";
-        ///console.log(project_2);--------------------------------------------------------today
-        // const addToProjects2 = document.getElementById("proj");
-        addToProjects.appendChild(project_2);
+                projectList.appendChild(project);
+                console.log("Project: ", project);
 
-    // (Optional) Display additional information about your 
-    // repositories (i.e. description, date, etc.)
+            }
 
-    // (Optional) Customize the styling of your "Projects" section list
-
-});
-
-    // project.innerText = `<a href="https://github.com/Karla1981/intro-to-programming-asteroid" target="_blank">${repositories[i].html_url}</a>`;
-
-    //`<a href="https://github.com/Karla1981/intro-to-programming-asteroid" target="_blank">project</a>`;
-    // ${repositories[i].html_url} 
-
-    // let anchor = document.createElement("a");// <a>
-    // anchor.href="https://github.com/Karla1981/intro-to-programming-asteroid";
-    // anchor.innerText = "intro-to-programming-asteroid";
-    // console.log(anchor);
-    // let addToProjects = document.getElementById("projects");
-    // addToProjects.appendChild(anchor)
-
+    });
