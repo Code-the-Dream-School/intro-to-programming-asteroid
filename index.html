@@ -6,55 +6,100 @@
   <meta charset="UTF-8">
   <meta name="description" content="Resume, contact, and links">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
-  <body>
+  <body id="body">
+    <div>
     <h1>Dahlak Keleta</h1>
+      <nav class="nav-header" id="nav-header">
+        <ul id="nav-bar">
+          <a href="#about"><li>About</li></a>
+          <a href="#experience"><li>Experience</li></a>
+          <a href="#skillset"><li>Skills</li></a>
+          <a href="#connect"><li>Connect</li></a>
+          <a href="#contact"><li>Contact</li></a>
+          <a href="#messages"><li>Messages</li></a>
+        </ul>
+      </nav>
+    </div>
 
-    <section>
+    <section id="about" class="section">
       <h2>"About"</h2>
       <p>
-        I am currently making a "later in life" career change.
-        currently studying...
-      <ul>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JQuery</li>
-      </ul>
-      Before 2022 ends, I will be a full stack developer.
+        Programing sits at the intersection of problem solving and creative exploration.<br>
+        Currently enrolled in two schools, Operation Spark and Code the Dream, for coding.<br>
+        I will graduate in the fall of 2022 and employable as a full-stack developer.
       </p>
 
     </section>
-    <section>
+    <section id="experience" class="section">
       <h2>"Experience"</h2>
       <p>
-        My life experiences and projects span from service industry, construction, sales
-        all the way to art, design/layout, and various creative endeavors. In some instances, my work experiences
-        were overlapping in skill sets required.<br>
-        While my tech related projects and experiences are minimal and are only within the scope
-        of the training and practice im gaining through these classes, my other life experiences will still be
+        My life experiences and projects span from service industry, construction, woodworking and sales
+        with an emphasis on art, design/layout, and various creative endeavors. Often, my work experiences
+        overlap in skill-sets required.<br>
+        While my coding projects and experiences are minimal and are only within the scope
+        of the training and practice gained through these schools, my other life accomplishments will be
         reflected in my work moving forward.
+        <ul id="skills">
+        
+        </ul>
       </p>
     </section>
 
-    <section id="skills">
+    <section id="skillset" class="section">
       <h2>"Skills"</h2>
-      <ul>
-
+      <ul id="skillset">
+        <li>Organized</li>
+        <li>Team player</li>
+        <li>Excellent communicator</li>
+        <li>Autonomous</li>
+        <li>Ability to research thoroughly</li>
+        <li>Multi-tasker</li>
+        <li>Time management</li>
       </ul>
     </section>
 
-    <section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul></ul>
+    </section>
+
+    <section id="connect" >
       <h2>"Connect"</h2>
       <ul>
         <li>email- <a href="dahlakkeleta@gmail.com">dahlakkeleta@gmail.com</a></li>
-        <li>facebook- <a href="www.facebook.com/dahlak.keleta">www.facebook.com/dahlak.keleta</a></li>
-        <li>instagram- <a href="instagram.com/dakush76">instagram.com/dakush76</a></li>
         <li>github- <a href="github.com/Dahlak76">https://github.com/Dahlak76</a></li>
       </ul>
     </section>
-    <footer></footer>
+    <section id="contact">
+      <h2>Leave a Message</h2>
+      <form id="form"name="leave_message">
+        <table>
+          <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" name="name" required="true"><br></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" name="email" required="true"><br>
+          </tr>
+          <tr>
+            <td><label for="message">Message</label></td>
+            <td><textarea name="message" required="true"></textarea><br></td>
+          </tr>
+          <tr>
+            <td><button id="submit-button" type="submit">Submit</button></td>
+          </tr>
+        </table>
+      </form>
+    </section>
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul></ul>
+    </section>
+    <footer id="footer"></footer>
     <script src="js/index.js"></script>
   </body>
 
