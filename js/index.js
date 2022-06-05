@@ -130,7 +130,7 @@ messageForm.addEventListener('submit', (event) => {
     // hint: appendChild method
     newMessage.appendChild(removeButton);
 
-    // Append the newMessage to the messageList element
+    // Append the newMessage toadd the messageList element
     messageList.appendChild(newMessage);
 
     // Inside the callback function, on the very last line, 
@@ -142,13 +142,27 @@ messageForm.addEventListener('submit', (event) => {
 const hideMessageSection = document.getElementById("messages");
 //hideMessageSection.innerHTML = " ";
 
+//Lesson-6-2
+// Using the Fetch API, create a "GET" request to the same GitHub API url as before
+//  hint: the fetch function
+//  hint: "GET" is the default method for fetch
+fetch('https://api.github.com/users/Karla1981/repos')
+  .then(response => response.json())
+  .then(data => { console.log(data) 
+            console.log(data);
+    
+            const projectSection = document.getElementById("projects");
+            const projectList = projectSection.querySelector("ul");
 
-// (Optional) Create an "edit" button for each message entry that allows the user 
-// to input a new/modified message
+            for (let i = 0; i < data.length; i++){
 
+                let project = document.createElement("li");
+                project.innerHTML = `<p>Has project:  ${data[i].has_projects}<p/><a href="${data[i].html_url}">
+                                           ${data[i].name} </a> <p>Created On: ${data[i].created_at}</p>`;
 
+                projectList.appendChild(project);
+                console.log("Project: ", project);
 
+            }
 
-
-
-
+    });
