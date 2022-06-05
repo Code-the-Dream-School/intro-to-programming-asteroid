@@ -130,7 +130,7 @@ messageForm.addEventListener('submit', (event) => {
     // hint: appendChild method
     newMessage.appendChild(removeButton);
 
-    // Append the newMessage to the messageList element
+    // Append the newMessage toadd the messageList element
     messageList.appendChild(newMessage);
 
     // Inside the callback function, on the very last line, 
@@ -141,68 +141,6 @@ messageForm.addEventListener('submit', (event) => {
 // (Optional) Hide the #messages section when the list is empty
 const hideMessageSection = document.getElementById("messages");
 //hideMessageSection.innerHTML = " ";
-
-// (Optional) Create an "edit" button for each message entry that allows the user 
-// to input a new/modified message
-
-// 6.1 - Fetch GitHub Repositories:
-// Create a new XMLHttpRequest object and store it in a variable named githubRequest
-/*
-const githubRequest = new XMLHttpRequest();
-
-// Call the open method on your githubRequest object and pass the necessary arguments
-// method: the method of your request (in this case, "GET")
-// url: the url of your request (in this case, "https://api.github.com/users/{GITHUB_USERNAME}/repos")
-githubRequest.open("GET", "https://api.github.com/users/Karla1981/repos");
-
-// Finally, call the send method on your githubRequest object to actually send the request
-githubRequest.send();
-
-// Handle Response from Server:
-// Below the last line of code you just wrote, add a "load" event listener on your 
-// githubRequest object and pass the necessary arguments
-// 1. event: the event that is being handled (in this case, "load")
-//  callback: the function that runs when this event occurs
-// Inside the callback function you just created, parse the response and store it in a variable named repositories
-//  hint: JSON.parse(this.response)
-//  Log the value of repositories in the console
-githubRequest.addEventListener("load", function () {
-    const repositories = JSON.parse(this.response);
-    console.log("Repositories: ",repositories)
-
-    // Save and refresh your browser
-    // You should see your list of GitHub repositories logged in the console
-    // Note: at this point, you have the response data but nothing is being displayed on the webpage itself
-
-    // Display Repositories in List
-    // Using "DOM Selection", select the #projects section by id and store it in a variable named projectSection
-    const projectSection = document.getElementById("projects");
-    //console.log("Project Section: ", projectSection)
-
-    //  Using "DOM Selection", query the projectSection (instead of the entire document) to find the <ul> element and
-    // store it in a variable named projectList
-    const projectList = projectSection.querySelector("ul");
-    //console.log("Project List: ", projectList);
-
-    // Create a for loop to iterate over your repositories Array, starting at index 0
-    for (let i = 0; i < repositories.length; i++){
-        // console.log("Arraym: ", repositories[i])
-        // Inside the loop, create a new list item (li) element and store it in a variable named project
-        // hint: createElement method
-        let project = document.createElement("li");
-        project.innerHTML = `Has project:  ${repositories[i].has_projects}<a href="${repositories[i].html_url}">${repositories[i].name} </a> <b>Created On: ${repositories[i].created_at}`;
-        //repositories[i].name
-
-        // On the next line, set the inner text of your project variable to the current Array element's name property
-        // hint: access the Array element using bracket notation- Check here!
-
-        // On the next line, append the project element to the projectList element
-        // hint: appendChild method
-        projectList.appendChild(project);
-        console.log("Project: ", project);    
-
-    }
-*/
 
 //Lesson-6-2
 // Using the Fetch API, create a "GET" request to the same GitHub API url as before

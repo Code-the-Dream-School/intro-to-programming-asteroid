@@ -61,7 +61,7 @@ body{
 }
 
 /*Experience-name style*/
-.experience-section h1{
+.experience-section h2{
     display: flex; 
     color:#0c0c0c;
     letter-spacing: 5px;
@@ -135,6 +135,13 @@ html {
       padding: 10px;
       margin: 20px;
       border-radius: 20px;
+  }
+  /* About h2 Style */
+  #about h2{
+      display: flex;
+      padding: 10px;
+      margin: 20px;
+      letter-spacing: 3px; 
   }
 
   /* Create a line effect on the about container section*/
@@ -218,15 +225,6 @@ html {
     background: #d3d3d3;
     width: 100%;
 }
-
-/* 
-.connect .showcase-form-demo{
-    flex-direction: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
- */
 
 /*Leave a Message Style*/
 #leave-a-message{ 
@@ -375,7 +373,7 @@ html {
         margin: 1px;
         padding: 1px;
     }
-    .experience-section h1{
+    .experience-section h2{
         flex: content;
         align-items: center;
         justify-content: center;
