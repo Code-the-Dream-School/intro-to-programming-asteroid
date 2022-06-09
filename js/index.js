@@ -17,7 +17,7 @@ Located where I want my list of skills to be by using desendant selector (#skill
 Using a for of loop I add each element of my skills array within a newly created list element
 Added each list element with array value into the skills list
 */
-let skills = ["HTML", "CSS", "JavaScript", "React.js"];
+let skills = ["HTML", "CSS", "JavaScript", "React.js", "Git", "Fetch API", ];
 let skillsList = document.querySelector("#skills ul");
 for (let skill of skills) {
   let newSkill = document.createElement("li");
