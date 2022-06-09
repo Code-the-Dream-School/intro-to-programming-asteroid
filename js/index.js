@@ -299,9 +299,11 @@ const checkStatus = (res) =>{
 
 const repositoryData = (data) => {
   for (i = 0; i < data.length; i++){
-    let projectItem = document.createElement("li");
-    projectItem.innerHTML = `<a href = "${data[i].html_url}" target = "_blank"><h3>${data[i].name}</h3><p>${data[i].description}</p></a>`
-    projectList.appendChild(projectItem)
+    if(data[i].name !== "Guessing-Game-Debugging" && data[i].name !== "React-Genius"){
+      let projectItem = document.createElement("li");
+      projectItem.innerHTML = `<a href = "${data[i].html_url}" target = "_blank"><h3>${data[i].name}</h3><p>${data[i].description}</p></a>`
+      projectList.appendChild(projectItem)
+    }
   }
 }
 
