@@ -52,3 +52,29 @@ function scrollTo(hash) {
     location.hash = "#" + hash;
 }
 
+var githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/Dmitry-Boyko/repos');
+githubRequest.send();
+
+if (githubRequest.readyState === 4) {
+    if ( githubRequest.status === 200 ) {
+        document.getElementById('projects').innerHTML = githubRequest.responseText;
+    } else if ( githubRequest.status == 404 ) {
+        alert(githubRequest.responseText); // file not found
+    } else if ( githubRequest.status == 500 ) {
+        alert(githubRequest.responseText); // served had a problem
+    }
+};
+
+githubRequest.addEventListener('load', function() {
+        const repositories = (JSON.parse(this.response));
+        const projectSection = document.getElementById('projects');
+        const projectList = projectSection.querySelector('ul');
+        for (let i = 0; i < repositories.length; i++) {
+            const project = document.createElement('li');
+            project.textContent = repositories[i].name;
+            console.log(project);
+            projectList.appendChild(project);
+        }
+    });
