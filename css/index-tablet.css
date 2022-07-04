@@ -140,4 +140,13 @@ Setting for modile view.
     html {
         scroll-behavior: smooth;
       }
+    
+    .project-link {
+        color: #2a539e;
+        text-decoration: none;
+    }
+    
+    .project-li {
+        list-style: none;
+    }
 }
