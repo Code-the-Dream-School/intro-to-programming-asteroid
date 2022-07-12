@@ -24,7 +24,7 @@ Below setting for browser
         font-size: 30px; font-weight: 10; color: #6880b8;
     }
     
-     .topnav {
+    .topnav {
         background-color: #333;
         overflow: hidden;
         border-radius: 10px;
@@ -156,4 +156,20 @@ Below setting for browser
     .project-li {
         list-style: none;
     }
+
+    .btn-linkedin {
+        background: #0E76A8;
+        border-radius: 6px;
+        color: #fff;
+        border-width: 14px;
+        border-style: solid;
+        border-color: #0E76A8;
+      }
+      .btn-linkedin:link, .btn-linkedin:visited {
+        color: #fff;
+      }
+      .btn-linkedin:active, .btn-linkedin:hover {
+        background: #0E76A8;
+        color: #fff;
+      }
 }
