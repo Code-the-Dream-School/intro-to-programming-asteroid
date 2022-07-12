@@ -145,8 +145,24 @@ Setting for modile view.
         color: #2a539e;
         text-decoration: none;
     }
-    
+
     .project-li {
         list-style: none;
     }
+
+    .btn-linkedin {
+        background: #0E76A8;
+        border-radius: 6px;
+        color: #fff;
+        border-width: 14px;
+        border-style: solid;
+        border-color: #0E76A8;
+      }
+      .btn-linkedin:link, .btn-linkedin:visited {
+        color: #fff;
+      }
+      .btn-linkedin:active, .btn-linkedin:hover {
+        background: #0E76A8;
+        color: #fff;
+      }
 }
