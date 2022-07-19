@@ -23,9 +23,13 @@ Below setting for browser
     h2 {
         font-size: 30px; font-weight: 10; color: #6880b8;
     }
+
+    h3 {
+        font-size: 12px; font-weight: 10; color: #b4b6b9;
+    }
     
     .topnav {
-        background-color: #333;
+        background-color: rgb(48, 83, 99);
         overflow: hidden;
         border-radius: 10px;
         position: fixed;
@@ -41,12 +45,12 @@ Below setting for browser
     }
     
     .topnav a:hover {
-        background-color: rgb(195, 235, 238);
-        color: black;
+        background-color: rgb(156, 181, 204);
+        color: rgb(50, 51, 54);
     }
     
     .topnav a.active {
-        background-color: #049faa;
+        background-color: rgb(54, 143, 143);
         color: white;
     }
 
@@ -107,7 +111,7 @@ Below setting for browser
         color: #323f5c;
         padding-top: 5px;
         padding-bottom: 10px;
-        padding-left: 250px;
+        padding-left: 230px;
     }
     
     input.userNameandEmail {
@@ -149,7 +153,7 @@ Below setting for browser
       }
 
     .project-link {
-        color: #2a539e;
+        color: d4d4d4;
         text-decoration: none;
     }
 
@@ -157,19 +161,16 @@ Below setting for browser
         list-style: none;
     }
 
-    .btn-linkedin {
-        background: #0E76A8;
-        border-radius: 6px;
-        color: #fff;
-        border-width: 14px;
-        border-style: solid;
-        border-color: #0E76A8;
+      .icongroup{
+        padding-left: 50px;
+        font-size:24px;
       }
-      .btn-linkedin:link, .btn-linkedin:visited {
-        color: #fff;
-      }
-      .btn-linkedin:active, .btn-linkedin:hover {
-        background: #0E76A8;
-        color: #fff;
-      }
+
+      .icon-text-size {
+            font-size: 50px;
+        }
+    
+        a, a:visited {
+            color: #455a81;
+        }
 }

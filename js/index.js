@@ -20,6 +20,13 @@ skillList.querySelector('li').textContent = "Cypress"
 const messageForm = document.querySelector('[name="leave_message"]')
 const messageContainer = document.querySelector('[id="messages"]')
 
+const linkedInButton = document.createElement('button')
+linkedInButton.type = 'button'
+linkedInButton.addEventListener('click', (event) => {
+    const linkedUrl = event.target.parentNode
+    entry.html_url()
+    })
+
 messageForm.addEventListener('submit', function(event){
     event.preventDefault()
     const userName = document.querySelector('[name="userName"]')

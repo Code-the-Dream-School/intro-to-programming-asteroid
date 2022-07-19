@@ -19,7 +19,7 @@ Setting for modile view.
     }
 
     .topnav {
-        background-color: #333;
+        background-color: rgb(48, 83, 99);
         overflow: hidden;
         border-radius: 10px;
     }
@@ -39,7 +39,7 @@ Setting for modile view.
     }
     
     .topnav a.active {
-        background-color: #04AA6D;
+        background-color: rgb(54, 143, 143);
         color: white;
     }
 
@@ -142,7 +142,7 @@ Setting for modile view.
       }
 
     .project-link {
-        color: #2a539e;
+        color: #d4d4d4;
         text-decoration: none;
     }
     
@@ -150,19 +150,16 @@ Setting for modile view.
         list-style: none;
     }
 
-    .btn-linkedin {
-        background: #0E76A8;
-        border-radius: 6px;
-        color: #fff;
-        border-width: 14px;
-        border-style: solid;
-        border-color: #0E76A8;
+    .icongroup{
+        padding-left: 50px;
+        font-size:24px;
       }
-      .btn-linkedin:link, .btn-linkedin:visited {
-        color: #fff;
-      }
-      .btn-linkedin:active, .btn-linkedin:hover {
-        background: #0E76A8;
-        color: #fff;
-      }
+
+      .icon-text-size {
+            font-size: 50px;
+        }
+    
+        a, a:visited {
+            color: #455a81;
+        }
 }
