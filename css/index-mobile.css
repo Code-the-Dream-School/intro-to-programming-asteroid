@@ -34,8 +34,8 @@ Setting for modile view.
     }
     
     .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+        background-color: rgb(156, 181, 204);
+        color: rgb(116, 118, 126);
     }
     
     .topnav a.active {
@@ -160,6 +160,6 @@ Setting for modile view.
         }
     
         a, a:visited {
-            color: #455a81;
+            color: #94969c;
         }
 }

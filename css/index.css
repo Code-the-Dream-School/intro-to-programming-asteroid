@@ -23,10 +23,6 @@ Below setting for browser
     h2 {
         font-size: 30px; font-weight: 10; color: #6880b8;
     }
-
-    h3 {
-        font-size: 12px; font-weight: 10; color: #b4b6b9;
-    }
     
     .topnav {
         background-color: rgb(48, 83, 99);
@@ -46,7 +42,7 @@ Below setting for browser
     
     .topnav a:hover {
         background-color: rgb(156, 181, 204);
-        color: rgb(50, 51, 54);
+        color: rgb(116, 118, 126);
     }
     
     .topnav a.active {
@@ -171,6 +167,6 @@ Below setting for browser
         }
     
         a, a:visited {
-            color: #455a81;
+            color: #94969c;
         }
 }
