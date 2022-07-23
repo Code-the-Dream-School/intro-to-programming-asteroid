@@ -3,7 +3,7 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
-const skills = ['JavaScript - ', 'CSS - ', 'HTML -', 'JQuery - ', 'NodeJS - ', 'React/ReactJS/native - ', 'Redux - ', 'Express - ', 'MongoDB - ', 'MySQL/noSQL '];
+const skills = ['JavaScript - ', 'CSS - ', 'HTML -', 'Mongoose - ', 'NodeJS - ', 'React/ReactJS/native - ', 'Redux - ', 'Express - ', 'MongoDB - ', 'MySQL/noSQL '];
 const skillsSection = document.getElementById('skills');
 console.log(skillsSection);
 //const skillsList = skillsSection.querySelector('ul');
