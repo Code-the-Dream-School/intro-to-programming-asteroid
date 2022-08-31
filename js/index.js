@@ -7,7 +7,7 @@ copyright.innerHTML = `&copy Amy Sandoval ${thisYear}`;
 footer.appendChild(copyright);
 
 //Create List of Skills
-const skills = ["JavaScript", "HTML", "CSS"];
+const skills = ["React", "JavaScript", "HTML", "CSS"];
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector("ul");
 
@@ -92,7 +92,8 @@ function fetchData() {
     .then((data) => {
       const html = data
         .map((repos) => {
-          return `<li>${repos.name}</li>`;
+          console.log(data);
+          return `<li><a href=${repos.html_url} target="_blank">${repos.name} </a></li>`;
         })
         .join("");
       const project = document.createElement("li");

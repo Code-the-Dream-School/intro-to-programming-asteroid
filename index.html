@@ -11,10 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+
+    <script src="https://kit.fontawesome.com/338afb6d62.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
       <header>
+        
           <h1 class="logo">Amy Sandoval</h1>
           <input type="checkbox" id="nav-toggle" class="nav-toggle">
           <label for="nav-toggle" class="nav-toggle-label">
@@ -25,7 +28,7 @@
               <li class="nav-links"><a href="#about">About</a></li>
               <li class="nav-links"><a href="#skills">Skills</a></li>
               <li class="nav-links"><a href="#projects">Projects</a></li>
-              <li class="nav-links"><a href="#experience">Experience</a></li>
+              <li class="nav-links"><a href="#experience">Education</a></li>
               <li class="nav-links"><a href="#messageForm">Contact</a></li>
             </ul>
           </nav>
@@ -33,6 +36,7 @@
       <div class="section-container">
         <section id="about">
           <h2>About</h2>
+          <!-- <img src="profile-photo.jpg" alt="profile-photo" id="profile-photo"> -->
           <p>
             Hi, I’m Amy! I am a queer Mexican-American woman, born and raised in the
             San Francisco Bay Area. I began learning to code with Code the Dream in
@@ -45,7 +49,12 @@
 
         <section id="skills">
           <h2>Skills</h2>
-        <ul></ul>
+        <ul>
+          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-square-js"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+        </ul>
         </section>
 
         <section id="projects" class="projects">
@@ -54,35 +63,17 @@
         </section>
 
         <section id="experience">
-          <h2>Experience</h2>
+          <h2>Education</h2> <!--renamed experience section-->
           <ul class="experience-list">
-            <li class="bold">Property Administrator</li>
-            <li class="right-align">September 2021 - Present</li>
-            <li>Cushman & Wakefield</li>
-            <li></li>
-            <li class="bold">Facilities Coordinator</li>
-            <li class="right-align">November 2019 - September 2021</li>
-            <li>Cushman & Wakefield @ Adobe</li>
-            <li></li>
-            <li class="bold">Workplace Support Specialist</li>
-            <li class="right-align">August 2018 - November 2019</li>
-            <li>Cushman & Wakefield @ Adobe</li>
-            <li></li>
-          </ul>
-        </section>
+            <li class="bold">Coursera: Meta Front-End Developer Professional Certificate</li>
+            <li class="right-align">August 2022 - Present</li>
 
-        <section id="connect">
-          <h2>Connect</h2>
-          <ul>
-            <li>
-              <a href="mailto:Amy.Jen.Sandoval@gmail.com" target="_blank">Email</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/amyjensandoval/" target="_blank">LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://github.com/SandovalAmy" target="_blank">Github</a>
-            </li>
+            <li class="bold">Code the Dream: React.js</li>
+            <li class="right-align">June 2022 - Present</li>
+
+            <li class="bold">Code the Dream: HTML, CSS, JavaScript</li>
+            <li class="right-align">January 2022 - May 2022</li>
+
           </ul>
         </section>
 
@@ -122,7 +113,12 @@
           <ul></ul>
         </section>
       </div>
-      <footer></footer>
+      <footer>
+        <div class="social-media-icons">
+        <a href="https://github.com/SandovalAmy" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/amyjensandoval/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      </footer>
       <script src = ./js/index.js></script>
     </main>
   </body>
