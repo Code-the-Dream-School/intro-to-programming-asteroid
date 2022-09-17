@@ -79,7 +79,14 @@
 
         <section id="messageForm">
           <h2>Leave a Message</h2>
-          <form class="message-form" name="leave_message">
+          <form class="message-form" name="leave_message" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
+
             <div class="form-box">
               <label for="name" class="form-label">Name</label>
               <input type="text" name="name" required="true"

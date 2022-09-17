@@ -233,6 +233,10 @@ button:hover {
   min-height: 5em;
 }
 
+.hidden {
+  display: none;
+}
+
 #messages {
   color: rgb(140, 87, 156);
 }
