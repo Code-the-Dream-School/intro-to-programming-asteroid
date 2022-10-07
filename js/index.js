@@ -92,7 +92,6 @@ function fetchData() {
     .then((data) => {
       const html = data
         .map((repos) => {
-          console.log(data);
           return `<li><a href=${repos.html_url} target="_blank">${repos.name} </a></li>`;
         })
         .join("");
