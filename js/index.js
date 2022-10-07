@@ -3,7 +3,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
-copyright.innerHTML = `&copy Amy Sandoval ${thisYear}`;
+copyright.innerHTML = `&copy Amy Jen Sandoval ${thisYear}`;
 footer.appendChild(copyright);
 
 //Create List of Skills
@@ -76,31 +76,31 @@ for (let i = 0; i < skills.length; i++) {
 ///OPTIONAL: Create an "edit" button for each message entry that allows user to input a new/modified message
 
 //API: https://api.github.com/users/SandovalAmy/repos
-const projectSection = document.getElementById("projects");
-const projectList = projectSection.querySelector("ul");
+// const projectSection = document.getElementById("projects");
+// const projectList = projectSection.querySelector("ul");
 
-const api_url = "https://api.github.com/users/SandovalAmy/repos";
+// const api_url = "https://api.github.com/users/SandovalAmy/repos";
 
-function fetchData() {
-  fetch(api_url)
-    .then((response) => {
-      if (!response.ok) {
-        throw Error("ERROR");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      const html = data
-        .map((repos) => {
-          return `<li><a href=${repos.html_url} target="_blank">${repos.name} </a></li>`;
-        })
-        .join("");
-      const project = document.createElement("li");
-      project.innerHTML = html;
-      projectList.appendChild(project);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-fetchData();
+// function fetchData() {
+//   fetch(api_url)
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw Error("ERROR");
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       const html = data
+//         .map((repos) => {
+//           return `<li><a href=${repos.html_url} target="_blank">${repos.name} </a></li>`;
+//         })
+//         .join("");
+//       const project = document.createElement("li");
+//       project.innerHTML = html;
+//       projectList.appendChild(project);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
+// fetchData();
